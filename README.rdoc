@@ -1,0 +1,43 @@
+== SaysServicesClient
+
+You need an initializer file for this gem to work properly.
+
+To use the generator, type this command:
+
+  rails generate says_services_client:initializer
+  
+== Configuration
+
+  open says_services_client.rb
+  
+  HYDRA = Typhoeus::Hydra.new
+  SaysServicesClient::Config.hydra = HYDRA
+  SaysServicesClient::Config.oauth_token = '6a6b37898f0179405f262a9343258ae6'
+  SaysServicesClient::Config.endpoint = {
+    campaign_url: 'http://localhost:3001/'
+  }
+  
+  Modify the campaign_url endpoint according to your local settings.
+  
+== Campaign Usage
+
+1.  Find a campaign with :id
+
+  SaysServicesClient::Campaign.find(11) do |d|
+    @campaign = d
+  end
+  HYDRA.run
+  
+  @campaign.id => 1
+  @campaign.title => 'happy ending'
+  
+2.  Find campaigns with conditions (country, target_age, target_gender, target_race, target_city)
+
+  SaysServicesClient::Campaign.all(country: :my, target_age: 8) do |d|
+    @campaigns = d
+  end
+  HYDRA.run
+  
+  @campaigns.size => 3
+  @campaigns.first.id => 1
+  @campaigns.first.title => 'happy ending'
