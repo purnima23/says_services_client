@@ -8,7 +8,7 @@ To use the generator, type this command:
   
 == Configuration
 
-  open says_services_client.rb
+open says_services_client.rb
   
   HYDRA = Typhoeus::Hydra.new
   SaysServicesClient::Config.hydra = HYDRA
@@ -17,21 +17,34 @@ To use the generator, type this command:
     campaign_url: 'http://localhost:3001/'
   }
   
-  Modify the campaign_url endpoint according to your local settings.
+Modify the campaign_url endpoint according to your local settings.
   
 == Campaign Usage
 
-1.  Find a campaign with :id
+Find single campaign with :id (syncrhonous)
 
   SaysServicesClient::Campaign.find(11) do |d|
-    @campaign = d
+    @campaign_1 = d
   end
+  
+  SaysServicesClient::Campaign.find(12) do |d|
+    @campaign_2 = d
+  end
+  
   HYDRA.run
   
-  @campaign.id => 1
-  @campaign.title => 'happy ending'
+  @campaign_1.id => 11
+  @campaign_1.title => 'happy ending'
+  @campaign_2.id => 12
+  @campaign_2.title => 'happy beginning'
   
-2.  Find campaigns with conditions (country, target_age, target_gender, target_race, target_city)
+Find single campaign with :id (asynchronous)
+
+  @campaign = SaysServicesClient::Campaign.find(11)
+  
+  @campaign.id => 11
+  
+Find campaigns with conditions of country, target_age, target_gender, target_race or target_city (synchronous)
 
   SaysServicesClient::Campaign.all(country: :my, target_age: 8) do |d|
     @campaigns = d
@@ -41,3 +54,9 @@ To use the generator, type this command:
   @campaigns.size => 3
   @campaigns.first.id => 1
   @campaigns.first.title => 'happy ending'
+  
+Find campaigns (asynchronous)
+
+  @campaigns = SaysServicesClient::Campaign.all
+  
+  @campaigns.size => 4

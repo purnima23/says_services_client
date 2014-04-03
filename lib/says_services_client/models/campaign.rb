@@ -7,24 +7,34 @@ module SaysServicesClient
       attr_protected :id
       
       class << self
-        def find(campaign_id, options={}, &block)
+        def find(campaign_id, options={})
           conn = establish_connection("/api/v2/campaigns/#{campaign_id}", params: options)
-          conn.on_complete do |response|
-            data = new(JSON.parse(response.body))
-            block.call(data)
+          
+          if block_given?
+            conn.on_complete do |response|
+              data = new(JSON.parse(response.body))
+              yield data
+            end
+            SaysServicesClient::Config.hydra.queue(conn)
+          else
+            response = conn.run
+            new(JSON.parse(response.body))
           end
-
-          SaysServicesClient::Config.hydra.queue(conn)
         end      
         
-        def all(options={}, &block)
+        def all(options={})
           conn = establish_connection("/api/v2/campaigns", params: options)
-          conn.on_complete do |response|
-            data = JSON.parse(response.body).collect {|campaign| new(campaign)}
-            block.call(data)
-          end
           
-          SaysServicesClient::Config.hydra.queue(conn)
+          if block_given?
+            conn.on_complete do |response|
+              data = JSON.parse(response.body).collect {|campaign| new(campaign)}
+              yield data
+            end          
+            SaysServicesClient::Config.hydra.queue(conn)
+          else
+            response = conn.run
+            JSON.parse(response.body).collect {|campaign| new(campaign)}
+          end
         end
       end
     end
