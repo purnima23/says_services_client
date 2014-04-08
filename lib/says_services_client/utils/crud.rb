@@ -5,6 +5,7 @@ module SaysServicesClient
       
       def update
         conn = self.class.send(:establish_connection, "/api/v2/campaigns/#{self.id}", method: :put, params: {campaign: self.attributes})
+        # conn = self.class.send(:establish_connection, "/api/v2/campaigns/#{self.id}", method: :put, body: {campaign: self.attributes})
         response = conn.run
         
         if response.code == 200

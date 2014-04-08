@@ -19,3 +19,15 @@ VCR.configure do |c|
   c.hook_into :typhoeus
   c.allow_http_connections_when_no_cassette = true
 end
+
+def reset_class class_name
+  Object.send(:remove_const, class_name) rescue nil
+  klass = Object.const_set(class_name, Class.new(SaysServicesClient::Models::Base))
+
+  klass.class_eval do
+    attr_accessor :name, :email
+    attr_reader :address
+    attr_protected :email
+  end
+  klass
+end

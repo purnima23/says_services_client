@@ -1,0 +1,100 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:9000//api/v2/campaigns/12?token=6a6b37898f0179405f262a9343258ae6&user_id=23
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - ! '"22b278dbd119146d83f845b704c7d978"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTRjMTY5YjJlOWZjODU2ZWFiMjJmMmIxMTYxNTExNjQzBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmkEgUDdFQ%3D%3D--27ad9dc34cbc78d54ba1e765196cd08c038bdfb5;
+        path=/; HttpOnly
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTRjMTY5YjJlOWZjODU2ZWFiMjJmMmIxMTYxNTExNjQzBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmkEgUDdFQ%3D%3D--27ad9dc34cbc78d54ba1e765196cd08c038bdfb5;
+        path=/; expires=Wed, 08-Oct-2014 04:50:44 GMT
+      Content-Length:
+      - '553'
+      X-Request-Id:
+      - 8ba6b23588a4f19c2a9156caf4def146
+      X-Runtime:
+      - '0.226296'
+      Connection:
+      - keep-alive
+      Server:
+      - thin 1.3.1 codename Triple Espresso
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":12,"friendly_id":"kanasai","title":"kanasai","campaign_about":"omg","is_ended":false,"is_completed":false,"remaining_days":248,"supporters_count":2,"views_count":2,"total_available_reward":"RM10","per_uv_reward":"RM0.10","site_url":"http://www.yahoo.com","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/12/photos/profile/img-1200x630.jpg?1386323400","site_screenshot_url":null,"triggers":[{"id":36,"message":"Are
+        you nutz?"}],"completed_at":"","created_at":"2013-12-05 14:57:32 +0800","updated_at":"2013-12-06
+        17:50:05 +0800"}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: !binary |-
+        aHR0cDovL2xvY2FsaG9zdDo5MDAwLy9hcGkvdjIvY2FtcGFpZ25zLzEyP3Rv
+        a2VuPTZhNmIzNzg5OGYwMTc5NDA1ZjI2MmE5MzQzMjU4YWU2JnVzZXJfaWQ9
+        MjM=
+  recorded_at: Tue, 08 Apr 2014 04:50:44 GMT
+- request:
+    method: get
+    uri: http://localhost:9000//api/v2/shares/users/23?campaign_ids=12&token=6a6b37898f0179405f262a9343258ae6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - ! '"94dc1ad0b69b47bea15be9200de19bf2"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTkxMTlkMjg2YjlmMmEzNzFhY2I1NmU2NjM5YTMzNTNiBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrBxMRxmY%3D--22704fc79c9624c85ff02caa25488af4a933bddf;
+        path=/; HttpOnly
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTkxMTlkMjg2YjlmMmEzNzFhY2I1NmU2NjM5YTMzNTNiBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrBxMRxmY%3D--22704fc79c9624c85ff02caa25488af4a933bddf;
+        path=/; expires=Wed, 08-Oct-2014 04:50:44 GMT
+      Content-Length:
+      - '199'
+      X-Request-Id:
+      - 95989b56ecf838230a0a501bf4e80c7f
+      X-Runtime:
+      - '0.102471'
+      Connection:
+      - keep-alive
+      Server:
+      - thin 1.3.1 codename Triple Espresso
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":24,"share_url":"http://bit.ly/1gsXUNx","uniq_total_clicked_count":0,"total_clicked_count":0,"message":"Are
+        you nutz?","reward_count":"0.0","rewarded_uv_count":0,"user_id":23,"campaign_id":12}]'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: !binary |-
+        aHR0cDovL2xvY2FsaG9zdDo5MDAwLy9hcGkvdjIvc2hhcmVzL3VzZXJzLzIz
+        P2NhbXBhaWduX2lkcz0xMiZ0b2tlbj02YTZiMzc4OThmMDE3OTQwNWYyNjJh
+        OTM0MzI1OGFlNg==
+  recorded_at: Tue, 08 Apr 2014 04:50:44 GMT
+recorded_with: VCR 2.9.0

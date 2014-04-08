@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:9000//api/v2/shares/users/9283123123?token=6a6b37898f0179405f262a9343258ae6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - ! '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTA1ZDE1MGQ0NTliNWI4NTU2MjhlZTlmZjFiYmVmMDY3BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCNTB3zYBAA%3D%3D--38911f97b1ce9662e17dfea7d17b46dc3df3d080;
+        path=/; HttpOnly
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTA1ZDE1MGQ0NTliNWI4NTU2MjhlZTlmZjFiYmVmMDY3BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCNTB3zYBAA%3D%3D--38911f97b1ce9662e17dfea7d17b46dc3df3d080;
+        path=/; expires=Wed, 08-Oct-2014 04:50:45 GMT
+      Content-Length:
+      - '2'
+      X-Request-Id:
+      - 0fc9fba0c9cbe6fb30d6eb310b0490b7
+      X-Runtime:
+      - '0.226366'
+      Connection:
+      - keep-alive
+      Server:
+      - thin 1.3.1 codename Triple Espresso
+    body:
+      encoding: US-ASCII
+      string: ! '[]'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: !binary |-
+        aHR0cDovL2xvY2FsaG9zdDo5MDAwLy9hcGkvdjIvc2hhcmVzL3VzZXJzLzky
+        ODMxMjMxMjM/dG9rZW49NmE2YjM3ODk4ZjAxNzk0MDVmMjYyYTkzNDMyNThh
+        ZTY=
+  recorded_at: Tue, 08 Apr 2014 04:50:45 GMT
+recorded_with: VCR 2.9.0

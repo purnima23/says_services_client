@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:9000//api/v2/campaigns?token=6a6b37898f0179405f262a9343258ae6
+    uri: http://localhost:9000//api/v2/campaigns?token=6a6b37898f0179405f262a9343258ae6&country=my&user_id=23
     body:
       encoding: US-ASCII
       string: ''
@@ -19,20 +19,20 @@ http_interactions:
       X-UA-Compatible:
       - IE=Edge
       ETag:
-      - ! '"6ad4eed08332f75706a9de400e33b4de"'
+      - ! '"1706bce42130cb50aae042a078016d9a"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTY3OTZhMjRhNGVhYTg0YTE1ODhiYzAwMzNhMTAzN2Y2BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrBynyCPI%3D--f330311ecb2ac2880d768a78c7d58cfa9c032327;
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTA2NDNhZmVmN2U5N2JjNmMzOTQ5Y2JiZGQyMzJjY2IyBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCO3mX00BAA%3D%3D--86d36c824959c0dd88e08c405de0949372a33cb2;
         path=/; HttpOnly
-      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTY3OTZhMjRhNGVhYTg0YTE1ODhiYzAwMzNhMTAzN2Y2BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrBynyCPI%3D--f330311ecb2ac2880d768a78c7d58cfa9c032327;
-        path=/; expires=Wed, 08-Oct-2014 04:50:44 GMT
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTA2NDNhZmVmN2U5N2JjNmMzOTQ5Y2JiZGQyMzJjY2IyBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCO3mX00BAA%3D%3D--86d36c824959c0dd88e08c405de0949372a33cb2;
+        path=/; expires=Wed, 08-Oct-2014 04:50:45 GMT
       Content-Length:
-      - '4878'
+      - '4318'
       X-Request-Id:
-      - 399a9f7e45fe9675ba42cea59bc06d53
+      - f4035d7d73fe4f3398074d1edb8e6932
       X-Runtime:
-      - '0.288292'
+      - '0.259245'
       Connection:
       - keep-alive
       Server:
@@ -78,14 +78,60 @@ http_interactions:
         #3"}],"completed_at":"2013-09-26 14:51:04 +0800","created_at":"2013-06-04
         11:22:15 +0800","updated_at":"2013-12-06 17:49:38 +0800"},{"id":12,"friendly_id":"kanasai","title":"kanasai","campaign_about":"omg","is_ended":false,"is_completed":false,"remaining_days":248,"supporters_count":2,"views_count":2,"total_available_reward":"RM10","per_uv_reward":"RM0.10","site_url":"http://www.yahoo.com","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/12/photos/profile/img-1200x630.jpg?1386323400","site_screenshot_url":null,"triggers":[{"id":36,"message":"Are
         you nutz?"}],"completed_at":"","created_at":"2013-12-05 14:57:32 +0800","updated_at":"2013-12-06
-        17:50:05 +0800"},{"id":9,"friendly_id":"aasm","title":"state machine","campaign_about":"<p>first
-        manual test run after huge changes</p>","is_ended":true,"is_completed":false,"remaining_days":-1,"supporters_count":1,"views_count":3,"total_available_reward":"Rp20","per_uv_reward":"Rp0","site_url":"http://www.yahoo.com","thumbnail_url":"/assets/default_campaign_profile.gif","site_screenshot_url":null,"triggers":[{"id":31,"message":"omg
-        this is ok"}],"completed_at":"2013-10-10 15:04:40 +0800","created_at":"2013-09-20
-        12:14:56 +0800","updated_at":"2014-03-31 14:26:04 +0800"}]'
+        17:50:05 +0800"}]'
     http_version: '1.1'
     adapter_metadata:
       effective_url: !binary |-
         aHR0cDovL2xvY2FsaG9zdDo5MDAwLy9hcGkvdjIvY2FtcGFpZ25zP3Rva2Vu
-        PTZhNmIzNzg5OGYwMTc5NDA1ZjI2MmE5MzQzMjU4YWU2
-  recorded_at: Tue, 08 Apr 2014 04:50:44 GMT
+        PTZhNmIzNzg5OGYwMTc5NDA1ZjI2MmE5MzQzMjU4YWU2JmNvdW50cnk9bXkm
+        dXNlcl9pZD0yMw==
+  recorded_at: Tue, 08 Apr 2014 04:50:45 GMT
+- request:
+    method: get
+    uri: http://localhost:9000//api/v2/shares/users/23?campaign_ids=2,3,12&token=6a6b37898f0179405f262a9343258ae6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - ! '"94dc1ad0b69b47bea15be9200de19bf2"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWU4MWVlODgyYTViMGYwMTdmNGVhZDllNGU1ZTQyOTUwBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmkEV12iJQ%3D%3D--cf13d3661dd5b2a5acb0892cbe4afaec8d57104d;
+        path=/; HttpOnly
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWU4MWVlODgyYTViMGYwMTdmNGVhZDllNGU1ZTQyOTUwBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmkEV12iJQ%3D%3D--cf13d3661dd5b2a5acb0892cbe4afaec8d57104d;
+        path=/; expires=Wed, 08-Oct-2014 04:50:45 GMT
+      Content-Length:
+      - '199'
+      X-Request-Id:
+      - 7408b22f237e52e8710a8a7549adc8fa
+      X-Runtime:
+      - '0.088917'
+      Connection:
+      - keep-alive
+      Server:
+      - thin 1.3.1 codename Triple Espresso
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":24,"share_url":"http://bit.ly/1gsXUNx","uniq_total_clicked_count":0,"total_clicked_count":0,"message":"Are
+        you nutz?","reward_count":"0.0","rewarded_uv_count":0,"user_id":23,"campaign_id":12}]'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: !binary |-
+        aHR0cDovL2xvY2FsaG9zdDo5MDAwLy9hcGkvdjIvc2hhcmVzL3VzZXJzLzIz
+        P2NhbXBhaWduX2lkcz0yLDMsMTImdG9rZW49NmE2YjM3ODk4ZjAxNzk0MDVm
+        MjYyYTkzNDMyNThhZTY=
+  recorded_at: Tue, 08 Apr 2014 04:50:45 GMT
 recorded_with: VCR 2.9.0

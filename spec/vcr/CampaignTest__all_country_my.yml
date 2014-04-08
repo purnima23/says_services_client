@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3001//api/v2/campaigns?token=6a6b37898f0179405f262a9343258ae6&country=my
+    uri: http://localhost:9000//api/v2/campaigns?token=6a6b37898f0179405f262a9343258ae6&country=my
     body:
       encoding: US-ASCII
       string: ''
@@ -19,20 +19,20 @@ http_interactions:
       X-UA-Compatible:
       - IE=Edge
       ETag:
-      - ! '"d4ac65c384ddeee558eb6c431766782f"'
+      - ! '"1706bce42130cb50aae042a078016d9a"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - 8share_my_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTg1NDg5ZjI4Nzc1ZDQ0NDE3MzYyZjhmYTRkNTA3YjI3BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB26fPmc%3D--66c3f7d410763aadf4d6a91b36e60af00c05d91d;
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWFjNjU3MmQ4NTc5NGQ3ZTRiNDhjY2JmNmU1MDFmZWYxBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrBwIYrPA%3D--d579ebb713451e40105e395268acca2fabf40ae4;
         path=/; HttpOnly
-      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTg1NDg5ZjI4Nzc1ZDQ0NDE3MzYyZjhmYTRkNTA3YjI3BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB26fPmc%3D--66c3f7d410763aadf4d6a91b36e60af00c05d91d;
-        path=/; expires=Wed, 01-Oct-2014 03:07:12 GMT
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWFjNjU3MmQ4NTc5NGQ3ZTRiNDhjY2JmNmU1MDFmZWYxBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrBwIYrPA%3D--d579ebb713451e40105e395268acca2fabf40ae4;
+        path=/; expires=Wed, 08-Oct-2014 04:50:44 GMT
       Content-Length:
       - '4318'
       X-Request-Id:
-      - efc3059c26536a4e3de2e0f89922b179
+      - b69dcb3e200c84b3565e30a91e8fe473
       X-Runtime:
-      - '0.299156'
+      - '0.140578'
       Connection:
       - keep-alive
       Server:
@@ -64,7 +64,7 @@ http_interactions:
         0px !important; font-size: 20px; float: none !important; padding: 0px !important;
         position: relative !important; top: -0.125em !important; vertical-align: baseline
         !important; background-position: initial initial !important; background-repeat:
-        initial initial !important;\">+</span>&nbsp;RUNNING APP FOR iPHONE AND ANDROID</span></h2>","is_ended":false,"is_completed":false,"remaining_days":503,"supporters_count":2,"views_count":42,"total_available_reward":"RM20","per_uv_reward":"RM0.20","site_url":"http://www.nike.com/my/en_gb/","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/2/photos/profile/NIKE_Wallpaper_a0r3y.jpg?1386323371","site_screenshot_url":null,"triggers":[{"id":5,"message":"THE
+        initial initial !important;\">+</span>&nbsp;RUNNING APP FOR iPHONE AND ANDROID</span></h2>","is_ended":false,"is_completed":false,"remaining_days":496,"supporters_count":2,"views_count":42,"total_available_reward":"RM20","per_uv_reward":"RM0.20","site_url":"http://www.nike.com/my/en_gb/","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/2/photos/profile/NIKE_Wallpaper_a0r3y.jpg?1386323371","site_screenshot_url":null,"triggers":[{"id":5,"message":"THE
         NEW NIKE+ RUNNING APP FOR iPHONE AND ANDROID"},{"id":7,"message":"Just do
         it"},{"id":8,"message":"Dont do it"}],"completed_at":"2013-09-25 17:25:09
         +0800","created_at":"2013-05-28 18:45:11 +0800","updated_at":"2013-12-06 17:49:32
@@ -72,17 +72,17 @@ http_interactions:
         style=\"font-weight: bold; color: #444444; font-family: arial, sans-serif;
         font-size: small; line-height: 16px;\">WarCry</span><span style=\"color: #444444;
         font-family: arial, sans-serif; font-size: small; line-height: 16px;\">&nbsp;-
-        mmorpgs games reviews news and more.</span></p>","is_ended":false,"is_completed":false,"remaining_days":429,"supporters_count":16,"views_count":171,"total_available_reward":"RM8","per_uv_reward":"RM0.40","site_url":"http://www.warcry.com","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/3/photos/profile/img-1200x630.jpg?1386323373","site_screenshot_url":null,"triggers":[{"id":6,"message":"This
+        mmorpgs games reviews news and more.</span></p>","is_ended":false,"is_completed":false,"remaining_days":422,"supporters_count":16,"views_count":171,"total_available_reward":"RM8","per_uv_reward":"RM0.40","site_url":"http://www.warcry.com","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/3/photos/profile/img-1200x630.jpg?1386323373","site_screenshot_url":null,"triggers":[{"id":6,"message":"This
         is a war cry for the warriors. Well this team out of Chicago is definitely
         a group of warriors"},{"id":25,"message":"bodoh #2"},{"id":26,"message":"bodoh
         #3"}],"completed_at":"2013-09-26 14:51:04 +0800","created_at":"2013-06-04
-        11:22:15 +0800","updated_at":"2013-12-06 17:49:38 +0800"},{"id":12,"friendly_id":"kanasai","title":"kanasai","campaign_about":"omg","is_ended":false,"is_completed":false,"remaining_days":255,"supporters_count":2,"views_count":2,"total_available_reward":"RM10","per_uv_reward":"RM0.10","site_url":"http://www.yahoo.com","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/12/photos/profile/img-1200x630.jpg?1386323400","site_screenshot_url":null,"triggers":[{"id":36,"message":"Are
+        11:22:15 +0800","updated_at":"2013-12-06 17:49:38 +0800"},{"id":12,"friendly_id":"kanasai","title":"kanasai","campaign_about":"omg","is_ended":false,"is_completed":false,"remaining_days":248,"supporters_count":2,"views_count":2,"total_available_reward":"RM10","per_uv_reward":"RM0.10","site_url":"http://www.yahoo.com","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/12/photos/profile/img-1200x630.jpg?1386323400","site_screenshot_url":null,"triggers":[{"id":36,"message":"Are
         you nutz?"}],"completed_at":"","created_at":"2013-12-05 14:57:32 +0800","updated_at":"2013-12-06
         17:50:05 +0800"}]'
     http_version: '1.1'
     adapter_metadata:
       effective_url: !binary |-
-        aHR0cDovL2xvY2FsaG9zdDozMDAxLy9hcGkvdjIvY2FtcGFpZ25zP3Rva2Vu
+        aHR0cDovL2xvY2FsaG9zdDo5MDAwLy9hcGkvdjIvY2FtcGFpZ25zP3Rva2Vu
         PTZhNmIzNzg5OGYwMTc5NDA1ZjI2MmE5MzQzMjU4YWU2JmNvdW50cnk9bXk=
-  recorded_at: Tue, 01 Apr 2014 03:07:12 GMT
+  recorded_at: Tue, 08 Apr 2014 04:50:44 GMT
 recorded_with: VCR 2.9.0

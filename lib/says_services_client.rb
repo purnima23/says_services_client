@@ -10,4 +10,5 @@ Dir.glob(models).each {|file| require file}
 
 module SaysServicesClient
   class Campaign < Models::Campaign; end
+  class Share < Models::Share; end
 end

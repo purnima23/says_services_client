@@ -1,41 +1,81 @@
 module SaysServicesClient
   module Models
     class Campaign < Base
-      ATTRIBUTES = [:id, :user_id, :title, :site_url, :end_date, :photo, :campaign_about, :state, :featured, :supporters_count, :identifier, :start_date, :total_reward, :reward_amount, :reward_type, :reward_count, :bit_columns, :exceptional_url, :click_limit, :site_screenshot, :reference_cap_limit, :admin_category, :acquisitioin_reward_amount, :acquisition_reward_count, :preview_key, :acquisition_type, :completed_at, :total_unique_visits, :target_uv, :video_id, :country_id, :views_count, :client_domain_id, :type, :paused_at, :created_at, :updated_at]
-            
-      attr_accessor *ATTRIBUTES
-      attr_protected :id
+      attr_reader :friendly_id, :is_ended, :is_completed, :remaining_days, :total_available_reward, :per_uv_reward, :site_url, :thumbnail_url, :site_screenshot_url, :triggers      
+      attr_accessor :id, :title, :campaign_about, :supporters_count, :views_count, :completed_at, :created_at, :updated_at
+      
+      validates_presence_of :title
       
       class << self
         def find(campaign_id, options={})
+          includes = [options.symbolize_keys!.delete(:include) || []].flatten          
+          raise ActiveModel::MissingAttributeError.new("user_id") if includes.include?(:share_by_user_id) && !options.has_key?(:user_id)
+          
           conn = establish_connection("/api/v2/campaigns/#{campaign_id}", params: options)
           
           if block_given?
             conn.on_complete do |response|
-              data = new(JSON.parse(response.body))
-              yield data
+              campaign = new(JSON.parse(response.body), as: :admin)
+              if includes.include?(:share_by_user_id)
+                shares = request_share_by_user_id(options[:user_id], campaign.id)
+                campaign.instance_variable_set("@shares", shares)
+              end
+              yield campaign
             end
             SaysServicesClient::Config.hydra.queue(conn)
           else
             response = conn.run
-            new(JSON.parse(response.body))
+            campaign = new(JSON.parse(response.body), as: :admin)
+            if includes.include?(:share_by_user_id)
+              shares = request_share_by_user_id(options[:user_id], campaign.id)
+              campaign.instance_variable_set("@shares", shares)
+            end
+            campaign
           end
         end      
         
         def all(options={})
+          includes = [options.symbolize_keys!.delete(:include) || []].flatten
+          raise ActiveModel::MissingAttributeError.new("user_id") if includes.include?(:share_by_user_id) && !options.has_key?(:user_id)
+          
           conn = establish_connection("/api/v2/campaigns", params: options)
           
           if block_given?
             conn.on_complete do |response|
-              data = JSON.parse(response.body).collect {|campaign| new(campaign)}
-              yield data
+              campaigns = JSON.parse(response.body).collect {|campaign| new(campaign, as: :admin)}
+              if includes.include?(:share_by_user_id)
+                shares = request_share_by_user_id(options[:user_id], campaigns.map(&:id))
+                campaigns_shares_mapping(campaigns, shares)
+              end
+              yield campaigns
             end          
             SaysServicesClient::Config.hydra.queue(conn)
           else
             response = conn.run
-            JSON.parse(response.body).collect {|campaign| new(campaign)}
+            campaigns = JSON.parse(response.body).collect {|campaign| new(campaign, as: :admin)}
+            if includes.include?(:share_by_user_id)
+              shares = request_share_by_user_id(options[:user_id], campaigns.map(&:id))
+              campaigns_shares_mapping(campaigns, shares)
+            end
+            campaigns
           end
         end
+        
+        private
+        def campaigns_shares_mapping(campaigns, shares)
+          campaigns.each do |campaign|
+            campaign.instance_variable_set("@shares", shares.select {|s| s.campaign_id == campaign.id})
+          end
+        end
+        
+        def request_share_by_user_id(user_id, campaign_ids)
+          campaign_ids = (campaign_ids.is_a?(Array) ? campaign_ids : [campaign_ids])
+          SaysServicesClient::Share.find_by_user_id(user_id, campaign_ids: campaign_ids)
+        end
+      end
+      
+      def share_by_user_id(user_id)
+        (instance_variable_get("@shares") || []).find {|share| share.user_id == user_id}
       end
     end
   end
