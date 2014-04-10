@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SaysServicesClient::Models::Shares::ServiceConcerns do
+describe SaysServicesClient::Models::Shares::ApiServiceConcerns do
   context '#find_by_user_id_path' do
     it 'appends campaign_ids to URL if present in hash as integer' do
       path = SaysServicesClient::Share.send(:find_by_user_id_path, 23, campaign_ids: 2)

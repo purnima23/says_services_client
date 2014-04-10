@@ -8,7 +8,7 @@ module SaysServicesClient
       include ActiveModel::Conversion
       include ActiveModel::MassAssignmentSecurity
       include SaysServicesClient::Utils::ClassLevelInheritableAttributes
-      include SaysServicesClient::Utils::Crud
+      include SaysServicesClient::Utils::OperationConcerns
       
       inheritable_attributes :attributes
       # class level instance variable
@@ -27,6 +27,14 @@ module SaysServicesClient
           self.attributes = (self.attributes + args).uniq
           super *args
         end
+        
+        def instantiate(attributes=nil)
+          @new_record = false
+          model = self.allocate
+          model.send(:assign_reader_attrs, attributes, as: :admin) if attributes
+          model.assign_attributes(attributes, as: :admin) if attributes
+          model
+        end
       end
       
       # override AR#inspect to mimic the behavior
@@ -42,14 +50,6 @@ module SaysServicesClient
       def initialize(attributes=nil)
         @new_record = true
         self.attributes = attributes unless attributes.nil?
-      end
-      
-      def self.instantiate(attributes=nil)
-        @new_record = false
-        model = self.allocate
-        model.send(:assign_reader_attrs, attributes, as: :admin) if attributes
-        model.assign_attributes(attributes, as: :admin) if attributes
-        model
       end
       
       def new_record?

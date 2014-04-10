@@ -1,7 +1,7 @@
 module SaysServicesClient
   module Models
     module Campaigns
-      module ServiceConcerns
+      module ApiServiceConcerns
         extend ActiveSupport::Concern
   
         module ClassMethods

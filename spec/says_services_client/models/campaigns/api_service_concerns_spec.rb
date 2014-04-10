@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SaysServicesClient::Models::Campaigns::ServiceConcerns do
+describe SaysServicesClient::Models::Campaigns::ApiServiceConcerns do
   context '#find' do
     context 'include_share_by_user_id' do
       it 'should raise error if include share by user id without user_id' do

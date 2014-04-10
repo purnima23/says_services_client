@@ -1,12 +1,12 @@
 require 'says_services_client/models/campaigns/state_concerns'
-require 'says_services_client/models/campaigns/service_concerns'
+require 'says_services_client/models/campaigns/api_service_concerns'
 require 'says_services_client/models/campaigns/share_concerns'
 
 module SaysServicesClient
   module Models
     class Campaign < Base
       include SaysServicesClient::Models::Campaigns::StateConcerns
-      include SaysServicesClient::Models::Campaigns::ServiceConcerns
+      include SaysServicesClient::Models::Campaigns::ApiServiceConcerns
       include SaysServicesClient::Models::Campaigns::ShareConcerns
       
       attr_reader :friendly_id, :is_ended, :is_completed, :remaining_days, :total_available_reward, :per_uv_reward, :site_url, :thumbnail_url, :site_screenshot_url, :triggers, :tag_list, :requirement
