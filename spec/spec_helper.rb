@@ -28,6 +28,10 @@ def reset_class class_name
     attr_accessor :name, :email
     attr_reader :address
     attr_protected :email
+    
+    validates_presence_of :name
+    validates_presence_of :email, on: :create
+    validates_presence_of :address, on: :update
   end
   klass
 end

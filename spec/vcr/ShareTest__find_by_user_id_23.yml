@@ -19,20 +19,20 @@ http_interactions:
       X-UA-Compatible:
       - IE=Edge
       ETag:
-      - ! '"94dc1ad0b69b47bea15be9200de19bf2"'
+      - ! '"e0ee37d731bf800f03c5ff5f2e0d6dc6"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTM1OGU2ZDE2NjU2MmRlMTM4NDVjMGJhYmViNTI4MzRmBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCBNxeUwBAA%3D%3D--5a5aec48e1ce2f4471f25a508306206b360b008c;
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTM4ZDE0MWU0OWJmZTRiNDIwZWE3NTc5YzYwZTc2NjM0BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmkEuV8HJA%3D%3D--b081f334efda2d04d845064e9534ea4a0003b8aa;
         path=/; HttpOnly
-      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTM1OGU2ZDE2NjU2MmRlMTM4NDVjMGJhYmViNTI4MzRmBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCBNxeUwBAA%3D%3D--5a5aec48e1ce2f4471f25a508306206b360b008c;
-        path=/; expires=Wed, 08-Oct-2014 04:50:45 GMT
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTM4ZDE0MWU0OWJmZTRiNDIwZWE3NTc5YzYwZTc2NjM0BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmkEuV8HJA%3D%3D--b081f334efda2d04d845064e9534ea4a0003b8aa;
+        path=/; expires=Thu, 09-Oct-2014 07:07:36 GMT
       Content-Length:
-      - '199'
+      - '240'
       X-Request-Id:
-      - d4835f4f50c655a3209d2cd9d4eb3d60
+      - 095a2e551fb63d69226ef755de84d0e6
       X-Runtime:
-      - '0.216760'
+      - '0.144169'
       Connection:
       - keep-alive
       Server:
@@ -40,11 +40,11 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ! '[{"id":24,"share_url":"http://bit.ly/1gsXUNx","uniq_total_clicked_count":0,"total_clicked_count":0,"message":"Are
-        you nutz?","reward_count":"0.0","rewarded_uv_count":0,"user_id":23,"campaign_id":12}]'
+        you nutz?","reward_count":"0.0","rewarded_uv_count":0,"user_id":23,"campaign_id":12,"created_at":"2014-03-17T15:19:17+08:00"}]'
     http_version: '1.1'
     adapter_metadata:
       effective_url: !binary |-
         aHR0cDovL2xvY2FsaG9zdDo5MDAwLy9hcGkvdjIvc2hhcmVzL3VzZXJzLzIz
         P3Rva2VuPTZhNmIzNzg5OGYwMTc5NDA1ZjI2MmE5MzQzMjU4YWU2
-  recorded_at: Tue, 08 Apr 2014 04:50:45 GMT
+  recorded_at: Wed, 09 Apr 2014 07:07:36 GMT
 recorded_with: VCR 2.9.0

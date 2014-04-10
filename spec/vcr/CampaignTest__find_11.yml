@@ -19,20 +19,20 @@ http_interactions:
       X-UA-Compatible:
       - IE=Edge
       ETag:
-      - ! '"21bde48f1a352e8ed322b644b5c8b151"'
+      - ! '"73095496e933d95c7b3ab1430c4f496d"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWQ3NzVmY2Q4MzA2ZmJlNWVkODFhYmI3OGMxOTY0MTk3BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB0SF2%2BQ%3D--583ed0c3606cbf090dcde68debfd51726f617f37;
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTY3NDA4NjA2MzlmMGRkOGIxODM3YTIzNjVhNTdmYWZmBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB1Xlq5o%3D--7a2d39483527c8c157970edc418a6aa1aa93547b;
         path=/; HttpOnly
-      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWQ3NzVmY2Q4MzA2ZmJlNWVkODFhYmI3OGMxOTY0MTk3BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB0SF2%2BQ%3D--583ed0c3606cbf090dcde68debfd51726f617f37;
-        path=/; expires=Wed, 08-Oct-2014 04:50:44 GMT
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTY3NDA4NjA2MzlmMGRkOGIxODM3YTIzNjVhNTdmYWZmBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB1Xlq5o%3D--7a2d39483527c8c157970edc418a6aa1aa93547b;
+        path=/; expires=Thu, 09-Oct-2014 07:07:34 GMT
       Content-Length:
-      - '1089'
+      - '1283'
       X-Request-Id:
-      - 60ad9b2d38e84360efe03659aa682fb9
+      - 45d05df833a68e90c677ce8b6d83e2dc
       X-Runtime:
-      - '0.112216'
+      - '0.300300'
       Connection:
       - keep-alive
       Server:
@@ -42,16 +42,16 @@ http_interactions:
       string: ! '{"id":11,"friendly_id":"discover-share-get-paid-its-that-easy-in","title":"1.
         Discover 2. Share 3. Get paid - It''s that easy!","campaign_about":"<p>What?
         Get paid cash to share cool stuff with your friends? Yes, that''s it, join
-        and find out now!</p>","is_ended":false,"is_completed":false,"remaining_days":35704,"supporters_count":0,"views_count":1,"total_available_reward":"INR2","per_uv_reward":"INR2","site_url":"http://says.com/in/specials","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/11/photos/profile/flag_in.jpg?1386323395","site_screenshot_url":"https://says-development.s3.amazonaws.com/campaigns/11/site_screenshots/show/default_cover.jpg?1380018267","triggers":[{"id":32,"message":"What?
+        and find out now!</p>","is_ended":false,"is_completed":false,"remaining_days":35703,"supporters_count":0,"views_count":1,"total_available_reward":"INR2","per_uv_reward":"INR2","site_url":"http://says.com/in/specials","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/11/photos/profile/flag_in.jpg?1386323395","site_screenshot_url":"https://says-development.s3.amazonaws.com/campaigns/11/site_screenshots/show/default_cover.jpg?1380018267","triggers":[{"id":32,"message":"What?
         Get paid to share movie trailers and links?"},{"id":33,"message":"Don''t you
         want to be the 1st to share cool stuff and get rewarded?"},{"id":34,"message":"1.
         Discover 2. Share 3. Get paid - It''s that easy!"},{"id":35,"message":"Sign
         up to get money for sharing."}],"completed_at":"","created_at":"2013-09-24
-        18:24:27 +0800","updated_at":"2013-12-06 17:49:59 +0800"}'
+        18:24:27 +0800","updated_at":"2013-12-06 17:49:59 +0800","state":"ready","country":"india","tag_list":[],"no_facebook_sharing":false,"type":"CommercialCampaign","requirement":{"age_max":null,"age_min":null,"gender":null,"race":null,"city_names":null}}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: !binary |-
         aHR0cDovL2xvY2FsaG9zdDo5MDAwLy9hcGkvdjIvY2FtcGFpZ25zLzExP3Rv
         a2VuPTZhNmIzNzg5OGYwMTc5NDA1ZjI2MmE5MzQzMjU4YWU2
-  recorded_at: Tue, 08 Apr 2014 04:50:44 GMT
+  recorded_at: Wed, 09 Apr 2014 07:07:34 GMT
 recorded_with: VCR 2.9.0

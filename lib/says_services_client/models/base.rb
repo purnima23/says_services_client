@@ -1,6 +1,8 @@
 module SaysServicesClient
   module Models
     class Base < Utils::Connection
+      I18n.enforce_available_locales = true
+      
       include ActiveModel::Serializers::JSON
       include ActiveModel::Validations
       include ActiveModel::Conversion
@@ -37,9 +39,27 @@ module SaysServicesClient
         "#<#{self.class} #{inspection}>"
       end
   
-      def initialize(attributes=nil, options={})
-        self.send(:assign_reader_attrs, attributes, options) if attributes
-        assign_attributes(attributes, options) if attributes
+      def initialize(attributes=nil)
+        @new_record = true
+        self.attributes = attributes unless attributes.nil?
+      end
+      
+      def self.instantiate(attributes=nil)
+        @new_record = false
+        model = self.allocate
+        model.send(:assign_reader_attrs, attributes, as: :admin) if attributes
+        model.assign_attributes(attributes, as: :admin) if attributes
+        model
+      end
+      
+      def new_record?
+        @new_record
+      end
+      
+      def valid?(context = nil)
+        context ||= (new_record? ? :create : :update)
+        output = super(context)
+        errors.empty? && output
       end
   
       def attributes
@@ -63,7 +83,6 @@ module SaysServicesClient
               
       private
       def assign_reader_attrs(attributes, options={})
-        return unless options[:as]
         attributes.each do |key, value|
           unless respond_to?("#{key}=")
             instance_variable_set("@#{key}", value)
