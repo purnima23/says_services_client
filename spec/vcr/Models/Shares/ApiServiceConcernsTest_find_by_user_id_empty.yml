@@ -23,16 +23,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTc5NzExMTg2YjQ0YTczMGE0ODE2MDg3YjhjMjhlMmNlBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB%2BbBLfY%3D--b5deaa5c42bbdf872c04991460c17292161b3bce;
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJThjZTcyMjE4NmI2NDAwM2UzMmY2OTJlNzg3YTE5ZDA3BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB3nROl4%3D--9ea6be06bd182b208004078e364d4014c68fb135;
         path=/; HttpOnly
-      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTc5NzExMTg2YjQ0YTczMGE0ODE2MDg3YjhjMjhlMmNlBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB%2BbBLfY%3D--b5deaa5c42bbdf872c04991460c17292161b3bce;
-        path=/; expires=Thu, 09-Oct-2014 07:07:36 GMT
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJThjZTcyMjE4NmI2NDAwM2UzMmY2OTJlNzg3YTE5ZDA3BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB3nROl4%3D--9ea6be06bd182b208004078e364d4014c68fb135;
+        path=/; expires=Fri, 10-Oct-2014 10:24:57 GMT
       Content-Length:
       - '2'
       X-Request-Id:
-      - 23535d90137a2444c5018794393dd1e5
+      - 3cf72118ae2185da88161a01aa35bbba
       X-Runtime:
-      - '0.113196'
+      - '0.396603'
       Connection:
       - keep-alive
       Server:
@@ -46,5 +46,5 @@ http_interactions:
         aHR0cDovL2xvY2FsaG9zdDo5MDAwLy9hcGkvdjIvc2hhcmVzL3VzZXJzLzky
         ODMxMjMxMjM/dG9rZW49NmE2YjM3ODk4ZjAxNzk0MDVmMjYyYTkzNDMyNThh
         ZTY=
-  recorded_at: Wed, 09 Apr 2014 07:07:36 GMT
+  recorded_at: Thu, 10 Apr 2014 10:24:57 GMT
 recorded_with: VCR 2.9.0

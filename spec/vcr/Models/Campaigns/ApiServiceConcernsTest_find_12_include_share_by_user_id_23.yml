@@ -1,0 +1,100 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:9000//api/v2/campaigns/12?token=6a6b37898f0179405f262a9343258ae6&user_id=23
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - ! '"faa489a3248393886031d529bf881054"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTM0YWU1NGZjYmQ2Nzg4ZWU4OTQwMjdkNjcwZGU3Nzk5BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmkE0gzrOw%3D%3D--fa0d95c2632ca9a6f914fa6fb6474d7b5cf472f3;
+        path=/; HttpOnly
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTM0YWU1NGZjYmQ2Nzg4ZWU4OTQwMjdkNjcwZGU3Nzk5BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmkE0gzrOw%3D%3D--fa0d95c2632ca9a6f914fa6fb6474d7b5cf472f3;
+        path=/; expires=Fri, 10-Oct-2014 10:24:54 GMT
+      Content-Length:
+      - '807'
+      X-Request-Id:
+      - 656a6dd7f2f760cb1304ea7bca3782e9
+      X-Runtime:
+      - '0.376448'
+      Connection:
+      - keep-alive
+      Server:
+      - thin 1.3.1 codename Triple Espresso
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":12,"friendly_id":"kanasai","title":"kanasai","campaign_about":"<p>omg</p>","is_ended":false,"is_completed":false,"remaining_days":246,"supporters_count":10,"views_count":25,"total_available_reward":"RM10","per_uv_reward":"RM0.10","site_url":"http://www.yahoo.com","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/12/photos/profile/img-1200x630.jpg?1386323400","site_screenshot_url":null,"triggers":[{"id":36,"message":"Are
+        you nutz?"},{"id":37,"message":"a=Alamak"}],"completed_at":"","created_at":"2013-12-05
+        14:57:32 +0800","updated_at":"2014-04-09 17:03:29 +0800","state":"active","country":"malaysia","tag_list":[],"no_facebook_sharing":false,"type":"CommercialCampaign","requirement":{"age_max":null,"age_min":null,"gender":"Male","race":[],"city_names":["Perak","Selangor"]}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: !binary |-
+        aHR0cDovL2xvY2FsaG9zdDo5MDAwLy9hcGkvdjIvY2FtcGFpZ25zLzEyP3Rv
+        a2VuPTZhNmIzNzg5OGYwMTc5NDA1ZjI2MmE5MzQzMjU4YWU2JnVzZXJfaWQ9
+        MjM=
+  recorded_at: Thu, 10 Apr 2014 10:24:54 GMT
+- request:
+    method: get
+    uri: http://localhost:9000//api/v2/shares/users/23?campaign_ids=12&token=6a6b37898f0179405f262a9343258ae6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - ! '"631eccc4edb360ed1aea122e317c67fe"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWViMTNjOTkyYWYxMDYzNDE2MzY4MjlkZTRhZjhkZjhlBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCPwm2S0CAA%3D%3D--3b000f88c5dd7445fb74a58878a1bec72a29ee2a;
+        path=/; HttpOnly
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWViMTNjOTkyYWYxMDYzNDE2MzY4MjlkZTRhZjhkZjhlBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCPwm2S0CAA%3D%3D--3b000f88c5dd7445fb74a58878a1bec72a29ee2a;
+        path=/; expires=Fri, 10-Oct-2014 10:24:55 GMT
+      Content-Length:
+      - '243'
+      X-Request-Id:
+      - 8b65018c357b3f96673b9415d6c1c31b
+      X-Runtime:
+      - '0.115247'
+      Connection:
+      - keep-alive
+      Server:
+      - thin 1.3.1 codename Triple Espresso
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":33,"share_url":"http://bit.ly/1lMjbaG","uniq_total_clicked_count":0,"total_clicked_count":0,"message":"Are
+        you nutz?","reward_count":"RM0.00","rewarded_uv_count":0,"user_id":23,"campaign_id":12,"created_at":"2014-04-10T18:20:14+08:00"}]'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: !binary |-
+        aHR0cDovL2xvY2FsaG9zdDo5MDAwLy9hcGkvdjIvc2hhcmVzL3VzZXJzLzIz
+        P2NhbXBhaWduX2lkcz0xMiZ0b2tlbj02YTZiMzc4OThmMDE3OTQwNWYyNjJh
+        OTM0MzI1OGFlNg==
+  recorded_at: Thu, 10 Apr 2014 10:24:55 GMT
+recorded_with: VCR 2.9.0

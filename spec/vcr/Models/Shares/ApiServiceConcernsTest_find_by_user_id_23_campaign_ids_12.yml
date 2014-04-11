@@ -19,33 +19,33 @@ http_interactions:
       X-UA-Compatible:
       - IE=Edge
       ETag:
-      - ! '"e0ee37d731bf800f03c5ff5f2e0d6dc6"'
+      - ! '"631eccc4edb360ed1aea122e317c67fe"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTQxYTM4ODI4NWUxNzFlMGRmYjQ2ZmFkNzdiYmI2NzcyBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB8poeoY%3D--d34a1913eeb5af82f96bb123608c312d4be5cfcc;
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTIxZDU3Zjk0NmVlNjVkNGFjMGRmNzc2MzBiY2QyNzkwBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCPNajzsBAA%3D%3D--df638c7879713242070bdbbcb14ff237215ee211;
         path=/; HttpOnly
-      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTQxYTM4ODI4NWUxNzFlMGRmYjQ2ZmFkNzdiYmI2NzcyBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB8poeoY%3D--d34a1913eeb5af82f96bb123608c312d4be5cfcc;
-        path=/; expires=Thu, 09-Oct-2014 07:07:36 GMT
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTIxZDU3Zjk0NmVlNjVkNGFjMGRmNzc2MzBiY2QyNzkwBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCPNajzsBAA%3D%3D--df638c7879713242070bdbbcb14ff237215ee211;
+        path=/; expires=Fri, 10-Oct-2014 10:24:57 GMT
       Content-Length:
-      - '240'
+      - '243'
       X-Request-Id:
-      - 15fa561388fd55a31d20949d89375913
+      - a43a67acffcba180c514b5e554c1ecb7
       X-Runtime:
-      - '0.321156'
+      - '0.134363'
       Connection:
       - keep-alive
       Server:
       - thin 1.3.1 codename Triple Espresso
     body:
       encoding: US-ASCII
-      string: ! '[{"id":24,"share_url":"http://bit.ly/1gsXUNx","uniq_total_clicked_count":0,"total_clicked_count":0,"message":"Are
-        you nutz?","reward_count":"0.0","rewarded_uv_count":0,"user_id":23,"campaign_id":12,"created_at":"2014-03-17T15:19:17+08:00"}]'
+      string: ! '[{"id":33,"share_url":"http://bit.ly/1lMjbaG","uniq_total_clicked_count":0,"total_clicked_count":0,"message":"Are
+        you nutz?","reward_count":"RM0.00","rewarded_uv_count":0,"user_id":23,"campaign_id":12,"created_at":"2014-04-10T18:20:14+08:00"}]'
     http_version: '1.1'
     adapter_metadata:
       effective_url: !binary |-
         aHR0cDovL2xvY2FsaG9zdDo5MDAwLy9hcGkvdjIvc2hhcmVzL3VzZXJzLzIz
         P2NhbXBhaWduX2lkcz0xMiZ0b2tlbj02YTZiMzc4OThmMDE3OTQwNWYyNjJh
         OTM0MzI1OGFlNg==
-  recorded_at: Wed, 09 Apr 2014 07:07:36 GMT
+  recorded_at: Thu, 10 Apr 2014 10:24:57 GMT
 recorded_with: VCR 2.9.0

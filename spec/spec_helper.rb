@@ -25,7 +25,7 @@ def reset_class class_name
   klass = Object.const_set(class_name, Class.new(SaysServicesClient::Models::Base))
 
   klass.class_eval do
-    attr_accessor :name, :email
+    attr_accessor :name, :email, :id
     attr_reader :address
     attr_protected :email
     

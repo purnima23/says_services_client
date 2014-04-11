@@ -126,11 +126,11 @@ describe SaysServicesClient::Models::Base do
   
   context '#attributes' do
     it 'returns hash' do
-      Dummy.new.attributes.should eq({"name" => nil, "email" => nil, "address" => nil})
+      Dummy.new.attributes.should eq({"name" => nil, "email" => nil, "id" => nil, "address" => nil})
       Dummy.any_instance.stub(:name).and_return("name")
       Dummy.any_instance.stub(:email).and_return("email")
       Dummy.any_instance.stub(:address).and_return("malaysia")
-      Dummy.new.attributes.should eq({"name" => 'name', "email" => 'email', "address" => 'malaysia'})
+      Dummy.new.attributes.should eq({"name" => 'name', "email" => 'email', "id" => nil, "address" => 'malaysia'})
     end
   end
   
@@ -138,7 +138,7 @@ describe SaysServicesClient::Models::Base do
     it 'sets instance variables and skip protected attributes' do
       dummy = Dummy.new
       dummy.attributes = {name: 'test', email: 'email@e.mail'}
-      dummy.attributes.should eq({"name" => 'test', "email" => nil, "address" => nil})
+      dummy.attributes.should eq({"name" => 'test', "email" => nil, "id"=>nil, "address" => nil})
     end
   end
   
@@ -146,13 +146,13 @@ describe SaysServicesClient::Models::Base do
     it 'sets instance variables and skip protected attributes' do
       dummy = Dummy.new
       dummy.assign_attributes({name: 'test', email: 'email@e.mail'})
-      dummy.attributes.should eq({"name" => 'test', "email" => nil, "address" => nil})
+      dummy.attributes.should eq({"name" => 'test', "email" => nil, "id"=>nil, "address" => nil})
     end
     
     it 'sets instance variables as admin' do
       dummy = Dummy.new
       dummy.assign_attributes({name: 'test', email: 'email@e.mail'}, as: :admin)
-      dummy.attributes.should eq({"name" => 'test', "email" => 'email@e.mail', "address" => nil})
+      dummy.attributes.should eq({"name" => 'test', "email" => 'email@e.mail', "id"=>nil, "address" => nil})
     end
   end
   

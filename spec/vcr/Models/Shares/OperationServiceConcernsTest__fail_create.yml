@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:9000/api/v2/shares/campaigns/12/users/28?token=6a6b37898f0179405f262a9343258ae6&username=newbie&message=Are%20you%20nutz%3F
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - ! '"529ef4375eda0c7b718ef506a92f074c"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTdhNTdmOGExNzNlNDc5YzJkM2Y1ZGE1NzgzZTkwNjA5BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCBbXk%2FwBAA%3D%3D--38e4e280b92a3fecf3a8592c40c18136e46e0f9e;
+        path=/; HttpOnly
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTdhNTdmOGExNzNlNDc5YzJkM2Y1ZGE1NzgzZTkwNjA5BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCBbXk%2FwBAA%3D%3D--38e4e280b92a3fecf3a8592c40c18136e46e0f9e;
+        path=/; expires=Fri, 10-Oct-2014 10:17:11 GMT
+      Content-Length:
+      - '31'
+      X-Request-Id:
+      - 45e6cef9cd7c9f04dcd3c6b2e7377d30
+      X-Runtime:
+      - '0.114538'
+      Connection:
+      - keep-alive
+      Server:
+      - thin 1.3.1 codename Triple Espresso
+    body:
+      encoding: US-ASCII
+      string: ! '{"error":"User can''t be blank"}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: !binary |-
+        aHR0cDovL2xvY2FsaG9zdDo5MDAwL2FwaS92Mi9zaGFyZXMvY2FtcGFpZ25z
+        LzEyL3VzZXJzLzI4P3Rva2VuPTZhNmIzNzg5OGYwMTc5NDA1ZjI2MmE5MzQz
+        MjU4YWU2JnVzZXJuYW1lPW5ld2JpZSZtZXNzYWdlPUFyZSUyMHlvdSUyMG51
+        dHolM0Y=
+  recorded_at: Thu, 10 Apr 2014 10:17:11 GMT
+recorded_with: VCR 2.9.0
