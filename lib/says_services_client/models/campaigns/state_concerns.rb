@@ -23,6 +23,26 @@ module SaysServicesClient
         def scheduled?
           self.state == 'scheduled'
         end
+        
+        def active?
+          self.state == 'active'
+        end
+        
+        def completed?
+          self.state == 'completed'
+        end
+        
+        def archiving?
+          selft.state == 'archiving'
+        end
+        
+        def archived?
+          self.state == 'archived'
+        end
+        
+        def abandoned?
+          self.state == 'abandoned'
+        end
       end
     end
   end
