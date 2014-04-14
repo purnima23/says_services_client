@@ -13,24 +13,15 @@ module SaysServicesClient
           
             if block_given?
               conn.on_complete do |response|
-                campaign = instantiate(JSON.parse(response.body))
-                if includes.include?(:share_by_user_id) && !options[:user_id].blank?
-                  shares = request_share_by_user_id(options[:user_id], campaign.id)
-                  campaign.instance_variable_set("@shares", shares)
-                end
+                campaign = parse_campaign(response.body, options: options, includes: includes)
                 yield campaign
               end
               SaysServicesClient::Config.hydra.queue(conn)
             else
               response = conn.run
-              campaign = instantiate(JSON.parse(response.body))
-              if includes.include?(:share_by_user_id) && !options[:user_id].blank?
-                shares = request_share_by_user_id(options[:user_id], campaign.id)
-                campaign.instance_variable_set("@shares", shares)
-              end
-              campaign
+              parse_campaign(response.body, options: options, includes: includes)
             end
-          end      
+          end
         
           def all(options={})
             includes = [options.symbolize_keys!.delete(:include) || []].flatten
@@ -40,23 +31,30 @@ module SaysServicesClient
           
             if block_given?
               conn.on_complete do |response|
-                campaigns = JSON.parse(response.body)["campaigns"].collect {|campaign| instantiate(campaign)}
-                if includes.include?(:share_by_user_id) && !options[:user_id].blank?
-                  shares = request_share_by_user_id(options[:user_id], campaigns.map(&:id))
-                  campaigns_shares_mapping(campaigns, shares)
-                end
+                campaigns = parse_all_campaigns(response.body, options: options, includes: includes)
                 yield campaigns
               end          
               SaysServicesClient::Config.hydra.queue(conn)
             else
               response = conn.run
-              campaigns = JSON.parse(response.body)["campaigns"].collect {|campaign| instantiate(campaign)}
-              if includes.include?(:share_by_user_id) && !options[:user_id].blank?
-                shares = request_share_by_user_id(options[:user_id], campaigns.map(&:id))
-                campaigns_shares_mapping(campaigns, shares)
-              end
-              campaigns
+              parse_all_campaigns(response.body, options: options, includes: includes)
             end
+          end
+          
+          def parse_all_campaigns(json, args={})
+            args[:includes] ||= []
+            args[:options] ||= {}
+            campaigns = JSON.parse(json)["campaigns"].collect {|campaign| instantiate(campaign)}
+            include_request_share_by_user_id(args[:options][:user_id], campaigns) if args[:includes].include?(:share_by_user_id) && !args[:options][:user_id].blank?
+            campaigns
+          end
+          
+          def parse_campaign(json, args={})
+            args[:includes] ||= []
+            args[:options] ||= {}
+            campaign = instantiate(JSON.parse(json))
+            include_request_share_by_user_id(args[:options][:user_id], [campaign]) if args[:includes].include?(:share_by_user_id) && !args[:options][:user_id].blank?
+            campaign
           end
         end
       end

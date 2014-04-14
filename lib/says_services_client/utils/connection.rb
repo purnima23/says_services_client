@@ -8,9 +8,9 @@ module SaysServicesClient
           Typhoeus::Request.new(endpoint + path, options)
         end
         
-        # raise error if no endpoint
         def endpoint
-          SaysServicesClient::Config.endpoint.has_key?(service_name) ? SaysServicesClient::Config.endpoint.fetch(service_name) : nil
+          raise MissingEndpoint.new("Missing #{service_name} endpoint") unless SaysServicesClient::Config.endpoint.has_key?(service_name)
+          SaysServicesClient::Config.endpoint.fetch(service_name)
         end
         
         def service_name

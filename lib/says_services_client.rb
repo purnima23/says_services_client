@@ -9,6 +9,10 @@ models = File.join(File.dirname(__FILE__), "says_services_client", "models", "*.
 Dir.glob(models).each {|file| require file}
 
 module SaysServicesClient
+  class MissingEndpoint < StandardError
+  end
+  
   class Campaign < Models::Campaign; end
   class Share < Models::Share; end
+  class CampaignList < Models::CampaignList; end
 end

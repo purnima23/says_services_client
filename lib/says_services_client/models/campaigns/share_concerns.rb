@@ -5,6 +5,11 @@ module SaysServicesClient
         extend ActiveSupport::Concern
         
         module ClassMethods
+          def include_request_share_by_user_id(user_id, campaigns)
+            shares = request_share_by_user_id(user_id, campaigns.map(&:id))
+            campaigns_shares_mapping(campaigns, shares)
+          end
+          
           private
           def campaigns_shares_mapping(campaigns, shares)
             campaigns.each do |campaign|
