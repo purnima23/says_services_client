@@ -26,7 +26,7 @@ module SaysServicesClient
             args[:includes] ||= []
             args[:options] ||= {}
             shares = JSON.parse(json)["shares"].collect {|share| instantiate(share)}
-            include_shared_campaign(shares.map(&:campaign_id)) if args[:includes].include?(:campaign)
+            include_shared_campaign(shares) if args[:includes].include?(:campaign)
             shares
           end
           

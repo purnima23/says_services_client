@@ -5,8 +5,8 @@ module SaysServicesClient
         extend ActiveSupport::Concern
         
         module ClassMethods
-          def include_shared_campaign(shares, campaign_ids)
-            shared_campaigns = SaysServicesClient::Campaign.all(ids: campaign_ids)
+          def include_shared_campaign(shares)
+            shared_campaigns = SaysServicesClient::Campaign.all(ids: shares.map(&:campaign_id))
             shares_campaigns_mapping(shares, shared_campaigns)
           end
           
