@@ -13,7 +13,7 @@ module SaysServicesClient
           private
           def shares_campaigns_mapping(shares, shared_campaigns)
             shares.each do |share|
-              share.instance_variable_set("@campaign", shared_campaigns.select {|c| c.id == share.campaign_id})
+              share.instance_variable_set("@campaign", shared_campaigns.first {|c| c.id == share.campaign_id})
             end
           end
         end

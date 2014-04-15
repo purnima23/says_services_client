@@ -8,6 +8,7 @@ describe SaysServicesClient::Models::Shares::SharedCampaignConcerns do
       VCR.use_cassette 'Models/Shares/SharedCampaignTest/include_shared_campaign' do
         SaysServicesClient::Share.include_shared_campaign([share, share2])
       end
+      share.campaign.is_a?(SaysServicesClient::Campaign).should be_true
       share.campaign.should_not be_nil
       share2.campaign.should_not be_nil
     end
@@ -19,7 +20,7 @@ describe SaysServicesClient::Models::Shares::SharedCampaignConcerns do
       share = SaysServicesClient::Share.new(campaign_id: 3)
       
       SaysServicesClient::Share.send(:shares_campaigns_mapping, [share], [campaign])
-      share.instance_variable_get("@campaign").should_not be_empty
+      share.instance_variable_get("@campaign").should_not be_blank
     end
   end
 
