@@ -19,20 +19,20 @@ http_interactions:
       X-UA-Compatible:
       - IE=Edge
       ETag:
-      - ! '"1dfc918c059fa598bfe770ea14a9e14c"'
+      - ! '"ddbd3ae523dbe2b7b84892a1ed821d62"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWIxYjg0ZjZkYTNmNTVjMTk4MWMyZTcxNDhkM2MyNGY1BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCN7y2woCAA%3D%3D--d0f1c4d0776dc84bd3fc4a6281b19bd71539374f;
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWVlZTg1MTUzMzQ1Yjc5NzA0YjE4MWJiYTk1YmEwNzE5BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCFgvAKYBAA%3D%3D--2a30d21a107cc19bb0be3621b7850ece8045239b;
         path=/; HttpOnly
-      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWIxYjg0ZjZkYTNmNTVjMTk4MWMyZTcxNDhkM2MyNGY1BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCN7y2woCAA%3D%3D--d0f1c4d0776dc84bd3fc4a6281b19bd71539374f;
-        path=/; expires=Tue, 14-Oct-2014 09:47:50 GMT
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWVlZTg1MTUzMzQ1Yjc5NzA0YjE4MWJiYTk1YmEwNzE5BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCFgvAKYBAA%3D%3D--2a30d21a107cc19bb0be3621b7850ece8045239b;
+        path=/; expires=Wed, 15-Oct-2014 08:11:37 GMT
       Content-Length:
       - '5008'
       X-Request-Id:
-      - 2f0f04ccf9a8d4732f8468ed08252d45
+      - f6d33ac5ce5bc7edc754995d6b2ca46c
       X-Runtime:
-      - '0.140892'
+      - '0.147451'
       Connection:
       - keep-alive
       Server:
@@ -65,7 +65,7 @@ http_interactions:
         0px !important; font-size: 20px; float: none !important; padding: 0px !important;
         position: relative !important; top: -0.125em !important; vertical-align: baseline
         !important; background-position: initial initial !important; background-repeat:
-        initial initial !important;\">+</span>&nbsp;RUNNING APP FOR iPHONE AND ANDROID</span></h2>","is_ended":false,"is_completed":false,"remaining_days":490,"supporters_count":2,"views_count":42,"total_available_reward":"RM20","per_uv_reward":"RM0.20","site_url":"http://www.nike.com/my/en_gb/","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/2/photos/profile/NIKE_Wallpaper_a0r3y.jpg?1386323371","site_screenshot_url":null,"triggers":[{"id":5,"message":"THE
+        initial initial !important;\">+</span>&nbsp;RUNNING APP FOR iPHONE AND ANDROID</span></h2>","is_ended":false,"is_completed":false,"remaining_days":489,"supporters_count":2,"views_count":42,"total_available_reward":"RM20","per_uv_reward":"RM0.20","site_url":"http://www.nike.com/my/en_gb/","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/2/photos/profile/NIKE_Wallpaper_a0r3y.jpg?1386323371","site_screenshot_url":null,"triggers":[{"id":5,"message":"THE
         NEW NIKE+ RUNNING APP FOR iPHONE AND ANDROID"},{"id":7,"message":"Just do
         it"},{"id":8,"message":"Dont do it"}],"completed_at":"2013-09-25 17:25:09
         +0800","created_at":"2013-05-28 18:45:11 +0800","updated_at":"2013-12-06 17:49:32
@@ -73,11 +73,11 @@ http_interactions:
         cry","campaign_about":"<p><span style=\"font-weight: bold; color: #444444;
         font-family: arial, sans-serif; font-size: small; line-height: 16px;\">WarCry</span><span
         style=\"color: #444444; font-family: arial, sans-serif; font-size: small;
-        line-height: 16px;\">&nbsp;- mmorpgs games reviews news and more.</span></p>","is_ended":false,"is_completed":false,"remaining_days":416,"supporters_count":21,"views_count":177,"total_available_reward":"RM8","per_uv_reward":"RM0.40","site_url":"http://www.warcry.com","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/3/photos/profile/img-1200x630.jpg?1386323373","site_screenshot_url":null,"triggers":[{"id":6,"message":"This
+        line-height: 16px;\">&nbsp;- mmorpgs games reviews news and more.</span></p>","is_ended":false,"is_completed":false,"remaining_days":415,"supporters_count":22,"views_count":177,"total_available_reward":"RM8","per_uv_reward":"RM0.40","site_url":"http://www.warcry.com","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/3/photos/profile/img-1200x630.jpg?1386323373","site_screenshot_url":null,"triggers":[{"id":6,"message":"This
         is a war cry for the warriors. Well this team out of Chicago is definitely
         a group of warriors"},{"id":25,"message":"bodoh #2"},{"id":26,"message":"bodoh
         #3"}],"completed_at":"2013-09-26 14:51:04 +0800","created_at":"2013-06-04
-        11:22:15 +0800","updated_at":"2013-12-06 17:49:38 +0800","state":"active","country":"malaysia","tag_list":["test","zenith"],"no_facebook_sharing":false,"type":"CommercialCampaign","requirement":{"age_max":null,"age_min":null,"gender":null,"race":null,"city_names":null}},{"id":12,"friendly_id":"kanasai","title":"kanasai","campaign_about":"<p>omg</p>","is_ended":false,"is_completed":false,"remaining_days":242,"supporters_count":10,"views_count":25,"total_available_reward":"RM10","per_uv_reward":"RM0.10","site_url":"http://www.yahoo.com","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/12/photos/profile/img-1200x630.jpg?1386323400","site_screenshot_url":null,"triggers":[{"id":36,"message":"Are
+        11:22:15 +0800","updated_at":"2013-12-06 17:49:38 +0800","state":"active","country":"malaysia","tag_list":["test","zenith"],"no_facebook_sharing":false,"type":"CommercialCampaign","requirement":{"age_max":null,"age_min":null,"gender":null,"race":null,"city_names":null}},{"id":12,"friendly_id":"kanasai","title":"kanasai","campaign_about":"<p>omg</p>","is_ended":false,"is_completed":false,"remaining_days":241,"supporters_count":11,"views_count":25,"total_available_reward":"RM10","per_uv_reward":"RM0.10","site_url":"http://www.yahoo.com","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/12/photos/profile/img-1200x630.jpg?1386323400","site_screenshot_url":null,"triggers":[{"id":36,"message":"Are
         you nutz?"},{"id":37,"message":"a=Alamak"}],"completed_at":"","created_at":"2013-12-05
         14:57:32 +0800","updated_at":"2014-04-09 17:03:29 +0800","state":"active","country":"malaysia","tag_list":[],"no_facebook_sharing":false,"type":"CommercialCampaign","requirement":{"age_max":null,"age_min":null,"gender":"Male","race":[],"city_names":["Perak","Selangor"]}}],"offset":0}'
     http_version: '1.1'
@@ -85,5 +85,5 @@ http_interactions:
       effective_url: !binary |-
         aHR0cDovL2xvY2FsaG9zdDo5MDAwLy9hcGkvdjIvY2FtcGFpZ25zP3Rva2Vu
         PTZhNmIzNzg5OGYwMTc5NDA1ZjI2MmE5MzQzMjU4YWU2JmNvdW50cnk9bXk=
-  recorded_at: Mon, 14 Apr 2014 09:47:50 GMT
+  recorded_at: Tue, 15 Apr 2014 08:11:37 GMT
 recorded_with: VCR 2.9.0

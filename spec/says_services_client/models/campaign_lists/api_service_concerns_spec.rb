@@ -4,7 +4,7 @@ describe SaysServicesClient::Models::CampaignLists::ApiServiceConcerns do
   context '#for' do
     context 'include_share_by_user_id' do
       it 'should raise error if include share by user id without user_id' do
-        VCR.use_cassette 'Models/CampaignLists/ApiServiceConcernsTest#all_country_my_include_share_by_user_id_23' do
+        VCR.use_cassette 'Models/CampaignLists/ApiServiceConcernsTest/all_country_my_include_share_by_user_id_23' do
           expect do
             @list = SaysServicesClient::CampaignList.for(country: 'my', include: :share_by_user_id)
           end.to raise_error
@@ -12,7 +12,7 @@ describe SaysServicesClient::Models::CampaignLists::ApiServiceConcerns do
       end
       
       it 'should ignore include_share_by_user_id request if user_id is blank' do
-        VCR.use_cassette 'Models/CampaignLists/ApiServiceConcernsTest#all_country_my_include_share_by_user_id_blank' do
+        VCR.use_cassette 'Models/CampaignLists/ApiServiceConcernsTest/all_country_my_include_share_by_user_id_blank' do
           SaysServicesClient::CampaignList.for(country: 'my', include: :share_by_user_id, user_id: nil) do |c|
             @list = c
           end
@@ -26,7 +26,7 @@ describe SaysServicesClient::Models::CampaignLists::ApiServiceConcerns do
     
     context 'with block given' do
       it 'returns all campaigns' do
-        VCR.use_cassette 'Models/CampaignLists/ApiServiceConcernsTest#all' do
+        VCR.use_cassette 'Models/CampaignLists/ApiServiceConcernsTest/all' do
           SaysServicesClient::CampaignList.for do |c|
             @list = c
           end
@@ -36,7 +36,7 @@ describe SaysServicesClient::Models::CampaignLists::ApiServiceConcerns do
       end
     
       it 'returns only MY campaigns if country is specified' do
-        VCR.use_cassette 'Models/CampaignLists/ApiServiceConcernsTest#all_country_my' do
+        VCR.use_cassette 'Models/CampaignLists/ApiServiceConcernsTest/all_country_my' do
           SaysServicesClient::CampaignList.for(country: 'my') do |c|
             @list = c
           end
@@ -46,7 +46,7 @@ describe SaysServicesClient::Models::CampaignLists::ApiServiceConcerns do
       end
       
       it 'can include share by user id' do
-        VCR.use_cassette 'Models/CampaignLists/ApiServiceConcernsTest#all_country_my_include_share_by_user_id_23' do
+        VCR.use_cassette 'Models/CampaignLists/ApiServiceConcernsTest/all_country_my_include_share_by_user_id_23' do
           SaysServicesClient::CampaignList.for(country: 'my', include: :share_by_user_id, user_id: 23) do |c|
             @list = c
           end
@@ -67,21 +67,21 @@ describe SaysServicesClient::Models::CampaignLists::ApiServiceConcerns do
     
     context 'without block given' do
       it 'returns all campaigns' do
-        VCR.use_cassette 'Models/CampaignLists/ApiServiceConcernsTest#all' do
+        VCR.use_cassette 'Models/CampaignLists/ApiServiceConcernsTest/all' do
           @list = SaysServicesClient::CampaignList.for
         end
         @list.campaigns.size.should eq(4)
       end
     
       it 'returns only MY campaigns if country is specified' do
-        VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest#all_country_my' do
+        VCR.use_cassette 'Models/CampaignLists/ApiServiceConcernsTest/all_country_my' do
           @list = SaysServicesClient::CampaignList.for(country: 'my')
         end
         @list.campaigns.size.should eq(3)
       end
       
       it 'can include share by user id' do
-        VCR.use_cassette 'Models/CampaignList/ApiServiceConcernsTest#all_country_my_include_share_by_user_id_23' do
+        VCR.use_cassette 'Models/CampaignLists/ApiServiceConcernsTest/all_country_my_include_share_by_user_id_23' do
           @list = SaysServicesClient::CampaignList.for(country: 'my', include: :share_by_user_id, user_id: 23)
           HYDRA.run
         end

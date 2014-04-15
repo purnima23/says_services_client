@@ -19,32 +19,32 @@ http_interactions:
       X-UA-Compatible:
       - IE=Edge
       ETag:
-      - ! '"d751713988987e9331980363e24189ce"'
+      - ! '"6164d5878bcab2864be1d49a454bd707"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJThjZTcyMjE4NmI2NDAwM2UzMmY2OTJlNzg3YTE5ZDA3BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB3nROl4%3D--9ea6be06bd182b208004078e364d4014c68fb135;
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJThkZmIxYmZjYTI4MmRlNzVlYmFiMmVmNTU3YWUzNTQ2BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCPaZIdkBAA%3D%3D--cfda4cabd1c934d5a11dbc88a683e2fc3dac4977;
         path=/; HttpOnly
-      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJThjZTcyMjE4NmI2NDAwM2UzMmY2OTJlNzg3YTE5ZDA3BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB3nROl4%3D--9ea6be06bd182b208004078e364d4014c68fb135;
-        path=/; expires=Fri, 10-Oct-2014 10:24:57 GMT
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJThkZmIxYmZjYTI4MmRlNzVlYmFiMmVmNTU3YWUzNTQ2BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCPaZIdkBAA%3D%3D--cfda4cabd1c934d5a11dbc88a683e2fc3dac4977;
+        path=/; expires=Wed, 15-Oct-2014 08:13:42 GMT
       Content-Length:
-      - '2'
+      - '24'
       X-Request-Id:
-      - 3cf72118ae2185da88161a01aa35bbba
+      - a485ba9acd7ab6e262546c2c12cc0d5d
       X-Runtime:
-      - '0.396603'
+      - '0.231772'
       Connection:
       - keep-alive
       Server:
       - thin 1.3.1 codename Triple Espresso
     body:
       encoding: US-ASCII
-      string: ! '[]'
+      string: ! '{"shares":[],"offset":0}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: !binary |-
         aHR0cDovL2xvY2FsaG9zdDo5MDAwLy9hcGkvdjIvc2hhcmVzL3VzZXJzLzky
         ODMxMjMxMjM/dG9rZW49NmE2YjM3ODk4ZjAxNzk0MDVmMjYyYTkzNDMyNThh
         ZTY=
-  recorded_at: Thu, 10 Apr 2014 10:24:57 GMT
+  recorded_at: Tue, 15 Apr 2014 08:13:42 GMT
 recorded_with: VCR 2.9.0

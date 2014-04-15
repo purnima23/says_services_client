@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:9000/api/v2/shares/campaigns/12/users/28?token=6a6b37898f0179405f262a9343258ae6&username=newbie&message=Are%20you%20nutz%3F
+    uri: http://localhost:9000/api/v2/shares/campaigns/12/users/23?token=6a6b37898f0179405f262a9343258ae6&username=newbie&message=Are%20you%20nutz%3F
     body:
       encoding: US-ASCII
       string: ''
@@ -23,16 +23,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTdhNTdmOGExNzNlNDc5YzJkM2Y1ZGE1NzgzZTkwNjA5BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCBbXk%2FwBAA%3D%3D--38e4e280b92a3fecf3a8592c40c18136e46e0f9e;
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWJjNzU3OWZlOTE3ZGU4NWE1ZDU4Mzc1NjYxNjYwOTExBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB1MH0IE%3D--7a29af98bdec6481d6fd7ea77633931a6f828fbf;
         path=/; HttpOnly
-      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTdhNTdmOGExNzNlNDc5YzJkM2Y1ZGE1NzgzZTkwNjA5BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCBbXk%2FwBAA%3D%3D--38e4e280b92a3fecf3a8592c40c18136e46e0f9e;
-        path=/; expires=Fri, 10-Oct-2014 10:17:11 GMT
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWJjNzU3OWZlOTE3ZGU4NWE1ZDU4Mzc1NjYxNjYwOTExBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB1MH0IE%3D--7a29af98bdec6481d6fd7ea77633931a6f828fbf;
+        path=/; expires=Wed, 15-Oct-2014 08:21:42 GMT
       Content-Length:
       - '31'
       X-Request-Id:
-      - 45e6cef9cd7c9f04dcd3c6b2e7377d30
+      - 07691d4fdf8ccc8348917b1e5b8e68c9
       X-Runtime:
-      - '0.114538'
+      - '1.603878'
       Connection:
       - keep-alive
       Server:
@@ -44,8 +44,8 @@ http_interactions:
     adapter_metadata:
       effective_url: !binary |-
         aHR0cDovL2xvY2FsaG9zdDo5MDAwL2FwaS92Mi9zaGFyZXMvY2FtcGFpZ25z
-        LzEyL3VzZXJzLzI4P3Rva2VuPTZhNmIzNzg5OGYwMTc5NDA1ZjI2MmE5MzQz
+        LzEyL3VzZXJzLzIzP3Rva2VuPTZhNmIzNzg5OGYwMTc5NDA1ZjI2MmE5MzQz
         MjU4YWU2JnVzZXJuYW1lPW5ld2JpZSZtZXNzYWdlPUFyZSUyMHlvdSUyMG51
         dHolM0Y=
-  recorded_at: Thu, 10 Apr 2014 10:17:11 GMT
+  recorded_at: Tue, 15 Apr 2014 08:21:42 GMT
 recorded_with: VCR 2.9.0
