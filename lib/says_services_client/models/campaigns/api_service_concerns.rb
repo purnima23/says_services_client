@@ -27,11 +27,8 @@ module SaysServicesClient
             includes = [options.symbolize_keys!.delete(:include) || []].flatten
             raise ActiveModel::MissingAttributeError.new("user_id") if includes.include?(:share_by_user_id) && !options.has_key?(:user_id)
             
-            ids = options.delete(:ids)
-            path = "/api/v2/campaigns"
-            path += "?ids=#{ids.join(",")}" if ids
-            conn = establish_connection(path, params: options)
-          
+            conn = establish_connection(all_path(options), params: options)
+            
             if block_given?
               conn.on_complete do |response|
                 campaigns = parse_all_campaigns(response.body, options: options, includes: includes)
@@ -58,6 +55,14 @@ module SaysServicesClient
             campaign = instantiate(JSON.parse(json))
             include_request_share_by_user_id(args[:options][:user_id], [campaign]) if args[:includes].include?(:share_by_user_id) && !args[:options][:user_id].blank?
             campaign
+          end
+          
+          private
+          def all_path(options)
+            ids = [options.delete(:ids)].flatten.compact
+            path = "/api/v2/campaigns"
+            path += "?ids=#{ids.join(",")}" unless ids.empty?
+            path
           end
         end
       end

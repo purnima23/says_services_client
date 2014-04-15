@@ -194,4 +194,21 @@ describe SaysServicesClient::Models::Campaigns::ApiServiceConcerns do
       end
     end
   end
+  
+  context '#all_path' do
+    it 'appends ids to URL if present in hash as integer' do
+      path = SaysServicesClient::Campaign.send(:all_path, ids: 2)
+      path.should eq("/api/v2/campaigns?ids=2")
+    end
+    
+    it 'appends ids to URL if present in hash as array' do
+      path = SaysServicesClient::Campaign.send(:all_path, ids: [1,2,3])
+      path.should eq("/api/v2/campaigns?ids=1,2,3")
+    end
+    
+    it 'should not append campaign_ids to URL if not present' do
+      path = SaysServicesClient::Campaign.send(:all_path, {})
+      path.should eq("/api/v2/campaigns")
+    end
+  end
 end
