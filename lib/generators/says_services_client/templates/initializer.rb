@@ -5,4 +5,5 @@ SaysServicesClient::Config.endpoint = {
   campaign_url: 'http://localhost:3001/',
   share_url: 'http://localhost:3001/',
   campaign_list_url: 'http://localhost:3001/',
+  share_list_url: 'http://localhost:9000/'
 }

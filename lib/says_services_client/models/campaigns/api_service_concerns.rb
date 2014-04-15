@@ -26,8 +26,11 @@ module SaysServicesClient
           def all(options={})
             includes = [options.symbolize_keys!.delete(:include) || []].flatten
             raise ActiveModel::MissingAttributeError.new("user_id") if includes.include?(:share_by_user_id) && !options.has_key?(:user_id)
-          
-            conn = establish_connection("/api/v2/campaigns", params: options)
+            
+            ids = options.delete(:ids)
+            path = "/api/v2/campaigns"
+            path += "?ids=#{ids.join(",")}" if ids
+            conn = establish_connection(path, params: options)
           
             if block_given?
               conn.on_complete do |response|

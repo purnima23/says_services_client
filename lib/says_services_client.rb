@@ -15,4 +15,5 @@ module SaysServicesClient
   class Campaign < Models::Campaign; end
   class Share < Models::Share; end
   class CampaignList < Models::CampaignList; end
+  class ShareList < Models::ShareList; end
 end

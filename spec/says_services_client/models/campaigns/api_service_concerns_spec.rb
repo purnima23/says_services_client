@@ -68,6 +68,36 @@ describe SaysServicesClient::Models::Campaigns::ApiServiceConcerns do
   end
   
   context '#all' do
+    context 'with ids' do
+      it 'should returns campaigns in ids' do
+        VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/all_with_ids_3_12' do
+          @campaigns = SaysServicesClient::Campaign.all(ids: [3, 12])
+        end
+        @campaigns.size.should eq(2)
+        @campaigns.first.id.should eq(3)
+        @campaigns.last.id.should eq(12)
+      end
+      
+      it 'can include share by user id' do
+        VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/all_with_ids_11_12_include_share_by_user_id_23' do
+          SaysServicesClient::Campaign.all(ids: [11,12], include: :share_by_user_id, user_id: 23) do |c|
+            @campaigns = c
+          end
+          HYDRA.run
+        end
+        @campaigns.size.should eq(2)
+        @campaigns.each do |c|
+          c.instance_variable_get("@shares").should_not be_nil
+          # campaign id: 12 has a share of user_id: 23
+          if c.id == 12
+            c.share_by_user_id(23).should_not be_nil
+          else
+            c.share_by_user_id(23).should be_nil
+          end
+        end
+      end
+    end
+    
     context 'include_share_by_user_id' do
       it 'should raise error if include share by user id without user_id' do
         VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/all_country_my_include_share_by_user_id_23' do
