@@ -80,4 +80,44 @@ describe SaysServicesClient::Models::Shares::ApiServiceConcerns do
       end
     end
   end
+
+  context '#find' do
+    context 'with block given' do
+      it 'returns correct share with id' do
+        VCR.use_cassette 'Models/Shares/ApiServiceConcernsTest/find_46' do
+          SaysServicesClient::Share.find(46) do |s|
+            @share = s
+          end
+          HYDRA.run
+        end
+        @share.id.should eq(46)
+      end
+      
+      it 'returns empty if no shares found' do
+        VCR.use_cassette 'Models/Shares/ApiServiceConcernsTest/find_9283123123' do
+          SaysServicesClient::Share.find(9283123123) do |s|
+            @share = s
+          end
+          HYDRA.run
+        end
+        @share.should be_nil
+      end
+    end
+    
+    context 'without block given' do
+      it 'returns correct share id' do
+        VCR.use_cassette 'Models/Shares/ApiServiceConcernsTest/find_46' do
+          @share = SaysServicesClient::Share.find(46)
+        end
+        @share.id.should eq(46)
+      end
+            
+      it 'returns empty if no shares found' do
+        VCR.use_cassette 'Models/Shares/ApiServiceConcernsTest/find_9283123123' do
+          @share = SaysServicesClient::Share.find(9283123123)
+        end
+        @share.should be_nil
+      end
+    end
+  end
 end

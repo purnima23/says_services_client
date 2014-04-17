@@ -21,6 +21,27 @@ module SaysServicesClient
               parse_all_shares(response.body, options: options, includes: includes)
             end
           end
+          
+          def find(id, options={})
+            includes = [options.symbolize_keys!.delete(:include) || []].flatten
+            
+            conn = establish_connection("/api/v2/shares/#{id}", params: options)
+          
+            if block_given?
+              conn.on_complete do |response|
+                if response.response_code == 404
+                  yield nil
+                else
+                  yield parse_share(response.body, options: options, includes: includes)
+                end
+              end
+              SaysServicesClient::Config.hydra.queue(conn)
+            else
+              response = conn.run
+              return nil if response.response_code == 404
+              parse_share(response.body, options: options, includes: includes)
+            end
+          end
 
           def parse_all_shares(json, args={})
             args[:includes] ||= []
@@ -28,6 +49,14 @@ module SaysServicesClient
             shares = JSON.parse(json)["shares"].collect {|share| instantiate(share)}
             include_shared_campaign(shares) if args[:includes].include?(:campaign)
             shares
+          end
+          
+          def parse_share(json, args={})
+            args[:includes] ||= []
+            args[:options] ||= {}
+            share = instantiate(JSON.parse(json))
+            include_shared_campaign([share]) if args[:includes].include?(:campaign)
+            share
           end
           
           private
