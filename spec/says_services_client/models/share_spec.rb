@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SaysServicesClient::Models::Share do
+describe SaysServicesClient::Share do
   describe 'validation' do
     before(:each) do
       @share = SaysServicesClient::Share.new
