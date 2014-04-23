@@ -1,0 +1,108 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:9000//api/v2/campaigns/13?token=6a6b37898f0179405f262a9343258ae6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - ! '"4063dff7722b6d2887c658bcd2267bcd"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTk4N2VlNTUyZjZkNmYxMGNkOTAxNWMwODUzYjJjMjJiBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB46gvMU%3D--99bf10260ee4e69b0b47d5c6431ed381b43959c3;
+        path=/; HttpOnly
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTk4N2VlNTUyZjZkNmYxMGNkOTAxNWMwODUzYjJjMjJiBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB46gvMU%3D--99bf10260ee4e69b0b47d5c6431ed381b43959c3;
+        path=/; expires=Thu, 23-Oct-2014 09:03:54 GMT
+      Content-Length:
+      - '822'
+      X-Request-Id:
+      - 2990ef3b17ecf5d10befae7f33cbd8a6
+      X-Runtime:
+      - '0.102104'
+      Connection:
+      - keep-alive
+      Server:
+      - thin 1.3.1 codename Triple Espresso
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":13,"friendly_id":"social-good-1","title":"social good","campaign_about":"<p>this
+        is a social good campaign</p>","is_ended":false,"is_completed":false,"remaining_days":365,"supporters_count":1,"views_count":0,"total_available_reward":"39998
+        BP","per_uv_reward":"2 BP","site_url":"http://www.google.com","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/13/photos/profile/IMG_0003.JPG?1397638871","site_screenshot_url":null,"triggers":[{"id":38,"message":"helppppp"},{"id":39,"message":"i
+        need you!"}],"completed_at":"","created_at":"2014-04-16 17:01:23 +0800","updated_at":"2014-04-16
+        17:14:57 +0800","state":"active","country":"malaysia","tag_list":[],"no_facebook_sharing":false,"type":"CommunityCampaign","requirement":{"age_max":null,"age_min":null,"gender":null,"race":null,"city_names":null}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: !binary |-
+        aHR0cDovL2xvY2FsaG9zdDo5MDAwLy9hcGkvdjIvY2FtcGFpZ25zLzEzP3Rv
+        a2VuPTZhNmIzNzg5OGYwMTc5NDA1ZjI2MmE5MzQzMjU4YWU2
+  recorded_at: Wed, 23 Apr 2014 09:03:54 GMT
+- request:
+    method: put
+    uri: http://localhost:9000/api/v2/campaigns/13?token=6a6b37898f0179405f262a9343258ae6&campaign%5Btitle%5D=social%20good&campaign%5Bcampaign_about%5D=%3Cp%3Ethis%20is%20a%20social%20good%20campaign%3C%2Fp%3E&campaign%5Bsupporters_count%5D=1&campaign%5Bviews_count%5D=0&campaign%5Bcompleted_at%5D=&campaign%5Bcreated_at%5D=2014-04-16%2017%3A01%3A23%20%2B0800&campaign%5Bupdated_at%5D=2014-04-16%2017%3A14%3A57%20%2B0800&campaign%5Bstate%5D=active&campaign%5Bno_facebook_sharing%5D=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - ! '"08c62df305edd8f50e0725664e2aa7fc"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWExZmFiMGMzMTk3NTIyMTQxN2NiM2EzMWUyZGZkN2Y0BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCP2SdJ4BAA%3D%3D--cbac3bddfb5d3026344ad399dcd0737880222d2e;
+        path=/; HttpOnly
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWExZmFiMGMzMTk3NTIyMTQxN2NiM2EzMWUyZGZkN2Y0BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCP2SdJ4BAA%3D%3D--cbac3bddfb5d3026344ad399dcd0737880222d2e;
+        path=/; expires=Thu, 23-Oct-2014 09:03:54 GMT
+      Content-Length:
+      - '26'
+      X-Request-Id:
+      - d46b91c5043896d259663bb071b4afa7
+      X-Runtime:
+      - '0.246746'
+      Connection:
+      - keep-alive
+      Server:
+      - thin 1.3.1 codename Triple Espresso
+    body:
+      encoding: US-ASCII
+      string: ! '{"saved":true,"errors":{}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: !binary |-
+        aHR0cDovL2xvY2FsaG9zdDo5MDAwL2FwaS92Mi9jYW1wYWlnbnMvMTM/dG9r
+        ZW49NmE2YjM3ODk4ZjAxNzk0MDVmMjYyYTkzNDMyNThhZTYmY2FtcGFpZ24l
+        NUJ0aXRsZSU1RD1zb2NpYWwlMjBnb29kJmNhbXBhaWduJTVCY2FtcGFpZ25f
+        YWJvdXQlNUQ9JTNDcCUzRXRoaXMlMjBpcyUyMGElMjBzb2NpYWwlMjBnb29k
+        JTIwY2FtcGFpZ24lM0MlMkZwJTNFJmNhbXBhaWduJTVCc3VwcG9ydGVyc19j
+        b3VudCU1RD0xJmNhbXBhaWduJTVCdmlld3NfY291bnQlNUQ9MCZjYW1wYWln
+        biU1QmNvbXBsZXRlZF9hdCU1RD0mY2FtcGFpZ24lNUJjcmVhdGVkX2F0JTVE
+        PTIwMTQtMDQtMTYlMjAxNyUzQTAxJTNBMjMlMjAlMkIwODAwJmNhbXBhaWdu
+        JTVCdXBkYXRlZF9hdCU1RD0yMDE0LTA0LTE2JTIwMTclM0ExNCUzQTU3JTIw
+        JTJCMDgwMCZjYW1wYWlnbiU1QnN0YXRlJTVEPWFjdGl2ZSZjYW1wYWlnbiU1
+        Qm5vX2ZhY2Vib29rX3NoYXJpbmclNUQ9ZmFsc2U=
+  recorded_at: Wed, 23 Apr 2014 09:03:54 GMT
+recorded_with: VCR 2.9.0

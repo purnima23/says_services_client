@@ -10,13 +10,14 @@ module SaysServicesClient
       include SaysServicesClient::Utils::ClassLevelInheritableAttributes
       include SaysServicesClient::Utils::OperationConcerns
       
-      inheritable_attributes :attributes
+      inheritable_attributes :attributes, :method_attributes
       # class level instance variable
       @attributes = []
+      @method_attributes = []
       
       class << self
         # class level attr accessor
-        attr_accessor :attributes
+        attr_accessor :attributes, :method_attributes
         
         def attr_accessor(*args)
           self.attributes = (self.attributes + args).uniq
@@ -25,6 +26,7 @@ module SaysServicesClient
         
         def attr_reader(*args)
           self.attributes = (self.attributes + args).uniq
+          self.method_attributes = (self.method_attributes + args).uniq
           super *args
         end
         
