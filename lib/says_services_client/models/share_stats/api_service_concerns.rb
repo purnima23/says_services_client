@@ -5,7 +5,7 @@ module SaysServicesClient
         extend ActiveSupport::Concern
   
         module ClassMethods
-          def find_by_user(id, options={})
+          def find_by_user_id(id, options={})
             conn = establish_connection("/api/v2/share_stats/#{id}", params: options)
           
             if block_given?
