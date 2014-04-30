@@ -31,10 +31,10 @@ module SaysServicesClient
         end
         
         def instantiate(attributes=nil)
-          @new_record = false
           model = self.allocate
           model.send(:assign_reader_attrs, attributes, as: :admin) if attributes
           model.assign_attributes(attributes, as: :admin) if attributes
+          model.instance_variable_set("@new_record", false)
           model
         end        
       end

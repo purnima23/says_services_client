@@ -52,7 +52,7 @@ describe SaysServicesClient::Models::Base do
   
   context '#instantiate' do
     it 'sets @new_record as false' do
-      Dummy.instantiate.instance_variable_get("@new_record").should be_false
+      Dummy.instantiate.instance_variable_get("@new_record").should eq(false)
     end
     
     it 'sets attribute readers' do
