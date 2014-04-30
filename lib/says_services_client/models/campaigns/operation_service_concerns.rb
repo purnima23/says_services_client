@@ -7,6 +7,7 @@ module SaysServicesClient
         private
         def update(options={})
           hash = self.attributes.clone.dup
+          # protected = ['id', 'type', 'created_at', 'updated_at']
           hash.delete("type")
           hash.delete("id")
           hash = hash.select{|k, v| !self.class.method_attributes.include?(k.to_sym)}

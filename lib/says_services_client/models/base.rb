@@ -36,7 +36,7 @@ module SaysServicesClient
           model.send(:assign_reader_attrs, attributes, as: :admin) if attributes
           model.assign_attributes(attributes, as: :admin) if attributes
           model
-        end
+        end        
       end
       
       # override AR#inspect to mimic the behavior
