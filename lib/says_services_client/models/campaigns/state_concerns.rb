@@ -33,7 +33,7 @@ module SaysServicesClient
         end
         
         def archiving?
-          selft.state == 'archiving'
+          self.state == 'archiving'
         end
         
         def archived?
