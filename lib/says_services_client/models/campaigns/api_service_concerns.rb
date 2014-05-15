@@ -45,7 +45,7 @@ module SaysServicesClient
             args[:includes] ||= []
             args[:options] ||= {}
             campaigns = JSON.parse(json)["campaigns"].collect {|campaign| instantiate(campaign)}
-            include_request_share_by_user_id(args[:options][:user_id], campaigns) if args[:includes].include?(:share_by_user_id) && !args[:options][:user_id].blank?
+            include_request_share_by_user_id(args[:options][:user_id], campaigns) if args[:includes].include?(:share_by_user_id) && !args[:options][:user_id].blank? && !campaigns.map(&:id).blank?
             campaigns
           end
           

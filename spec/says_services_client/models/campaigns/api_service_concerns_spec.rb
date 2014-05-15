@@ -68,6 +68,14 @@ describe SaysServicesClient::Models::Campaigns::ApiServiceConcerns do
   end
   
   context '#all' do
+    it 'should not run #include_request_share_by_user_id if campaigns is empty' do
+      VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/all_country_in_include_share_by_user_id_1' do
+        SaysServicesClient::Campaign.should_not_receive(:include_request_share_by_user_id)
+        @campaigns = SaysServicesClient::Campaign.all(country: 'in', include: :share_by_user_id, user_id: 1)
+      end
+      @campaigns.size.should eq(0)
+    end      
+    
     context 'with ids' do
       it 'should returns campaigns in ids' do
         VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/all_with_ids_3_12' do
@@ -179,7 +187,6 @@ describe SaysServicesClient::Models::Campaigns::ApiServiceConcerns do
       it 'can include share by user id' do
         VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/all_country_my_include_share_by_user_id_23' do
           @campaigns = SaysServicesClient::Campaign.all(country: 'my', include: :share_by_user_id, user_id: 23)
-          HYDRA.run
         end
         @campaigns.size.should eq(3)
         @campaigns.each do |c|

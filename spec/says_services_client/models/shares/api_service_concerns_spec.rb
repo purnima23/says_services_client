@@ -19,6 +19,14 @@ describe SaysServicesClient::Models::Shares::ApiServiceConcerns do
   end
   
   context '#find_by_user_id' do
+    it 'should not run #include_shared_campaign if shares is empty' do
+      VCR.use_cassette 'Models/Shares/ApiServiceConcernsTest/find_by_user_id_empty' do
+        SaysServicesClient::Share.should_not_receive(:include_shared_campaign)
+        @shares = SaysServicesClient::Share.find_by_user_id(9283123123, include: :campaign)
+      end
+      @shares.should be_empty
+    end      
+    
     context 'with block given' do
       it 'returns correct share without campaign_ids' do
         VCR.use_cassette 'Models/Shares/ApiServiceConcernsTest/find_by_user_id_23' do
