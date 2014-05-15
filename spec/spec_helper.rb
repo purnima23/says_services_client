@@ -27,7 +27,6 @@ def reset_class class_name
   klass.class_eval do
     attr_accessor :name, :email, :id
     attr_reader :address
-    attr_protected :email
     
     validates_presence_of :name
     validates_presence_of :email, on: :create

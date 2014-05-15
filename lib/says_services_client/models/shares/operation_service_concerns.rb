@@ -12,8 +12,8 @@ module SaysServicesClient
           
           response = conn.run
           attrs = JSON.parse(response.body)
-          assign_reader_attrs(attrs, as: :admin)
-          assign_attributes(attrs, as: :admin)
+          assign_reader_attrs(attrs)
+          self.attributes = attrs
           @new_record = false if id
           !id.blank?
         end

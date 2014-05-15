@@ -6,7 +6,6 @@ module SaysServicesClient
       include ActiveModel::Serializers::JSON
       include ActiveModel::Validations
       include ActiveModel::Conversion
-      include ActiveModel::MassAssignmentSecurity
       include SaysServicesClient::Utils::ClassLevelInheritableAttributes
       include SaysServicesClient::Utils::OperationConcerns
       
@@ -33,7 +32,7 @@ module SaysServicesClient
         def instantiate(attributes=nil)
           model = self.allocate
           model.send(:assign_reader_attrs, attributes, as: :admin) if attributes
-          model.assign_attributes(attributes, as: :admin) if attributes
+          model.attributes = attributes if attributes
           model.instance_variable_set("@new_record", false)
           model
         end        
@@ -72,13 +71,7 @@ module SaysServicesClient
       end
 
       def attributes=(attrs)
-        sanitize_for_mass_assignment(attrs).each do |k, v|
-          send("#{k}=", v)
-        end
-      end
-      
-      def assign_attributes(values, options={})
-        sanitize_for_mass_assignment(values, options[:as]).each do |k, v|
+        attrs.each do |k, v|
           send("#{k}=", v)
         end
       end

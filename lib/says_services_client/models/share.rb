@@ -10,7 +10,6 @@ module SaysServicesClient
     
     attr_accessor :id, :uniq_total_clicked_count, :total_clicked_count, :message, :reward_count, :rewarded_uv_count, :user_id, :campaign_id, :created_at, :username
     attr_reader :share_url, :fresh
-    attr_protected :uniq_total_clicked_count, :total_clicked_count, :reward_count, :rewarded_uv_count      
     
     validates_presence_of :user_id, on: :create
     validates_presence_of :campaign_id, on: :create

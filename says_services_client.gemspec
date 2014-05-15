@@ -18,7 +18,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '~> 4.1.0'
   s.add_dependency 'typhoeus', '~> 0.6.8'
-  s.add_dependency 'protected_attributes', '~> 1.0.7'
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "vcr"

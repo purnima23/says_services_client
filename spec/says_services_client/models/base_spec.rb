@@ -43,11 +43,6 @@ describe SaysServicesClient::Models::Base do
       dummy = Dummy.new({name: 'soh'})
       dummy.name.should eq('soh')
     end
-    
-    it 'skips protected attributes' do
-      dummy = Dummy.new({name: 'soh', email: 'cherwei@gmail.com'})
-      dummy.email.should be_nil
-    end    
   end
   
   context '#instantiate' do
@@ -63,11 +58,6 @@ describe SaysServicesClient::Models::Base do
     it 'sets attributes' do
       dummy = Dummy.instantiate({name: 'soh'})
       dummy.name.should eq('soh')
-    end
-    
-    it 'sets protected attributes' do
-      dummy = Dummy.instantiate({name: 'soh', email: 'cherwei@gmail.com'})
-      dummy.email.should eq("cherwei@gmail.com")
     end
   end
   
@@ -135,23 +125,9 @@ describe SaysServicesClient::Models::Base do
   end
   
   context '#attributes=' do
-    it 'sets instance variables and skip protected attributes' do
+    it 'sets instance variables' do
       dummy = Dummy.new
       dummy.attributes = {name: 'test', email: 'email@e.mail'}
-      dummy.attributes.should eq({"name" => 'test', "email" => nil, "id"=>nil, "address" => nil})
-    end
-  end
-  
-  context '#assign_attributes' do
-    it 'sets instance variables and skip protected attributes' do
-      dummy = Dummy.new
-      dummy.assign_attributes({name: 'test', email: 'email@e.mail'})
-      dummy.attributes.should eq({"name" => 'test', "email" => nil, "id"=>nil, "address" => nil})
-    end
-    
-    it 'sets instance variables as admin' do
-      dummy = Dummy.new
-      dummy.assign_attributes({name: 'test', email: 'email@e.mail'}, as: :admin)
       dummy.attributes.should eq({"name" => 'test', "email" => 'email@e.mail', "id"=>nil, "address" => nil})
     end
   end
