@@ -5,5 +5,9 @@ module SaysServicesClient
     include SaysServicesClient::Models::ShareLists::ApiServiceConcerns
     
     attr_reader :offset, :shares
+    
+    def next_page?
+      offset > 0
+    end
   end
 end

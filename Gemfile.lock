@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    says_services_client (1.0.2)
+    says_services_client (1.0.4)
       protected_attributes (~> 1.0.7)
       rails (~> 4.1.0)
       typhoeus (~> 0.6.8)

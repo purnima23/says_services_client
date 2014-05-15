@@ -5,5 +5,9 @@ module SaysServicesClient
     include SaysServicesClient::Models::CampaignLists::ApiServiceConcerns
     
     attr_reader :offset, :campaigns
+    
+    def next_page?
+      offset > 0
+    end
   end
 end
