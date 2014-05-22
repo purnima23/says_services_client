@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:9000//api/v2/campaigns/user_recommendations/28?token=6a6b37898f0179405f262a9343258ae6&country=my
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - ! '"e205d149a9c1aa237a355f147cfe9eaf"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTM4MzUxODE0MmVmZDdjMjVjODJlMzY2ODc0NmJlMDViBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCC%2BvUcYBAA%3D%3D--6fb0874993921c883b86773d3cabe916735c6f49;
+        path=/; HttpOnly
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTM4MzUxODE0MmVmZDdjMjVjODJlMzY2ODc0NmJlMDViBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCC%2BvUcYBAA%3D%3D--6fb0874993921c883b86773d3cabe916735c6f49;
+        path=/; expires=Sat, 22-Nov-2014 06:07:00 GMT
+      Content-Length:
+      - '4922'
+      X-Request-Id:
+      - 86db5ca25b8740a8d587e218d15df9cb
+      X-Runtime:
+      - '0.332670'
+      Connection:
+      - keep-alive
+      Server:
+      - thin 1.3.1 codename Triple Espresso
+    body:
+      encoding: US-ASCII
+      string: ! '{"campaigns":[{"id":2,"friendly_id":"nike","title":"nike just do
+        it","campaign_about":"<h2 class=\"nike-cq-nikeplus-activity-carousel-title-headline
+        nike-cq-nikeplus-activity-carousel-title-headline-level-2 nike-cq-subtitle-styled-header\"
+        style=\"margin: 0px; font-size: 1em; font-weight: normal; line-height: 1;
+        color: #333333; font-family: ''TradeGothicW01-BoldCn20 675334'', ''Helvetica
+        W01 Bold'', ''Arial Bold'', Arial, sans-serif; text-align: center; padding:
+        0px !important;\"><span class=\"nike-cq-nikeplus-activity-carousel-title-line-1
+        nike-cq-title-line nike-cq-line1 nike-cq-333333 nike-cq-font40px nike-cq-nospacing
+        nike-cq-tradegothicw01boldcn20675334\" style=\"font-family: ''TradeGothicW01-BoldCn20
+        675334'', ''Arial Black'', ''Arial Bold'', Arial, sans-serif; font-size: 2.5em;
+        word-spacing: -0.05em; letter-spacing: -0.045em; display: block !important;
+        line-height: 1 !important;\">JOIN THE NIKE<span class=\"nikeplus\" style=\"display:
+        inline !important; line-height: inherit !important; background-image: none
+        !important; margin: 0px !important; font-size: 40px; float: none !important;
+        padding: 0px !important; position: relative !important; top: -0.125em !important;
+        vertical-align: baseline !important; background-position: initial initial
+        !important; background-repeat: initial initial !important;\">+</span>&nbsp;RUNNING
+        COMMUNITY</span><span class=\"nike-cq-nikeplus-activity-carousel-title-line-2
+        nike-cq-title-line nike-cq-line2 nike-cq-666666 nike-cq-font20px nike-cq-nospacing
+        nike-cq-tradegothicltstdboldcondensedno20\" style=\"font-size: 1.25em; color:
+        #666666; display: block !important; line-height: 1 !important; margin-top:
+        3px;\">THE NEW NIKE<span class=\"nikeplus\" style=\"display: inline !important;
+        line-height: inherit !important; background-image: none !important; margin:
+        0px !important; font-size: 20px; float: none !important; padding: 0px !important;
+        position: relative !important; top: -0.125em !important; vertical-align: baseline
+        !important; background-position: initial initial !important; background-repeat:
+        initial initial !important;\">+</span>&nbsp;RUNNING APP FOR iPHONE AND ANDROID</span></h2>","is_ended":false,"is_completed":false,"remaining_days":452,"supporters_count":5,"views_count":44,"total_available_reward":"RM20","per_uv_reward":"RM0.20","site_url":"http://www.nike.com/my/en_gb/","photo_url":"https://says-development.s3.amazonaws.com/campaigns/2/photos/profile/NIKE_Wallpaper_a0r3y.jpg?1386323371","large_photo_url":"https://says-development.s3.amazonaws.com/campaigns/2/photos/fb/NIKE_Wallpaper_a0r3y.jpg?1386323371","site_screenshot_url":null,"triggers":[{"id":5,"message":"THE
+        NEW NIKE+ RUNNING APP FOR iPHONE AND ANDROID"},{"id":7,"message":"Just do
+        it"},{"id":8,"message":"Dont do it"}],"completed_at":"2013-09-25 17:25:09
+        +0800","created_at":"2013-05-28 18:45:11 +0800","updated_at":"2013-12-06 17:49:32
+        +0800","state":"active","country":"malaysia","tag_list":[],"no_facebook_sharing":false,"type":"CommercialCampaign","requirement":{"age_max":null,"age_min":null,"gender":null,"race":null,"city_names":null}},{"id":12,"friendly_id":"kanasai","title":"kanasaii","campaign_about":"<p>omg</p>","is_ended":false,"is_completed":false,"remaining_days":204,"supporters_count":23,"views_count":30,"total_available_reward":"RM10","per_uv_reward":"RM0.10","site_url":"http://www.yahoo.com","photo_url":"https://says-development.s3.amazonaws.com/campaigns/12/photos/profile/img-1200x630.jpg?1386323400","large_photo_url":"https://says-development.s3.amazonaws.com/campaigns/12/photos/fb/img-1200x630.jpg?1386323400","site_screenshot_url":null,"triggers":[{"id":36,"message":"Are
+        you nutz?"},{"id":37,"message":"a=Alamak"}],"completed_at":"","created_at":"2013-12-05
+        14:57:32 +0800","updated_at":"2014-04-24 11:19:33 +0800","state":"active","country":"malaysia","tag_list":[],"no_facebook_sharing":false,"type":"CommercialCampaign","requirement":{"age_max":null,"age_min":null,"gender":"Male","race":[],"city_names":["Perak","Selangor"]}},{"id":13,"friendly_id":"social-good-1","title":"social
+        good","campaign_about":"<p>this is a social good campaign</p>","is_ended":false,"is_completed":false,"remaining_days":336,"supporters_count":3,"views_count":0,"total_available_reward":"39998
+        BP","per_uv_reward":"2 BP","site_url":"http://www.google.com","photo_url":"https://says-development.s3.amazonaws.com/campaigns/13/photos/profile/IMG_0003.JPG?1397638871","large_photo_url":"https://says-development.s3.amazonaws.com/campaigns/13/photos/fb/IMG_0003.JPG?1397638871","site_screenshot_url":null,"triggers":[{"id":38,"message":"helppppp"},{"id":39,"message":"i
+        need you!"}],"completed_at":"","created_at":"2014-04-16 09:01:23 +0800","updated_at":"2014-04-16
+        17:14:57 +0800","state":"active","country":"malaysia","tag_list":[],"no_facebook_sharing":false,"type":"CommunityCampaign","requirement":{"age_max":null,"age_min":null,"gender":null,"race":null,"city_names":null}}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: !binary |-
+        aHR0cDovL2xvY2FsaG9zdDo5MDAwLy9hcGkvdjIvY2FtcGFpZ25zL3VzZXJf
+        cmVjb21tZW5kYXRpb25zLzI4P3Rva2VuPTZhNmIzNzg5OGYwMTc5NDA1ZjI2
+        MmE5MzQzMjU4YWU2JmNvdW50cnk9bXk=
+  recorded_at: Thu, 22 May 2014 06:07:00 GMT
+recorded_with: VCR 2.9.0

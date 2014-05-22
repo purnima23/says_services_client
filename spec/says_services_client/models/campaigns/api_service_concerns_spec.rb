@@ -218,4 +218,29 @@ describe SaysServicesClient::Models::Campaigns::ApiServiceConcerns do
       path.should eq("/api/v2/campaigns")
     end
   end
+  
+  context '#recommendations_for_user' do
+    context 'with block given' do
+      it 'returns all campaigns' do
+        VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/recommendations_for_user_28' do
+          SaysServicesClient::Campaign.recommendations_for_user(28, {country: 'my'}) do |c|
+            @campaigns = c
+          end
+          HYDRA.run
+        end
+        @campaigns.size.should eq(3)
+        @campaigns.map(&:id).should eq([2,12,13])
+      end
+    end
+    
+    context 'without block given' do
+      it 'returns all campaigns' do
+        VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/recommendations_for_user_23' do
+          @campaigns = SaysServicesClient::Campaign.recommendations_for_user(23, {country: 'my'})
+        end
+        @campaigns.size.should eq(4)
+        @campaigns.map(&:id).should eq([2,3,12,13])
+      end
+    end
+  end
 end

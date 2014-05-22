@@ -41,6 +41,21 @@ module SaysServicesClient
             end
           end
           
+          def recommendations_for_user(user_id, options={})
+            conn = establish_connection("/api/v2/campaigns/user_recommendations/#{user_id}", params: options)
+            
+            if block_given?
+              conn.on_complete do |response|
+                campaigns = parse_all_campaigns(response.body, options: options)
+                yield campaigns
+              end          
+              SaysServicesClient::Config.hydra.queue(conn)
+            else
+              response = conn.run
+              parse_all_campaigns(response.body, options: options)
+            end
+          end
+          
           def parse_all_campaigns(json, args={})
             args[:includes] ||= []
             args[:options] ||= {}
