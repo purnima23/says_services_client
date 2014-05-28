@@ -19,20 +19,20 @@ http_interactions:
       X-UA-Compatible:
       - IE=Edge
       ETag:
-      - ! '"4063dff7722b6d2887c658bcd2267bcd"'
+      - ! '"21894f92e23e516192efd6615ad219a6"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTk4N2VlNTUyZjZkNmYxMGNkOTAxNWMwODUzYjJjMjJiBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB46gvMU%3D--99bf10260ee4e69b0b47d5c6431ed381b43959c3;
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiJThiNTk0NWQ0MDVkMGRkNDJkNmM5YzUyMGIwYWExNjcwBjsAVEkiDXJlZmVycmVyBjsAVEkiCW5vbmUGOwBUSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB29iXcw%3D--6282af42e3f69e0721c3554dbd15e6e6dc1b2781;
         path=/; HttpOnly
-      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTk4N2VlNTUyZjZkNmYxMGNkOTAxNWMwODUzYjJjMjJiBjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB46gvMU%3D--99bf10260ee4e69b0b47d5c6431ed381b43959c3;
-        path=/; expires=Thu, 23-Oct-2014 09:03:54 GMT
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiJThiNTk0NWQ0MDVkMGRkNDJkNmM5YzUyMGIwYWExNjcwBjsAVEkiDXJlZmVycmVyBjsAVEkiCW5vbmUGOwBUSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB29iXcw%3D--6282af42e3f69e0721c3554dbd15e6e6dc1b2781;
+        path=/; expires=Fri, 28-Nov-2014 10:05:28 GMT
       Content-Length:
-      - '822'
+      - '945'
       X-Request-Id:
-      - 2990ef3b17ecf5d10befae7f33cbd8a6
+      - f429ade7076db4d40fc306d9786eaecb
       X-Runtime:
-      - '0.102104'
+      - '0.100827'
       Connection:
       - keep-alive
       Server:
@@ -40,19 +40,19 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ! '{"id":13,"friendly_id":"social-good-1","title":"social good","campaign_about":"<p>this
-        is a social good campaign</p>","is_ended":false,"is_completed":false,"remaining_days":365,"supporters_count":1,"views_count":0,"total_available_reward":"39998
-        BP","per_uv_reward":"2 BP","site_url":"http://www.google.com","thumbnail_url":"https://says-development.s3.amazonaws.com/campaigns/13/photos/profile/IMG_0003.JPG?1397638871","site_screenshot_url":null,"triggers":[{"id":38,"message":"helppppp"},{"id":39,"message":"i
-        need you!"}],"completed_at":"","created_at":"2014-04-16 17:01:23 +0800","updated_at":"2014-04-16
-        17:14:57 +0800","state":"active","country":"malaysia","tag_list":[],"no_facebook_sharing":false,"type":"CommunityCampaign","requirement":{"age_max":null,"age_min":null,"gender":null,"race":null,"city_names":null}}'
+        is a social good campaign</p>","is_ended":false,"is_completed":false,"remaining_days":330,"supporters_count":11,"views_count":0,"total_available_reward":"39998
+        0","per_uv_reward":"2 0","site_url":"http://www.google.com","photo_url":"https://says-development.s3.amazonaws.com/campaigns/13/photos/profile/IMG_0003.JPG?1397638871","large_photo_url":"https://says-development.s3.amazonaws.com/campaigns/13/photos/fb/IMG_0003.JPG?1397638871","site_screenshot_url":null,"triggers":[{"id":38,"message":"helppppp"},{"id":39,"message":"i
+        need you!"}],"completed_at":"","created_at":"2014-04-16 09:01:23 +0800","updated_at":"2014-05-28
+        18:04:51 +0800","state":"active","country":"malaysia","tag_list":[],"no_facebook_sharing":false,"type":"CommunityCampaign","reward_type":null,"requirement":{"age_max":null,"age_min":null,"gender":null,"race":null,"city_names":null}}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: !binary |-
         aHR0cDovL2xvY2FsaG9zdDo5MDAwLy9hcGkvdjIvY2FtcGFpZ25zLzEzP3Rv
         a2VuPTZhNmIzNzg5OGYwMTc5NDA1ZjI2MmE5MzQzMjU4YWU2
-  recorded_at: Wed, 23 Apr 2014 09:03:54 GMT
+  recorded_at: Wed, 28 May 2014 10:05:28 GMT
 - request:
     method: put
-    uri: http://localhost:9000/api/v2/campaigns/13?token=6a6b37898f0179405f262a9343258ae6&campaign%5Btitle%5D=social%20good&campaign%5Bcampaign_about%5D=%3Cp%3Ethis%20is%20a%20social%20good%20campaign%3C%2Fp%3E&campaign%5Bsupporters_count%5D=1&campaign%5Bviews_count%5D=0&campaign%5Bcompleted_at%5D=&campaign%5Bcreated_at%5D=2014-04-16%2017%3A01%3A23%20%2B0800&campaign%5Bupdated_at%5D=2014-04-16%2017%3A14%3A57%20%2B0800&campaign%5Bstate%5D=active&campaign%5Bno_facebook_sharing%5D=false
+    uri: http://localhost:9000/api/v2/campaigns/13?token=6a6b37898f0179405f262a9343258ae6&campaign%5Btitle%5D=social%20good&campaign%5Bcampaign_about%5D=%3Cp%3Ethis%20is%20a%20social%20good%20campaign%3C%2Fp%3E&campaign%5Bsupporters_count%5D=11&campaign%5Bviews_count%5D=0&campaign%5Bcompleted_at%5D=&campaign%5Bcreated_at%5D=2014-04-16%2009%3A01%3A23%20%2B0800&campaign%5Bupdated_at%5D=2014-05-28%2018%3A04%3A51%20%2B0800&campaign%5Bstate%5D=active&campaign%5Bno_facebook_sharing%5D=false&campaign%5Breward_type%5D=
     body:
       encoding: US-ASCII
       string: ''
@@ -73,16 +73,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWExZmFiMGMzMTk3NTIyMTQxN2NiM2EzMWUyZGZkN2Y0BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCP2SdJ4BAA%3D%3D--cbac3bddfb5d3026344ad399dcd0737880222d2e;
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiJTUwZWVkY2YwYzE3Mzk4YzM3ODcwNDlmNzAwNWFkYWE5BjsAVEkiDXJlZmVycmVyBjsAVEkiCW5vbmUGOwBUSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB4NYq8U%3D--2b2697922a1bb126f3b71f073b50590f220cd5bd;
         path=/; HttpOnly
-      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWExZmFiMGMzMTk3NTIyMTQxN2NiM2EzMWUyZGZkN2Y0BjsAVEkiDXJlZmVycmVyBjsARkkiCW5vbmUGOwBGSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCP2SdJ4BAA%3D%3D--cbac3bddfb5d3026344ad399dcd0737880222d2e;
-        path=/; expires=Thu, 23-Oct-2014 09:03:54 GMT
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiJTUwZWVkY2YwYzE3Mzk4YzM3ODcwNDlmNzAwNWFkYWE5BjsAVEkiDXJlZmVycmVyBjsAVEkiCW5vbmUGOwBUSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrB4NYq8U%3D--2b2697922a1bb126f3b71f073b50590f220cd5bd;
+        path=/; expires=Fri, 28-Nov-2014 10:05:28 GMT
       Content-Length:
       - '26'
       X-Request-Id:
-      - d46b91c5043896d259663bb071b4afa7
+      - f4ef268095c081679ef3c2e0e9e3cfb1
       X-Runtime:
-      - '0.246746'
+      - '0.114269'
       Connection:
       - keep-alive
       Server:
@@ -98,11 +98,12 @@ http_interactions:
         NUJ0aXRsZSU1RD1zb2NpYWwlMjBnb29kJmNhbXBhaWduJTVCY2FtcGFpZ25f
         YWJvdXQlNUQ9JTNDcCUzRXRoaXMlMjBpcyUyMGElMjBzb2NpYWwlMjBnb29k
         JTIwY2FtcGFpZ24lM0MlMkZwJTNFJmNhbXBhaWduJTVCc3VwcG9ydGVyc19j
-        b3VudCU1RD0xJmNhbXBhaWduJTVCdmlld3NfY291bnQlNUQ9MCZjYW1wYWln
-        biU1QmNvbXBsZXRlZF9hdCU1RD0mY2FtcGFpZ24lNUJjcmVhdGVkX2F0JTVE
-        PTIwMTQtMDQtMTYlMjAxNyUzQTAxJTNBMjMlMjAlMkIwODAwJmNhbXBhaWdu
-        JTVCdXBkYXRlZF9hdCU1RD0yMDE0LTA0LTE2JTIwMTclM0ExNCUzQTU3JTIw
-        JTJCMDgwMCZjYW1wYWlnbiU1QnN0YXRlJTVEPWFjdGl2ZSZjYW1wYWlnbiU1
-        Qm5vX2ZhY2Vib29rX3NoYXJpbmclNUQ9ZmFsc2U=
-  recorded_at: Wed, 23 Apr 2014 09:03:54 GMT
+        b3VudCU1RD0xMSZjYW1wYWlnbiU1QnZpZXdzX2NvdW50JTVEPTAmY2FtcGFp
+        Z24lNUJjb21wbGV0ZWRfYXQlNUQ9JmNhbXBhaWduJTVCY3JlYXRlZF9hdCU1
+        RD0yMDE0LTA0LTE2JTIwMDklM0EwMSUzQTIzJTIwJTJCMDgwMCZjYW1wYWln
+        biU1QnVwZGF0ZWRfYXQlNUQ9MjAxNC0wNS0yOCUyMDE4JTNBMDQlM0E1MSUy
+        MCUyQjA4MDAmY2FtcGFpZ24lNUJzdGF0ZSU1RD1hY3RpdmUmY2FtcGFpZ24l
+        NUJub19mYWNlYm9va19zaGFyaW5nJTVEPWZhbHNlJmNhbXBhaWduJTVCcmV3
+        YXJkX3R5cGUlNUQ9
+  recorded_at: Wed, 28 May 2014 10:05:28 GMT
 recorded_with: VCR 2.9.0
