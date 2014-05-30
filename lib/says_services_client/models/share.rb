@@ -8,7 +8,7 @@ module SaysServicesClient
     include SaysServicesClient::Models::Shares::OperationServiceConcerns
     include SaysServicesClient::Models::Shares::SharedCampaignConcerns
     
-    attr_accessor :id, :uniq_total_clicked_count, :total_clicked_count, :message, :reward_count, :rewarded_uv_count, :user_id, :campaign_id, :created_at, :username
+    attr_accessor :id, :uniq_total_clicked_count, :total_clicked_count, :message, :reward_count, :rewarded_uv_count, :user_id, :campaign_id, :created_at, :username, :country_code
     attr_reader :share_url, :fresh
     
     validates_presence_of :user_id, on: :create
