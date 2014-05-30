@@ -8,6 +8,7 @@ module SaysServicesClient
         def create_operation_service(options={})
           options[:username] ||= username
           options[:message] ||= message
+          options[:country_code] ||= country_code
           conn = self.class.send(:establish_connection, "api/v2/shares/campaigns/#{campaign_id}/users/#{user_id}", method: :post, params: options)
           
           response = conn.run
