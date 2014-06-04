@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://says-connect.dev/api/admin/v1/users/1?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - '"97aa782b8561ce2b55b75c5bd3f6ffa6"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2693a136a4641805f5c489321ff52cc0
+      X-Runtime:
+      - '0.023114'
+      Date:
+      - Wed, 04 Jun 2014 16:29:44 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"login":"nguyen","email":"nguyen@localhost.com","status":"activated","created_at":"2014-03-14T08:59:33Z","updated_at":"2014-06-04T08:19:14Z","avatar_url":"http://says-connect-development.s3-website-ap-southeast-1.amazonaws.com/avatars/small_thumb.jpg","dob":"1999-03-03","gender":"Male","race":"Chinese","ident_no":"123456789012","name":"Nguyen","bank_name":"MAYBANK
+        BERHAD","bank_account":"123456786544","phone_number":"12345678","city":"Johor","country":"malaysia"}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://says-connect.dev/api/admin/v1/users/1?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+  recorded_at: Wed, 04 Jun 2014 16:29:44 GMT
+- request:
+    method: get
+    uri: http://sociable2.dev/my/api/admin/v1/users/1?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&uid=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      ETag:
+      - '"33dfa1b981d8d1b2d28c05236a53b927"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Request-Id:
+      - 085aecbd-815f-45f5-932d-a99c11141e15
+      X-Runtime:
+      - '0.291396'
+      Date:
+      - Wed, 04 Jun 2014 16:29:46 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"contribution_point":0,"wallet":"RM0.00","invite_link":"http://bit.ly/1kn1eRg","banned_from_campaign":false,"notify_daily_digest":true,"warn":false,"cashouts":[],"processing_cashout":[],"invited_friends":[]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://sociable2.dev/my/api/admin/v1/users/1?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&uid=true
+  recorded_at: Wed, 04 Jun 2014 16:29:46 GMT
+recorded_with: VCR 2.9.0

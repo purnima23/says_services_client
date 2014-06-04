@@ -42,8 +42,40 @@ describe SaysServicesClient::User, :vcr do
       user.phone_number.should eq '12345678'
       user.race.should eq 'Chinese'
       user.status.should eq 'activated'
-      user.created_at.should_not eq be_nil
-      user.updated_at.should_not eq be_nil
+      user.created_at.should_not be_nil
+      user.updated_at.should_not be_nil
+    end
+
+    context 'when sociable is included' do
+      it 'merges user info from sociable' do
+        user = nil
+        SaysServicesClient::User.find(1, include: :sociable, country_code: 'my') do |result|
+          user = result
+        end
+        HYDRA.run
+
+        user.login.should eq 'nguyen'
+        user.avatar_url.should eq 'http://says-connect-development.s3-website-ap-southeast-1.amazonaws.com/avatars/small_thumb.jpg'
+        user.bank_account.should eq '123456786544'
+        user.bank_name.should eq 'MAYBANK BERHAD'
+        user.city.should eq 'Johor'
+        user.country.should eq 'malaysia'
+        user.dob.should eq '1999-03-03'
+        user.email.should eq 'nguyen@localhost.com'
+        user.gender.should eq 'Male'
+        user.ident_no.should eq '123456789012'
+        user.name.should eq 'Nguyen'
+        user.phone_number.should eq '12345678'
+        user.race.should eq 'Chinese'
+        user.status.should eq 'activated'
+        user.created_at.should_not be_nil
+        user.updated_at.should_not be_nil
+        user.invite_link.should_not be_nil
+        user.wallet.should eq "RM0.00"
+        user.contribution_point.should eq 0
+        user.warn.should eq false
+        user.banned_from_campaign.should eq false
+      end
     end
   end
 end
