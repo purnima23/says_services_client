@@ -33,8 +33,8 @@ describe SaysServicesClient::User, :vcr do
       user.bank_account.should eq '123456786544'
       user.bank_name.should eq 'MAYBANK BERHAD'
       user.city.should eq 'Johor'
-      user.country.should eq 'malaysia'
-      user.dob.should eq '1999-03-03'
+      user.country_name.should eq 'malaysia'
+      user.dob.should eq Time.parse('1999-03-03')
       user.email.should eq 'nguyen@localhost.com'
       user.gender.should eq 'Male'
       user.ident_no.should eq '123456789012'
@@ -59,8 +59,8 @@ describe SaysServicesClient::User, :vcr do
         user.bank_account.should eq '123456786544'
         user.bank_name.should eq 'MAYBANK BERHAD'
         user.city.should eq 'Johor'
-        user.country.should eq 'malaysia'
-        user.dob.should eq '1999-03-03'
+        user.country_name.should eq 'malaysia'
+        user.dob.should eq Time.parse('1999-03-03')
         user.email.should eq 'nguyen@localhost.com'
         user.gender.should eq 'Male'
         user.ident_no.should eq '123456789012'

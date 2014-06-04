@@ -19,23 +19,23 @@ http_interactions:
       X-UA-Compatible:
       - IE=Edge
       ETag:
-      - "\"e3c36494677c8be35c89d48828700e08\""
+      - '"5cae6a05f26c991cbb56f57a0103e1bf"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f8e12cc2e0fc88c6f2823d1de86c8315
+      - 30f819da07b02333efd99b3b5ec40009
       X-Runtime:
-      - '0.018305'
+      - '0.016742'
       Date:
-      - Wed, 04 Jun 2014 08:25:16 GMT
+      - Wed, 04 Jun 2014 17:11:12 GMT
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: "{\"users\":[{\"id\":1,\"login\":\"updated_username\",\"email\":\"nguyen@localhost.com\",\"status\":\"activated\",\"activated_at\":\"2014-06-04T08:19:14Z\",\"name\":\"Nguyen\",\"gender\":\"Male\",\"country\":\"malaysia\"},{\"id\":5,\"login\":\"nguyen2\",\"email\":\"nguyen2@localhost.com\",\"status\":null,\"activated_at\":null,\"name\":\"Nguyen
-        edited\",\"gender\":\"Male\",\"country\":\"malaysia\"},{\"id\":6,\"login\":\"nguyen3\",\"email\":\"nguyen3@localhost.com\",\"status\":null,\"activated_at\":null,\"name\":null,\"gender\":\"Male\",\"country\":\"malaysia\"}]}"
+      string: '{"users":[{"id":1,"login":"nguyen","email":"nguyen@localhost.com","status":"activated","activated_at":"2014-06-04T08:19:14Z","name":"Nguyen","gender":"Male","country":"malaysia"},{"id":5,"login":"nguyen2","email":"nguyen2@localhost.com","status":null,"activated_at":null,"name":"Nguyen
+        edited","gender":"Male","country":"malaysia"},{"id":6,"login":"nguyen3","email":"nguyen3@localhost.com","status":null,"activated_at":null,"name":null,"gender":"Male","country":"malaysia"}]}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: http://says-connect.dev/api/admin/v1/users?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&keyword=nguyen
-  recorded_at: Wed, 04 Jun 2014 08:25:16 GMT
+  recorded_at: Wed, 04 Jun 2014 17:11:12 GMT
 recorded_with: VCR 2.9.0

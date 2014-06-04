@@ -3,7 +3,7 @@
 module SaysServicesClient
   class User < Models::Base  
 
-    TIME_FIELDS = [:activated_at, :created_at, :updated_at]
+    TIME_FIELDS = [:activated_at, :created_at, :updated_at, :dob]
 
     def self.all(options={})      
       conn = establish_connection("/api/admin/v1/users", params: options)

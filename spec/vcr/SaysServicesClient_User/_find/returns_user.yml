@@ -19,23 +19,23 @@ http_interactions:
       X-UA-Compatible:
       - IE=Edge
       ETag:
-      - '"97aa782b8561ce2b55b75c5bd3f6ffa6"'
+      - '"e6966120889ccae0171b3b2c0b3b9e6f"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3a79bfb7e3602fdafdbf7bbbd1911099
+      - 64a471d566e2df393860343b698c2aca
       X-Runtime:
-      - '0.018896'
+      - '0.013194'
       Date:
-      - Wed, 04 Jun 2014 13:37:17 GMT
+      - Wed, 04 Jun 2014 17:11:12 GMT
       Connection:
       - close
     body:
       encoding: UTF-8
       string: '{"id":1,"login":"nguyen","email":"nguyen@localhost.com","status":"activated","created_at":"2014-03-14T08:59:33Z","updated_at":"2014-06-04T08:19:14Z","avatar_url":"http://says-connect-development.s3-website-ap-southeast-1.amazonaws.com/avatars/small_thumb.jpg","dob":"1999-03-03","gender":"Male","race":"Chinese","ident_no":"123456789012","name":"Nguyen","bank_name":"MAYBANK
-        BERHAD","bank_account":"123456786544","phone_number":"12345678","city":"Johor","country":"malaysia"}'
+        BERHAD","bank_account":"123456786544","phone_number":"12345678","city":"Johor","country_name":"malaysia"}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: http://says-connect.dev/api/admin/v1/users/1?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
-  recorded_at: Wed, 04 Jun 2014 13:37:17 GMT
+  recorded_at: Wed, 04 Jun 2014 17:11:12 GMT
 recorded_with: VCR 2.9.0
