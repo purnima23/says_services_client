@@ -11,5 +11,13 @@ describe SaysServicesClient::Cashout, :vcr do
       cashout.created_at.class.should eq Time
       cashout.updated_at.class.should eq Time
     end
+
+    context 'when include_sum is passed' do
+      it 'returns request_amount_sum with last_request' do
+        cashouts = SaysServicesClient::Cashout.all(country_code: 'my', include_sum: true)
+
+        SaysServicesClient::Cashout.last_request.request_amount_sum.should_not be_nil
+      end
+    end
   end
 end

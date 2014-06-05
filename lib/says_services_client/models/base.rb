@@ -17,6 +17,16 @@ module SaysServicesClient
       class << self
         # class level attr accessor
         attr_accessor :attributes, :method_attributes
+
+        @@last_request = nil
+
+        def last_request
+          @@last_request
+        end
+
+        def last_request=(request)
+          @@last_request = request
+        end
         
         def attr_accessor(*args)
           self.attributes = (self.attributes + args).uniq

@@ -11,19 +11,27 @@ module SaysServicesClient
       
       if block_given?
         conn.on_complete do |response|
-          cashouts = parse_list(response.body)
+          cashouts = parse_list(response.body, options)
           yield cashouts
         end          
         SaysServicesClient::Config.hydra.queue(conn)
       else
         response = conn.run
-        parse_list(response.body)
+        parse_list(response.body, options)
       end
     end
 
-    def self.parse_list(json)
+    def self.parse_list(json, options={})
       parsed = JSON.parse(json)
-      parsed["cashouts"].map { |u| parse(u) }
+      cashouts = parsed.delete("cashouts").map { |u| parse(u) }
+
+      last_request = Hashie::Mash.new
+      parsed.keys.each do |key|
+        last_request[key] = parsed[key]
+      end
+      self.last_request = last_request
+
+      cashouts
     end
 
     def self.parse(json)
