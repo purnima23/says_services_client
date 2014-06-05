@@ -20,4 +20,20 @@ describe SaysServicesClient::Cashout, :vcr do
       end
     end
   end
+
+  describe '#update' do
+    it 'updates cashout' do
+      cashout = SaysServicesClient::Cashout.update(1, country_code: 'my', update_action: 'verify')
+
+      cashout.state.should eq 'verified'
+    end
+
+    context 'when there is error' do
+      it 'returns error' do
+        cashout = SaysServicesClient::Cashout.update(1, country_code: 'my', update_action: 'verify')
+
+        cashout.errors.first.should eq "Your account does not reach cash-out amount."
+      end
+    end
+  end
 end

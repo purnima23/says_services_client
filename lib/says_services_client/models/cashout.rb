@@ -21,6 +21,19 @@ module SaysServicesClient
       end
     end
 
+    def self.update(id, options={})
+      country_code = options.delete(:country_code)
+      raise ActiveModel::MissingAttributeError.new("country_code") if country_code.blank?
+      raise ActiveModel::MissingAttributeError.new("id") if id.blank?
+      raise ActiveModel::MissingAttributeError.new("update_action") if options[:update_action].blank?
+
+      request = establish_connection("/#{country_code}/api/admin/v1/cashouts/#{id}", method: :put, params: options)
+      response = request.run
+      parse(response.body)
+    end
+
+    protected
+
     def self.parse_list(json, options={})
       parsed = JSON.parse(json)
       cashouts = parsed.delete("cashouts").map { |u| parse(u) }
