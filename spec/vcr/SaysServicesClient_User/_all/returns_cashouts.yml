@@ -1,0 +1,382 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sociable2.dev/api/admin/v1/cashouts?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '30527'
+      X-Request-Id:
+      - dd59a45d-788c-4b14-8bc5-adcdd8830600
+      X-Runtime:
+      - '0.203500'
+      Date:
+      - Thu, 05 Jun 2014 08:21:46 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\"
+        />\n  <title>Action Controller: Exception caught</title>\n  <style>\n    body
+        {\n      background-color: #FAFAFA;\n      color: #333;\n      margin: 0px;\n
+        \   }\n\n    body, p, ol, ul, td {\n      font-family: helvetica, verdana,
+        arial, sans-serif;\n      font-size:   13px;\n      line-height: 18px;\n    }\n\n
+        \   pre {\n      font-size: 11px;\n      white-space: pre-wrap;\n    }\n\n
+        \   pre.box {\n      border: 1px solid #EEE;\n      padding: 10px;\n      margin:
+        0px;\n      width: 958px;\n    }\n\n    header {\n      color: #F0F0F0;\n
+        \     background: #C52F24;\n      padding: 0.5em 1.5em;\n    }\n\n    h1 {\n
+        \     margin: 0.2em 0;\n      line-height: 1.1em;\n      font-size: 2em;\n
+        \   }\n\n    h2 {\n      color: #C52F24;\n      line-height: 25px;\n    }\n\n
+        \   .details {\n      border: 1px solid #D0D0D0;\n      border-radius: 4px;\n
+        \     margin: 1em 0px;\n      display: block;\n      width: 978px;\n    }\n\n
+        \   .summary {\n      padding: 8px 15px;\n      border-bottom: 1px solid #D0D0D0;\n
+        \     display: block;\n    }\n\n    .details pre {\n      margin: 5px;\n      border:
+        none;\n    }\n\n    #container {\n      box-sizing: border-box;\n      width:
+        100%;\n      padding: 0 1.5em;\n    }\n\n    .source * {\n      margin: 0px;\n
+        \     padding: 0px;\n    }\n\n    .source {\n      border: 1px solid #D9D9D9;\n
+        \     background: #ECECEC;\n      width: 978px;\n    }\n\n    .source pre
+        {\n      padding: 10px 0px;\n      border: none;\n    }\n\n    .source .data
+        {\n      font-size: 80%;\n      overflow: auto;\n      background-color: #FFF;\n
+        \   }\n\n    .info {\n      padding: 0.5em;\n    }\n\n    .source .data .line_numbers
+        {\n      background-color: #ECECEC;\n      color: #AAA;\n      padding: 1em
+        .5em;\n      border-right: 1px solid #DDD;\n      text-align: right;\n    }\n\n
+        \   .line {\n      padding-left: 10px;\n    }\n\n    .line:hover {\n      background-color:
+        #F6F6F6;\n    }\n\n    .line.active {\n      background-color: #FFCCCC;\n
+        \   }\n\n    a { color: #980905; }\n    a:visited { color: #666; }\n    a:hover
+        { color: #C52F24; }\n\n      #route_table {\n    margin: 0 auto 0;\n    border-collapse:
+        collapse;\n  }\n\n  #route_table td {\n    padding: 0 30px;\n  }\n\n  #route_table
+        tr.bottom th {\n    padding-bottom: 10px;\n    line-height: 15px;\n  }\n\n
+        \ #route_table .matched_paths {\n    background-color: LightGoldenRodYellow;\n
+        \ }\n\n  #route_table .matched_paths {\n    border-bottom: solid 3px SlateGrey;\n
+        \ }\n\n  #path_search {\n    width: 80%;\n    font-size: inherit;\n  }\n\n
+        \ </style>\n\n  <script>\n    var toggle = function(id) {\n      var s = document.getElementById(id).style;\n
+        \     s.display = s.display == 'none' ? 'block' : 'none';\n      return false;\n
+        \   }\n    var show = function(id) {\n      document.getElementById(id).style.display
+        = 'block';\n    }\n    var hide = function(id) {\n      document.getElementById(id).style.display
+        = 'none';\n    }\n    var toggleTrace = function() {\n      return toggle('blame_trace');\n
+        \   }\n    var toggleSessionDump = function() {\n      return toggle('session_dump');\n
+        \   }\n    var toggleEnvDump = function() {\n      return toggle('env_dump');\n
+        \   }\n  </script>\n</head>\n<body>\n\n<header>\n  <h1>Routing Error</h1>\n</header>\n<div
+        id=\"container\">\n  <h2>No route matches [GET] &quot;/api/admin/v1/cashouts&quot;</h2>\n\n
+        \ \n<p><code>Rails.root: /Users/nguyenvunguyen/Projects/sociable2</code></p>\n\n<div
+        id=\"traces\">\n    <a href=\"#\" onclick=\"hide(&#39;Framework-Trace&#39;);hide(&#39;Full-Trace&#39;);show(&#39;Application-Trace&#39;);;
+        return false;\">Application Trace</a> |\n    <a href=\"#\" onclick=\"hide(&#39;Application-Trace&#39;);hide(&#39;Full-Trace&#39;);show(&#39;Framework-Trace&#39;);;
+        return false;\">Framework Trace</a> |\n    <a href=\"#\" onclick=\"hide(&#39;Application-Trace&#39;);hide(&#39;Framework-Trace&#39;);show(&#39;Full-Trace&#39;);;
+        return false;\">Full Trace</a> \n\n    <div id=\"Application-Trace\" style=\"display:
+        block;\">\n      <pre><code></code></pre>\n    </div>\n    <div id=\"Framework-Trace\"
+        style=\"display: none;\">\n      <pre><code>actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in
+        `call&#39;\nactionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in
+        `call&#39;\nrailties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app&#39;\nrailties
+        (4.1.0) lib/rails/rack/logger.rb:20:in `block in call&#39;\nactivesupport
+        (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;\nactivesupport
+        (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged&#39;\nactivesupport
+        (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged&#39;\nrailties
+        (4.1.0) lib/rails/rack/logger.rb:20:in `call&#39;\nactionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in
+        `call&#39;\nrack (1.5.2) lib/rack/methodoverride.rb:21:in `call&#39;\nrack
+        (1.5.2) lib/rack/runtime.rb:17:in `call&#39;\nactivesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in
+        `call&#39;\nrack (1.5.2) lib/rack/lock.rb:17:in `call&#39;\nactionpack (4.1.0)
+        lib/action_dispatch/middleware/static.rb:64:in `call&#39;\nrack (1.5.2) lib/rack/sendfile.rb:112:in
+        `call&#39;\nrailties (4.1.0) lib/rails/engine.rb:514:in `call&#39;\nrailties
+        (4.1.0) lib/rails/application.rb:144:in `call&#39;\n/Users/nguyenvunguyen/Library/Application
+        Support/Pow/Versions/0.4.3/node_modules/nack/lib/nack/server.rb:155:in `handle&#39;\n/Users/nguyenvunguyen/Library/Application
+        Support/Pow/Versions/0.4.3/node_modules/nack/lib/nack/server.rb:109:in `rescue
+        in block (2 levels) in start&#39;\n/Users/nguyenvunguyen/Library/Application
+        Support/Pow/Versions/0.4.3/node_modules/nack/lib/nack/server.rb:106:in `block
+        (2 levels) in start&#39;\n/Users/nguyenvunguyen/Library/Application Support/Pow/Versions/0.4.3/node_modules/nack/lib/nack/server.rb:96:in
+        `each&#39;\n/Users/nguyenvunguyen/Library/Application Support/Pow/Versions/0.4.3/node_modules/nack/lib/nack/server.rb:96:in
+        `block in start&#39;\n/Users/nguyenvunguyen/Library/Application Support/Pow/Versions/0.4.3/node_modules/nack/lib/nack/server.rb:76:in
+        `loop&#39;\n/Users/nguyenvunguyen/Library/Application Support/Pow/Versions/0.4.3/node_modules/nack/lib/nack/server.rb:76:in
+        `start&#39;\n/Users/nguyenvunguyen/Library/Application Support/Pow/Versions/0.4.3/node_modules/nack/lib/nack/server.rb:12:in
+        `run&#39;\n/Users/nguyenvunguyen/Library/Application Support/Pow/Versions/0.4.3/node_modules/nack/bin/nack_worker:4:in
+        `&lt;main&gt;&#39;</code></pre>\n    </div>\n    <div id=\"Full-Trace\" style=\"display:
+        none;\">\n      <pre><code>actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in
+        `call&#39;\nactionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in
+        `call&#39;\nrailties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app&#39;\nrailties
+        (4.1.0) lib/rails/rack/logger.rb:20:in `block in call&#39;\nactivesupport
+        (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;\nactivesupport
+        (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged&#39;\nactivesupport
+        (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged&#39;\nrailties
+        (4.1.0) lib/rails/rack/logger.rb:20:in `call&#39;\nactionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in
+        `call&#39;\nrack (1.5.2) lib/rack/methodoverride.rb:21:in `call&#39;\nrack
+        (1.5.2) lib/rack/runtime.rb:17:in `call&#39;\nactivesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in
+        `call&#39;\nrack (1.5.2) lib/rack/lock.rb:17:in `call&#39;\nactionpack (4.1.0)
+        lib/action_dispatch/middleware/static.rb:64:in `call&#39;\nrack (1.5.2) lib/rack/sendfile.rb:112:in
+        `call&#39;\nrailties (4.1.0) lib/rails/engine.rb:514:in `call&#39;\nrailties
+        (4.1.0) lib/rails/application.rb:144:in `call&#39;\n/Users/nguyenvunguyen/Library/Application
+        Support/Pow/Versions/0.4.3/node_modules/nack/lib/nack/server.rb:155:in `handle&#39;\n/Users/nguyenvunguyen/Library/Application
+        Support/Pow/Versions/0.4.3/node_modules/nack/lib/nack/server.rb:109:in `rescue
+        in block (2 levels) in start&#39;\n/Users/nguyenvunguyen/Library/Application
+        Support/Pow/Versions/0.4.3/node_modules/nack/lib/nack/server.rb:106:in `block
+        (2 levels) in start&#39;\n/Users/nguyenvunguyen/Library/Application Support/Pow/Versions/0.4.3/node_modules/nack/lib/nack/server.rb:96:in
+        `each&#39;\n/Users/nguyenvunguyen/Library/Application Support/Pow/Versions/0.4.3/node_modules/nack/lib/nack/server.rb:96:in
+        `block in start&#39;\n/Users/nguyenvunguyen/Library/Application Support/Pow/Versions/0.4.3/node_modules/nack/lib/nack/server.rb:76:in
+        `loop&#39;\n/Users/nguyenvunguyen/Library/Application Support/Pow/Versions/0.4.3/node_modules/nack/lib/nack/server.rb:76:in
+        `start&#39;\n/Users/nguyenvunguyen/Library/Application Support/Pow/Versions/0.4.3/node_modules/nack/lib/nack/server.rb:12:in
+        `run&#39;\n/Users/nguyenvunguyen/Library/Application Support/Pow/Versions/0.4.3/node_modules/nack/bin/nack_worker:4:in
+        `&lt;main&gt;&#39;</code></pre>\n    </div>\n</div>\n\n\n    <h2>\n      Routes\n
+        \   </h2>\n\n    <p>\n      Routes match in priority from top to bottom\n
+        \   </p>\n\n    \n<table id='route_table' class='route_table'>\n  <thead>\n
+        \   <tr>\n      <th>Helper</th>\n      <th>HTTP Verb</th>\n      <th>Path</th>\n
+        \     <th>Controller#Action</th>\n    </tr>\n    <tr class='bottom'>\n      <th>\n
+        \       <a data-route-helper=\"_path\" href=\"#\" title=\"Returns a relative
+        path (without the http or domain)\">Path</a> /\n        <a data-route-helper=\"_url\"
+        href=\"#\" title=\"Returns an absolute url (with the http and domain)\">Url</a>\n
+        \     </th>\n      <th>\n      </th>\n      <th>\n        <input id=\"path_search\"
+        name=\"path[]\" placeholder=\"Path Match\" type=\"search\" />\n      </th>\n
+        \     <th>\n      </th>\n    </tr>\n  </thead>\n  <tbody class='matched_paths'
+        id='matched_paths'>\n  </tbody>\n  <tbody>\n    <tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/' data-regexp='^\\/$'>\n    /\n  </td>\n
+        \ <td data-route-reqs='redirect(301, /my)'>\n    redirect(301, /my)\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name=''>\n  </td>\n
+        \ <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/:region/auth/:provider/callback(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/auth\\/([^\\/.?]+)\\/callback(?:\\.([^\\/.?]+))?$'>\n
+        \   /:region/auth/:provider/callback(.:format)\n  </td>\n  <td data-route-reqs='omniauth_callbacks#says'>\n
+        \   omniauth_callbacks#says\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='sign_out'>\n      sign_out<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/:country/sign_out(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/sign_out(?:\\.([^\\/.?]+))?$'>\n    /:country/sign_out(.:format)\n
+        \ </td>\n  <td data-route-reqs='sessions#destroy'>\n    sessions#destroy\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='v2_root'>\n
+        \     v2_root<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
+        \   GET\n  </td>\n  <td data-route-path='/:country(.:format)' data-regexp='^\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country(.:format)\n  </td>\n  <td data-route-reqs='v2/home#show'>\n
+        \   v2/home#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='sitemap'>\n      sitemap<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/:country/sitemap(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/sitemap(?:\\.([^\\/.?]+))?$'>\n    /:country/sitemap(.:format)\n
+        \ </td>\n  <td data-route-reqs='v2/sitemap#index'>\n    v2/sitemap#index\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='root_sitemap'>\n
+        \     root_sitemap<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
+        \   GET\n  </td>\n  <td data-route-path='/:country/sitemap-root(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/sitemap\\-root(?:\\.([^\\/.?]+))?$'>\n    /:country/sitemap-root(.:format)\n
+        \ </td>\n  <td data-route-reqs='v2/sitemap#show {:app=&gt;&quot;root&quot;}'>\n
+        \   v2/sitemap#show {:app=&gt;&quot;root&quot;}\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='app_sitemap'>\n      app_sitemap<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/:country/:app/sitemap(.:format)' data-regexp='^\\/([^\\/.?]+)\\/([^\\/.?]+)\\/sitemap(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/:app/sitemap(.:format)\n  </td>\n  <td data-route-reqs='v2/sitemap#show'>\n
+        \   v2/sitemap#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='special_shares'>\n      special_shares<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/:country/specials/:special_id/shares(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/specials\\/([^\\/.?]+)\\/shares(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/specials/:special_id/shares(.:format)\n  </td>\n  <td data-route-reqs='v2/shares#create'>\n
+        \   v2/shares#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='specials'>\n      specials<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/:country/specials(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/specials(?:\\.([^\\/.?]+))?$'>\n    /:country/specials(.:format)\n
+        \ </td>\n  <td data-route-reqs='v2/specials#index'>\n    v2/specials#index\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='special'>\n
+        \     special<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
+        \   GET\n  </td>\n  <td data-route-path='/:country/specials/:id(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/specials\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/specials/:id(.:format)\n  </td>\n  <td data-route-reqs='v2/specials#show'>\n
+        \   v2/specials#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='load_more_dashboard'>\n      load_more_dashboard<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/:country/dashboard/load_more(.:format)' data-regexp='^\\/([^\\/.?]+)\\/dashboard\\/load_more(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/dashboard/load_more(.:format)\n  </td>\n  <td data-route-reqs='v2/dashboard#load_more'>\n
+        \   v2/dashboard#load_more\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='dashboard'>\n      dashboard<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/:country/dashboard(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/dashboard(?:\\.([^\\/.?]+))?$'>\n    /:country/dashboard(.:format)\n
+        \ </td>\n  <td data-route-reqs='v2/dashboard#show'>\n    v2/dashboard#show\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='confirm_cashouts'>\n
+        \     confirm_cashouts<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='POST'>\n
+        \   POST\n  </td>\n  <td data-route-path='/:country/cashouts/confirm(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/cashouts\\/confirm(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/cashouts/confirm(.:format)\n  </td>\n  <td data-route-reqs='v2/cashouts#confirm'>\n
+        \   v2/cashouts#confirm\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='notify_cashout'>\n      notify_cashout<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/:country/cashouts/:id/notify(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/cashouts\\/([^\\/.?]+)\\/notify(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/cashouts/:id/notify(.:format)\n  </td>\n  <td data-route-reqs='v2/cashouts#notify'>\n
+        \   v2/cashouts#notify\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='cashouts'>\n      cashouts<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/:country/cashouts(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/cashouts(?:\\.([^\\/.?]+))?$'>\n    /:country/cashouts(.:format)\n
+        \ </td>\n  <td data-route-reqs='v2/cashouts#create'>\n    v2/cashouts#create\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='new_cashout'>\n
+        \     new_cashout<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
+        \   GET\n  </td>\n  <td data-route-path='/:country/cashouts/new(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/cashouts\\/new(?:\\.([^\\/.?]+))?$'>\n    /:country/cashouts/new(.:format)\n
+        \ </td>\n  <td data-route-reqs='v2/cashouts#new'>\n    v2/cashouts#new\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name='invites'>\n
+        \     invites<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='POST'>\n
+        \   POST\n  </td>\n  <td data-route-path='/:country/invites(.:format)' data-regexp='^\\/([^\\/.?]+)\\/invites(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/invites(.:format)\n  </td>\n  <td data-route-reqs='v2/invites#create'>\n
+        \   v2/invites#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/:country/invites(.:format)' data-regexp='^\\/([^\\/.?]+)\\/invites(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/invites(.:format)\n  </td>\n  <td data-route-reqs='v2/invites#show'>\n
+        \   v2/invites#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='confirm_unsubscribe_subscriptions'>\n      confirm_unsubscribe_subscriptions<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/:country/confirm/unsubscribe(.:format)' data-regexp='^\\/([^\\/.?]+)\\/confirm\\/unsubscribe(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/confirm/unsubscribe(.:format)\n  </td>\n  <td data-route-reqs='v2/subscriptions#confirm_unsubscribe'>\n
+        \   v2/subscriptions#confirm_unsubscribe\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='unsubscribe_subscriptions'>\n
+        \     unsubscribe_subscriptions<span class='helper'>_path</span>\n  </td>\n
+        \ <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/:country/unsubscribe(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/unsubscribe(?:\\.([^\\/.?]+))?$'>\n    /:country/unsubscribe(.:format)\n
+        \ </td>\n  <td data-route-reqs='v2/subscriptions#unsubscribe'>\n    v2/subscriptions#unsubscribe\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='load_invite'>\n
+        \     load_invite<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
+        \   GET\n  </td>\n  <td data-route-path='/:country/:identifier/invite(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/((\\w[\\w\\.\\-_@]+))\\/invite(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/:identifier/invite(.:format)\n  </td>\n  <td data-route-reqs='v2/invites#load
+        {:identifier=&gt;/\\w[\\w\\.\\-_@]+/}'>\n    v2/invites#load {:identifier=&gt;/\\w[\\w\\.\\-_@]+/}\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='pages'>\n
+        \     pages<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
+        \   GET\n  </td>\n  <td data-route-path='/:country/pages/:action(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/pages\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/pages/:action(.:format)\n  </td>\n  <td data-route-reqs='v2/pages#:action'>\n
+        \   v2/pages#:action\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='page'>\n      page<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/:country/:action(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n    /:country/:action(.:format)\n
+        \ </td>\n  <td data-route-reqs='v2/pages#:action'>\n    v2/pages#:action\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='account'>\n
+        \     account<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
+        \   GET\n  </td>\n  <td data-route-path='/:country/api/v1/account(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/api\\/v1\\/account(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/api/v1/account(.:format)\n  </td>\n  <td data-route-reqs='v1/accounts#show
+        {:format=&gt;&quot;json&quot;}'>\n    v1/accounts#show {:format=&gt;&quot;json&quot;}\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/:country/api/v1/specials/:special_id/shares(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/api\\/v1\\/specials\\/([^\\/.?]+)\\/shares(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/api/v1/specials/:special_id/shares(.:format)\n  </td>\n  <td
+        data-route-reqs='v1/shares#create {:format=&gt;&quot;json&quot;}'>\n    v1/shares#create
+        {:format=&gt;&quot;json&quot;}\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/:country/api/v1/specials(.:format)' data-regexp='^\\/([^\\/.?]+)\\/api\\/v1\\/specials(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/api/v1/specials(.:format)\n  </td>\n  <td data-route-reqs='v1/specials#index
+        {:format=&gt;&quot;json&quot;}'>\n    v1/specials#index {:format=&gt;&quot;json&quot;}\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/:country/api/v1/specials/:id(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/api\\/v1\\/specials\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/api/v1/specials/:id(.:format)\n  </td>\n  <td data-route-reqs='v1/specials#show
+        {:format=&gt;&quot;json&quot;}'>\n    v1/specials#show {:format=&gt;&quot;json&quot;}\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='shares'>\n
+        \     shares<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
+        \   GET\n  </td>\n  <td data-route-path='/:country/api/v1/shares(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/api\\/v1\\/shares(?:\\.([^\\/.?]+))?$'>\n    /:country/api/v1/shares(.:format)\n
+        \ </td>\n  <td data-route-reqs='v1/shares#index {:format=&gt;&quot;json&quot;}'>\n
+        \   v1/shares#index {:format=&gt;&quot;json&quot;}\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='versions'>\n      versions<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/:country/api/v1/versions(.:format)' data-regexp='^\\/([^\\/.?]+)\\/api\\/v1\\/versions(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/api/v1/versions(.:format)\n  </td>\n  <td data-route-reqs='v1/versions#index
+        {:format=&gt;&quot;json&quot;}'>\n    v1/versions#index {:format=&gt;&quot;json&quot;}\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='api_credentials'>\n
+        \     api_credentials<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
+        \   GET\n  </td>\n  <td data-route-path='/:country/api/v1/credentials(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/api\\/v1\\/credentials(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/api/v1/credentials(.:format)\n  </td>\n  <td data-route-reqs='api/mobile/v1/credentials#index
+        {:format=&gt;&quot;json&quot;}'>\n    api/mobile/v1/credentials#index {:format=&gt;&quot;json&quot;}\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='api_login'>\n
+        \     api_login<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='POST'>\n
+        \   POST\n  </td>\n  <td data-route-path='/:country/api/v2/login(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/api\\/v2\\/login(?:\\.([^\\/.?]+))?$'>\n    /:country/api/v2/login(.:format)\n
+        \ </td>\n  <td data-route-reqs='api/mobile/v2/sessions#create {:format=&gt;&quot;json&quot;}'>\n
+        \   api/mobile/v2/sessions#create {:format=&gt;&quot;json&quot;}\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name='api_mobile_v2_login'>\n
+        \     api_mobile_v2_login<span class='helper'>_path</span>\n  </td>\n  <td
+        data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/:country/api/mobile/v2/login(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/api\\/mobile\\/v2\\/login(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/api/mobile/v2/login(.:format)\n  </td>\n  <td data-route-reqs='api/mobile/v2/sessions#create
+        {:format=&gt;&quot;json&quot;}'>\n    api/mobile/v2/sessions#create {:format=&gt;&quot;json&quot;}\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='api_mobile_v2_feedbacks'>\n
+        \     api_mobile_v2_feedbacks<span class='helper'>_path</span>\n  </td>\n
+        \ <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/:country/api/mobile/v2/feedbacks(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/api\\/mobile\\/v2\\/feedbacks(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/api/mobile/v2/feedbacks(.:format)\n  </td>\n  <td data-route-reqs='api/mobile/v2/feedbacks#create
+        {:format=&gt;&quot;json&quot;}'>\n    api/mobile/v2/feedbacks#create {:format=&gt;&quot;json&quot;}\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='ironmq_update_api_ironmq_v1_account_index'>\n
+        \     ironmq_update_api_ironmq_v1_account_index<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/:country/api/ironmq/v1/account/ironmq_update(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/api\\/ironmq\\/v1\\/account\\/ironmq_update(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/api/ironmq/v1/account/ironmq_update(.:format)\n  </td>\n  <td
+        data-route-reqs='api/ironmq/v1/account#ironmq_update {:format=&gt;&quot;json&quot;}'>\n
+        \   api/ironmq/v1/account#ironmq_update {:format=&gt;&quot;json&quot;}\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name='reward_user_api_ironmq_v1_account_index'>\n
+        \     reward_user_api_ironmq_v1_account_index<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/:country/api/ironmq/v1/account/reward_user(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/api\\/ironmq\\/v1\\/account\\/reward_user(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/api/ironmq/v1/account/reward_user(.:format)\n  </td>\n  <td
+        data-route-reqs='api/ironmq/v1/account#reward_user {:format=&gt;&quot;json&quot;}'>\n
+        \   api/ironmq/v1/account#reward_user {:format=&gt;&quot;json&quot;}\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name='api_admin_v1_user'>\n
+        \     api_admin_v1_user<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
+        \   GET\n  </td>\n  <td data-route-path='/:country/api/admin/v1/users/:id(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/api\\/admin\\/v1\\/users\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/api/admin/v1/users/:id(.:format)\n  </td>\n  <td data-route-reqs='api/admin/v1/users#show
+        {:format=&gt;&quot;json&quot;}'>\n    api/admin/v1/users#show {:format=&gt;&quot;json&quot;}\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n  </td>\n  <td data-route-path='/:country/api/admin/v1/users/:id(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/api\\/admin\\/v1\\/users\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/api/admin/v1/users/:id(.:format)\n  </td>\n  <td data-route-reqs='api/admin/v1/users#update
+        {:format=&gt;&quot;json&quot;}'>\n    api/admin/v1/users#update {:format=&gt;&quot;json&quot;}\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='PUT'>\n    PUT\n  </td>\n  <td data-route-path='/:country/api/admin/v1/users/:id(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/api\\/admin\\/v1\\/users\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/api/admin/v1/users/:id(.:format)\n  </td>\n  <td data-route-reqs='api/admin/v1/users#update
+        {:format=&gt;&quot;json&quot;}'>\n    api/admin/v1/users#update {:format=&gt;&quot;json&quot;}\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='api_admin_v1_cashouts'>\n
+        \     api_admin_v1_cashouts<span class='helper'>_path</span>\n  </td>\n  <td
+        data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/:country/api/admin/v1/cashouts(.:format)'
+        data-regexp='^\\/([^\\/.?]+)\\/api\\/admin\\/v1\\/cashouts(?:\\.([^\\/.?]+))?$'>\n
+        \   /:country/api/admin/v1/cashouts(.:format)\n  </td>\n  <td data-route-reqs='api/admin/v1/cashouts#index
+        {:format=&gt;&quot;json&quot;}'>\n    api/admin/v1/cashouts#index {:format=&gt;&quot;json&quot;}\n
+        \ </td>\n</tr>\n\n  </tbody>\n</table>\n\n<script type='text/javascript'>\n
+        \ function each(elems, func) {\n    if (!elems instanceof Array) { elems =
+        [elems]; }\n    for (var i = 0, len = elems.length; i < len; i++) {\n      func(elems[i]);\n
+        \   }\n  }\n\n  function setValOn(elems, val) {\n    each(elems, function(elem)
+        {\n      elem.innerHTML = val;\n    });\n  }\n\n  function onClick(elems,
+        func) {\n    each(elems, function(elem) {\n      elem.onclick = func;\n    });\n
+        \ }\n\n  // Enables functionality to toggle between `_path` and `_url` helper
+        suffixes\n  function setupRouteToggleHelperLinks() {\n    var toggleLinks
+        = document.querySelectorAll('#route_table [data-route-helper]');\n    onClick(toggleLinks,
+        function(){\n      var helperTxt   = this.getAttribute(\"data-route-helper\"),\n
+        \         helperElems = document.querySelectorAll('[data-route-name] span.helper');\n
+        \     setValOn(helperElems, helperTxt);\n    });\n  }\n\n  // takes an array
+        of elements with a data-regexp attribute and\n  // passes their parent <tr>
+        into the callback function\n  // if the regexp matches a given path\n  function
+        eachElemsForPath(elems, path, func) {\n    each(elems, function(e){\n      var
+        reg = e.getAttribute(\"data-regexp\");\n      if (path.match(RegExp(reg)))
+        {\n        func(e.parentNode.cloneNode(true));\n      }\n    })\n  }\n\n  //
+        Ensure path always starts with a slash \"/\" and remove params or fragments\n
+        \ function sanitizePath(path) {\n    var path = path.charAt(0) == '/' ? path
+        : \"/\" + path;\n    return path.replace(/\\#.*|\\?.*/, '');\n  }\n\n  //
+        Enables path search functionality\n  function setupMatchPaths() {\n    var
+        regexpElems     = document.querySelectorAll('#route_table [data-regexp]'),\n
+        \       pathElem        = document.querySelector('#path_search'),\n        selectedSection
+        = document.querySelector('#matched_paths'),\n        noMatchText     = '<tr><th
+        colspan=\"4\">None</th></tr>';\n\n\n    // Remove matches if no path is present\n
+        \   pathElem.onblur = function(e) {\n      if (pathElem.value === \"\") selectedSection.innerHTML
+        = \"\";\n    }\n\n    // On key press perform a search for matching paths\n
+        \   pathElem.onkeyup = function(e){\n      var path        = sanitizePath(pathElem.value),\n
+        \         defaultText = '<tr><th colspan=\"4\">Paths Matching (' + path +
+        '):</th></tr>';\n\n      // Clear out results section\n      selectedSection.innerHTML=
+        defaultText;\n\n      // Display matches if they exist\n      eachElemsForPath(regexpElems,
+        path, function(e){\n        selectedSection.appendChild(e);\n      });\n\n
+        \     // If no match present, tell the user\n      if (selectedSection.innerHTML
+        === defaultText) {\n        selectedSection.innerHTML = selectedSection.innerHTML
+        + noMatchText;\n      }\n    }\n  }\n\n  setupMatchPaths();\n  setupRouteToggleHelperLinks();\n</script>\n\n</div>\n\n\n</body>\n</html>\n"
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://sociable2.dev/api/admin/v1/cashouts?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+  recorded_at: Thu, 05 Jun 2014 08:21:46 GMT
+recorded_with: VCR 2.9.0

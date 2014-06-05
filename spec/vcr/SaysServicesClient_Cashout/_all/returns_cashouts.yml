@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sociable2.dev/my/api/admin/v1/cashouts?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      ETag:
+      - '"1b209997a07aaa25a0555c58d43e6859"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Request-Id:
+      - b2ab86eb-003f-459c-99cf-279a0902b34f
+      X-Runtime:
+      - '0.178661'
+      Date:
+      - Thu, 05 Jun 2014 08:45:28 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"cashouts":[{"id":1,"name":"Nguyen edited","email":"nguyen2@localhost.com","bank_name":"ALLIANCE
+        BANK MALAYSIA BERHAD","phone_number":"1234567899","state":"pending","cashout_option":"Online
+        Bank Transfer","request_amount":8.0,"warn":false,"reject_reason":null,"type":"CashCashout","external_name":null,"external_id":null,"identity_card":"890324115424","bank_account":"123456789012311","notified":false,"batch_number":null,"partner":{},"identity_type":null,"created_at":"2014-06-05T01:57:13.000+08:00","updated_at":"2014-06-05T01:57:13.000+08:00"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://sociable2.dev/my/api/admin/v1/cashouts?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+  recorded_at: Thu, 05 Jun 2014 08:45:28 GMT
+recorded_with: VCR 2.9.0

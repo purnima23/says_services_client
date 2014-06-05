@@ -16,6 +16,7 @@ require 'says_services_client/models/share_list'
 require 'says_services_client/models/share_stat'
 require 'says_services_client/models/trigger'
 require 'says_services_client/models/user'
+require 'says_services_client/models/cashout'
 
 module SaysServicesClient
   class MissingEndpoint < StandardError

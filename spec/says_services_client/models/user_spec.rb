@@ -4,7 +4,7 @@ describe SaysServicesClient::User, :vcr do
   describe '#all' do
     it 'returns users' do
       users = SaysServicesClient::User.all(country: 'malaysia')
-      users.count.should == 5
+      users.count.should eq 5
 
       user = users.first
       user.id.should eq 1
