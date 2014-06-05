@@ -1,5 +1,3 @@
-# require 'says_services_client/models/users/api_service_concerns'
-
 module SaysServicesClient
   class User < Models::Base  
 
