@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:9000//api/v2/campaigns?ids=11,12&token=6a6b37898f0179405f262a9343258ae6&user_id=23
+    uri: http://localhost:9000//api/v2/campaigns?ids=11,12&token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&user_id=23
     body:
       encoding: US-ASCII
       string: ''
@@ -59,7 +59,7 @@ http_interactions:
   recorded_at: Tue, 15 Apr 2014 09:18:51 GMT
 - request:
     method: get
-    uri: http://localhost:9000//api/v2/shares/users/23?campaign_ids=11,12&token=6a6b37898f0179405f262a9343258ae6
+    uri: http://localhost:9000//api/v2/shares/users/23?campaign_ids=11,12&token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
     body:
       encoding: US-ASCII
       string: ''

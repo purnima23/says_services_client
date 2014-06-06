@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:9000//api/v2/campaigns/999?token=6a6b37898f0179405f262a9343258ae6&user_id=1
+    uri: http://localhost:9000//api/v2/campaigns/999?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&user_id=1
     body:
       encoding: US-ASCII
       string: ''
@@ -216,7 +216,7 @@ http_interactions:
         (3.2.17) lib/rails/commands.rb:50:in `tap&#x27;\nrailties (3.2.17) lib/rails/commands.rb:50:in
         `&lt;top (required)&gt;&#x27;\nscript/rails:6:in `require&#x27;\nscript/rails:6:in
         `&lt;main&gt;&#x27;</code></pre>\n    </div>\n</div>\n\n\n\n<h2 style=\"margin-top:
-        30px\">Request</h2>\n<p><b>Parameters</b>: <pre>{&quot;token&quot;=&gt;&quot;6a6b37898f0179405f262a9343258ae6&quot;,\n
+        30px\">Request</h2>\n<p><b>Parameters</b>: <pre>{&quot;token&quot;=&gt;&quot;424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&quot;,\n
         &quot;user_id&quot;=&gt;&quot;1&quot;,\n &quot;id&quot;=&gt;&quot;999&quot;}</pre></p>\n\n<p><a
         href=\"#\" onclick=\"document.getElementById('session_dump').style.display='block';
         return false;\">Show session dump</a></p>\n<div id=\"session_dump\" style=\"display:none\"><pre>abingo_identity:

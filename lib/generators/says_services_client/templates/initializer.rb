@@ -1,6 +1,6 @@
 HYDRA = Typhoeus::Hydra.new
 SaysServicesClient::Config.hydra = HYDRA
-SaysServicesClient::Config.oauth_token = '6a6b37898f0179405f262a9343258ae6'
+SaysServicesClient::Config.oauth_token = '424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8'
 SaysServicesClient::Config.endpoint = {
   campaign_url: 'http://localhost:3001/',
   share_url: 'http://localhost:3001/',
