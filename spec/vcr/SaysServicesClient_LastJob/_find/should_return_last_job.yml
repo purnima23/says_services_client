@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:9000//api/v2/last_job/clicks_filter?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - "\"8af258aa796aa4ad3e9271c739fb28ae\""
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiJWZiMzg5MTlhZDg5OTBhYWQxYTExNzFlZDNlNjRmOGNlBjsAVEkiDXJlZmVycmVyBjsAVEkiCW5vbmUGOwBUSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCKThrY4BAA%3D%3D--3539357018e393ee6101dd8a188baebbdd804b59;
+        path=/; HttpOnly
+      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiJWZiMzg5MTlhZDg5OTBhYWQxYTExNzFlZDNlNjRmOGNlBjsAVEkiDXJlZmVycmVyBjsAVEkiCW5vbmUGOwBUSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCKThrY4BAA%3D%3D--3539357018e393ee6101dd8a188baebbdd804b59;
+        path=/; expires=Sat, 06-Dec-2014 09:31:24 GMT
+      Content-Length:
+      - '74'
+      X-Request-Id:
+      - 9afc920db82984a73676d61870747a18
+      X-Runtime:
+      - '0.076601'
+      Connection:
+      - keep-alive
+      Server:
+      - thin 1.3.1 codename Triple Espresso
+    body:
+      encoding: UTF-8
+      string: "{\"id\":1,\"job_name\":\"clicks_filter\",\"last_run\":\"2013-09-26T14:15:33+08:00\"}"
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://localhost:9000//api/v2/last_job/clicks_filter?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+  recorded_at: Fri, 06 Jun 2014 09:31:24 GMT
+recorded_with: VCR 2.9.0

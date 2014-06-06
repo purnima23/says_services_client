@@ -9,5 +9,6 @@ SaysServicesClient::Config.endpoint = {
   user_list_url: 'http://sociable.dev',
   user_url: 'http://says-connect.dev',
   sociable_user_url: 'http://sociable.dev',
-  share_stat_url: 'http://localhost:9000/'
+  share_stat_url: 'http://localhost:9000/',
+  last_job_url: 'http://localhost:9000/'
 }
