@@ -3,6 +3,7 @@ require "says_services_client/config"
 require 'active_model'
 require 'active_support/all'
 require 'hashie'
+require 'will_paginate/collection'
 
 require 'says_services_client/utils/class_level_inheritable_attributes'
 require 'says_services_client/utils/connection'

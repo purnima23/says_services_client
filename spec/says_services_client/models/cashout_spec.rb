@@ -19,6 +19,16 @@ describe SaysServicesClient::Cashout, :vcr do
         SaysServicesClient::Cashout.last_request.request_amount_sum.should_not be_nil
       end
     end
+
+    context 'when paginating' do
+      it 'returns paginated collection' do
+        cashouts = SaysServicesClient::Cashout.all(page: 1, per_page: 2, country_code: 'my')
+
+        cashouts.count.should eq 2
+        cashouts.current_page.should eq 1
+        cashouts.total_entries.should eq 5
+      end
+    end
   end
 
   describe '#update' do

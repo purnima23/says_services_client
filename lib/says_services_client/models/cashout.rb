@@ -48,13 +48,19 @@ module SaysServicesClient
       parsed = JSON.parse(json)
       cashouts = parsed.delete("cashouts").map { |u| parse(u) }
 
+      page     = parsed.delete("page") || 1
+      per_page = parsed.delete("per_page") || 15
+      total    = parsed.delete("total_entries") || cashouts.length
+      
       last_request = Hashie::Mash.new
       parsed.keys.each do |key|
         last_request[key] = parsed[key]
       end
       self.last_request = last_request
 
-      cashouts
+      WillPaginate::Collection.create(page, per_page, total) do |pager|
+        pager.replace cashouts
+      end
     end
 
     def self.parse(json)

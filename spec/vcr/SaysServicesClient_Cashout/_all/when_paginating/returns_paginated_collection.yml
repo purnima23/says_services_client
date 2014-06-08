@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sociable2.dev/my/api/admin/v1/cashouts?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&page=1&per_page=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      ETag:
+      - '"be393e017578a5417b1ca472ece7f1fd"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Request-Id:
+      - 5669fc51-afb0-4d97-a64e-0e889c4bdbcd
+      X-Runtime:
+      - '0.211357'
+      Date:
+      - Sun, 08 Jun 2014 14:46:54 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"cashouts":[{"id":6,"user_id":6,"name":"user JVLDZVZE","email":"mai@says.my","bank_name":"MAYBANK
+        BERHAD","phone_number":"0199909602","state":"pending","cashout_option":null,"request_amount":5.0,"warn":false,"reject_reason":null,"type":"CashCashout","external_name":null,"external_id":null,"identity_card":"810507035291","bank_account":"573635753073","notified":false,"batch_number":null,"partner":{},"identity_type":null,"created_at":"2014-06-08T22:46:16.000+08:00","updated_at":"2014-06-08T22:46:16.000+08:00","user_state":"activated","user_wallet":"100.0","country":"malaysia"},{"id":7,"user_id":7,"name":"user
+        ZNBPHKJN","email":"mai@says.my","bank_name":"MAYBANK BERHAD","phone_number":"0199909602","state":"pending","cashout_option":null,"request_amount":5.0,"warn":false,"reject_reason":null,"type":"CashCashout","external_name":null,"external_id":null,"identity_card":"810507035292","bank_account":"718865878021","notified":false,"batch_number":null,"partner":{},"identity_type":null,"created_at":"2014-06-08T22:46:16.000+08:00","updated_at":"2014-06-08T22:46:16.000+08:00","user_state":"activated","user_wallet":"100.0","country":"malaysia"}],"page":"1","per_page":"2","total_entries":5}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://sociable2.dev/my/api/admin/v1/cashouts?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&page=1&per_page=2
+  recorded_at: Sun, 08 Jun 2014 14:46:54 GMT
+recorded_with: VCR 2.9.0
