@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: http://sociable2.dev/my/api/admin/v1/cashouts/update_all?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&status=pending&update_action=verify
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      ETag:
+      - '"0893318de140b4196d2fd865a14e24c6"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=PUT; path=/
+      X-Request-Id:
+      - 2e1ba0c8-112c-46ce-bef4-ebf2ed08e36d
+      X-Runtime:
+      - '0.029742'
+      Date:
+      - Sun, 08 Jun 2014 06:03:58 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"errors":["Your account does not reach cash-out amount.","Your account
+        does not reach cash-out amount."]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://sociable2.dev/my/api/admin/v1/cashouts/update_all?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&status=pending&update_action=verify
+  recorded_at: Sun, 08 Jun 2014 06:03:58 GMT
+recorded_with: VCR 2.9.0

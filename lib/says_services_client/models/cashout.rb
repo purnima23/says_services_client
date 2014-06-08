@@ -32,6 +32,16 @@ module SaysServicesClient
       parse(response.body)
     end
 
+    def self.update_all(options={})
+      country_code = options.delete(:country_code)
+      raise ActiveModel::MissingAttributeError.new("country_code") if country_code.blank?
+      raise ActiveModel::MissingAttributeError.new("update_action") if options[:update_action].blank?
+
+      request = establish_connection("/#{country_code}/api/admin/v1/cashouts/update_all", method: :put, params: options)
+      response = request.run
+      parse(response.body)
+    end
+
     protected
 
     def self.parse_list(json, options={})

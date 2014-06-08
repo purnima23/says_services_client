@@ -36,4 +36,18 @@ describe SaysServicesClient::Cashout, :vcr do
       end
     end
   end
+
+  describe '#update_all' do
+    it 'updates all cashouts' do
+      response = SaysServicesClient::Cashout.update_all(status: 'pending', country_code: 'my', update_action: 'verify')
+      response.errors.should be_empty
+    end
+
+    context 'when there is error' do
+      it 'updates all cashouts' do
+        response = SaysServicesClient::Cashout.update_all(status: 'pending', country_code: 'my', update_action: 'verify')
+        response.errors.first.should eq "Your account does not reach cash-out amount."
+      end
+    end
+  end
 end
