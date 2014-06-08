@@ -29,11 +29,11 @@ http_interactions:
       Set-Cookie:
       - request_method=PUT; path=/
       X-Request-Id:
-      - 92224882-3f7b-472e-af2a-17b95b39959a
+      - 659c939c-18f8-48a8-b1a0-d248fb811c58
       X-Runtime:
-      - '0.618853'
+      - '0.424227'
       Date:
-      - Sun, 08 Jun 2014 06:00:53 GMT
+      - Sun, 08 Jun 2014 06:09:20 GMT
       Connection:
       - close
     body:
@@ -42,5 +42,50 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: http://sociable2.dev/my/api/admin/v1/cashouts/update_all?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&status=pending&update_action=verify
-  recorded_at: Sun, 08 Jun 2014 06:00:53 GMT
+  recorded_at: Sun, 08 Jun 2014 06:09:20 GMT
+- request:
+    method: get
+    uri: http://sociable2.dev/my/api/admin/v1/cashouts?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      ETag:
+      - '"3bbfaa669bbffc16e67ae65b41be4c1e"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Request-Id:
+      - 54423a66-72ac-4c64-8edd-316f6cab4420
+      X-Runtime:
+      - '0.049189'
+      Date:
+      - Sun, 08 Jun 2014 06:09:20 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"cashouts":[{"id":27,"user_id":27,"name":"user KYYBALKG","email":"mai@says.my","bank_name":"MAYBANK
+        BERHAD","phone_number":"0199909602","state":"verified","cashout_option":null,"request_amount":5.0,"warn":false,"reject_reason":null,"type":"CashCashout","external_name":null,"external_id":null,"identity_card":"810507035291","bank_account":"580360870084","notified":false,"batch_number":null,"partner":{},"identity_type":null,"created_at":"2014-06-08T14:06:32.000+08:00","updated_at":"2014-06-08T14:09:19.000+08:00","user_state":"activated","user_wallet":"100.0","country":"malaysia"},{"id":28,"user_id":28,"name":"user
+        EXNGHJJB","email":"mai@says.my","bank_name":"MAYBANK BERHAD","phone_number":"0199909602","state":"verified","cashout_option":null,"request_amount":5.0,"warn":false,"reject_reason":null,"type":"CashCashout","external_name":null,"external_id":null,"identity_card":"810507035292","bank_account":"178208748033","notified":false,"batch_number":null,"partner":{},"identity_type":null,"created_at":"2014-06-08T14:06:33.000+08:00","updated_at":"2014-06-08T14:09:20.000+08:00","user_state":"activated","user_wallet":"100.0","country":"malaysia"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://sociable2.dev/my/api/admin/v1/cashouts?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+  recorded_at: Sun, 08 Jun 2014 06:09:20 GMT
 recorded_with: VCR 2.9.0

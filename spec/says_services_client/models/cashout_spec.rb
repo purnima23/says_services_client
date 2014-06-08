@@ -41,6 +41,10 @@ describe SaysServicesClient::Cashout, :vcr do
     it 'updates all cashouts' do
       response = SaysServicesClient::Cashout.update_all(status: 'pending', country_code: 'my', update_action: 'verify')
       response.errors.should be_empty
+
+      cashouts = SaysServicesClient::Cashout.all(country_code: 'my')
+      cashouts.first.state.should eq 'verified'
+      cashouts.last.state.should eq 'verified'
     end
 
     context 'when there is error' do
