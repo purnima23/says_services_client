@@ -19,7 +19,19 @@ describe SaysServicesClient::User, :vcr do
     context 'when filters are passed' do
       it 'returns users based on filters' do
         users = SaysServicesClient::User.all(keyword: 'nguyen')
-        users.count.should == 3
+        
+        users.count.should eq 3
+      end
+    end
+
+    context 'when paginating' do
+      it 'returns users by page' do
+        users = SaysServicesClient::User.all(page: 1,
+                                             per_page: 2)
+
+        users.count.should eq 2
+        users.current_page.should eq 1
+        users.total_entries.should eq 6
       end
     end
   end

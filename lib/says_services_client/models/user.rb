@@ -59,7 +59,15 @@ module SaysServicesClient
 
     def self.parse_list(json, options={})
       parsed = JSON.parse(json)
-      parsed["users"].map { |u| parse(u) }
+      users = parsed["users"].map { |u| parse(u) }
+
+      page     = parsed["page"] || 1
+      per_page = parsed["per_page"] || 15
+      total    = parsed["total_entries"] || users.length
+
+      WillPaginate::Collection.create(page, per_page, total) do |pager|
+        pager.replace users
+      end
     end
 
     def self.parse(json, options={})

@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://says-connect.dev/api/admin/v1/users?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&page=1&per_page=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - '"681e41aa10e7a6b43c9461a96d174e5c"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e4aebbf3a556a4c76567a0bfba56d165
+      X-Runtime:
+      - '0.019693'
+      Date:
+      - Fri, 13 Jun 2014 03:39:53 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"users":[{"id":1,"login":"nguyen","email":"nguyen@localhost.com","status":"activated","activated_at":"2014-06-04T08:19:14Z","name":"Nguyen","gender":"Male","country":"malaysia"},{"id":2,"login":"testprofile","email":"testprofile@localhost.com","status":null,"activated_at":null,"name":null,"gender":null,"country":"indonesia"}],"page":"1","per_page":"2","total_entries":6}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://says-connect.dev/api/admin/v1/users?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&page=1&per_page=2
+  recorded_at: Fri, 13 Jun 2014 03:39:53 GMT
+recorded_with: VCR 2.9.0
