@@ -5,7 +5,7 @@ describe SaysServicesClient::Models::Campaigns::ShareConcerns do
     it 'includes share to campaign' do
       VCR.use_cassette 'Models/Campaigns/ShareConcernsTest/include_request_share_by_user_id_23' do
         campaign = SaysServicesClient::Campaign.new(id: 3)
-        SaysServicesClient::Campaign.include_request_share_by_user_id(23, [campaign])
+        SaysServicesClient::Campaign.include_request_share_by_user_id('my', 23, [campaign])
         campaign.share_by_user_id(23).should_not be_nil
       end
     end
@@ -24,13 +24,13 @@ describe SaysServicesClient::Models::Campaigns::ShareConcerns do
   
   context '#request_share_by_user_id' do
     it 'accepts campaign id' do
-      SaysServicesClient::Share.should_receive(:find_by_user_id).with(23, campaign_ids: [12])
-      SaysServicesClient::Campaign.send(:request_share_by_user_id, 23, 12)
+      SaysServicesClient::Share.should_receive(:find_by_user_id).with(23, campaign_ids: [12], country: 'my')
+      SaysServicesClient::Campaign.send(:request_share_by_user_id, 'my', 23, 12)
     end
     
     it 'accepts array of campaign id' do
-      SaysServicesClient::Share.should_receive(:find_by_user_id).with(23, campaign_ids: [12])
-      SaysServicesClient::Campaign.send(:request_share_by_user_id, 23, [12])
+      SaysServicesClient::Share.should_receive(:find_by_user_id).with(23, campaign_ids: [12], country: 'my')
+      SaysServicesClient::Campaign.send(:request_share_by_user_id, 'my', 23, [12])
     end
   end
     

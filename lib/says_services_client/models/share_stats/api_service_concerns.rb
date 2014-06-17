@@ -6,7 +6,10 @@ module SaysServicesClient
   
         module ClassMethods
           def find_by_user_id(id, options={})
-            conn = establish_connection("/api/v2/share_stats/#{id}", params: options)
+            country = options.delete(:country)
+            raise ActiveModel::MissingAttributeError.new("country") if country.blank?
+
+            conn = establish_connection("/#{country}/api/v2/share_stats/#{id}", params: options)
           
             if block_given?
               conn.on_complete do |response|

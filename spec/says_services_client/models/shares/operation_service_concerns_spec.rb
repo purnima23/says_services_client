@@ -5,7 +5,7 @@ describe SaysServicesClient::Models::Shares::OperationServiceConcerns do
     describe '#create_operation_service' do
       it 'returns true if record created' do
         VCR.use_cassette 'Models/Shares/OperationServiceConcernsTest/success_create' do
-          share = SaysServicesClient::Share.new(user_id: 28, campaign_id: 12, username: 'newbie', message: 'Are you nutz?')
+          share = SaysServicesClient::Share.new(user_id: 28, campaign_id: 12, username: 'newbie', message: 'Are you nutz?', country_code: 'my')
           share.send(:create_operation_service).should be_true
           share.new_record?.should be_false
         end
@@ -13,7 +13,7 @@ describe SaysServicesClient::Models::Shares::OperationServiceConcerns do
       
       it 'returns false if record not created' do
         VCR.use_cassette 'Models/Shares/OperationServiceConcernsTest/fail_create' do
-          share = SaysServicesClient::Share.new(user_id: 23, campaign_id: 12, username: 'newbie', message: 'Are you nutz?')
+          share = SaysServicesClient::Share.new(user_id: 23, campaign_id: 12, username: 'newbie', message: 'Are you nutz?', country_code: 'my')
           share.send(:create_operation_service).should be_false
           share.new_record?.should be_true
         end
@@ -21,7 +21,7 @@ describe SaysServicesClient::Models::Shares::OperationServiceConcerns do
       
       it 'assigns attributes for returned record' do
         VCR.use_cassette 'Models/Shares/OperationServiceConcernsTest/success_create' do
-          share = SaysServicesClient::Share.new(user_id: 28, campaign_id: 12, username: 'newbie', message: 'Are you nutz?')
+          share = SaysServicesClient::Share.new(user_id: 28, campaign_id: 12, username: 'newbie', message: 'Are you nutz?', country_code: 'my')
           share.send(:create_operation_service).should be_true
           share.new_record?.should be_false
           share.share_url.should eq('http://bit.ly/1m5TFgY')

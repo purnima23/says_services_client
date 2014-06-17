@@ -6,14 +6,14 @@ describe SaysServicesClient::Models::Campaigns::ApiServiceConcerns do
       it 'should raise error if include share by user id without user_id' do
         VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/find_12_include_share_by_user_id_23' do
           expect do
-            @campaign = SaysServicesClient::Campaign.find(12, include: :share_by_user_id)
+            @campaign = SaysServicesClient::Campaign.find(12, country: 'my', include: :share_by_user_id)
           end.to raise_error
         end
       end
       
       it 'should ignore include_share_by_user_id request if user_id is blank' do
         VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/find_12_include_share_by_user_id_blank' do
-          SaysServicesClient::Campaign.find(12, include: :share_by_user_id, user_id: nil) do |c|
+          SaysServicesClient::Campaign.find(12, country: 'my', include: :share_by_user_id, user_id: nil) do |c|
             @campaign = c
           end
           HYDRA.run
@@ -25,7 +25,7 @@ describe SaysServicesClient::Models::Campaigns::ApiServiceConcerns do
     context 'with block given' do
       it 'returns correct campaign' do
         VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/find_11' do
-          SaysServicesClient::Campaign.find(11) do |c|
+          SaysServicesClient::Campaign.find(11, country: 'my') do |c|
             @campaign = c
           end
           HYDRA.run
@@ -35,7 +35,7 @@ describe SaysServicesClient::Models::Campaigns::ApiServiceConcerns do
       
       it 'can include share by user id' do
         VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/find_12_include_share_by_user_id_23' do
-          SaysServicesClient::Campaign.find(12, include: :share_by_user_id, user_id: 23) do |c|
+          SaysServicesClient::Campaign.find(12, country: 'my', include: :share_by_user_id, user_id: 23) do |c|
             @campaign = c
           end
           HYDRA.run
@@ -50,14 +50,14 @@ describe SaysServicesClient::Models::Campaigns::ApiServiceConcerns do
     context 'without block given' do
       it 'returns correct campaign' do
         VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/find_11' do
-          @campaign = SaysServicesClient::Campaign.find(11)
+          @campaign = SaysServicesClient::Campaign.find(11, country: 'my')
         end
         @campaign.id.should eq(11)
       end
       
       it 'can include share by user id' do
         VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/find_12_include_share_by_user_id_23' do
-          @campaign = SaysServicesClient::Campaign.find(12, include: :share_by_user_id, user_id: 23)
+          @campaign = SaysServicesClient::Campaign.find(12, country: 'my', include: :share_by_user_id, user_id: 23)
         end
         @campaign.id.should eq(12)
         @campaign.instance_variable_get("@shares").should_not be_nil
@@ -79,7 +79,7 @@ describe SaysServicesClient::Models::Campaigns::ApiServiceConcerns do
     context 'with ids' do
       it 'should returns campaigns in ids' do
         VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/all_with_ids_3_12' do
-          @campaigns = SaysServicesClient::Campaign.all(ids: [3, 12])
+          @campaigns = SaysServicesClient::Campaign.all(ids: [3, 12], country: 'my')
         end
         @campaigns.size.should eq(2)
         @campaigns.first.id.should eq(3)
@@ -88,7 +88,7 @@ describe SaysServicesClient::Models::Campaigns::ApiServiceConcerns do
       
       it 'can include share by user id' do
         VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/all_with_ids_11_12_include_share_by_user_id_23' do
-          SaysServicesClient::Campaign.all(ids: [11,12], include: :share_by_user_id, user_id: 23) do |c|
+          SaysServicesClient::Campaign.all(ids: [11,12], country: 'my', include: :share_by_user_id, user_id: 23) do |c|
             @campaigns = c
           end
           HYDRA.run
@@ -128,17 +128,7 @@ describe SaysServicesClient::Models::Campaigns::ApiServiceConcerns do
       end
     end
     
-    context 'with block given' do
-      it 'returns all campaigns' do
-        VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/all' do
-          SaysServicesClient::Campaign.all do |c|
-            @campaigns = c
-          end
-          HYDRA.run
-        end
-        @campaigns.size.should eq(4)
-      end
-    
+    context 'with block given' do    
       it 'returns only MY campaigns if country is specified' do
         VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/all_country_my' do
           SaysServicesClient::Campaign.all(country: 'my') do |c|
@@ -170,13 +160,6 @@ describe SaysServicesClient::Models::Campaigns::ApiServiceConcerns do
     end
     
     context 'without block given' do
-      it 'returns all campaigns' do
-        VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/all' do
-          @campaigns = SaysServicesClient::Campaign.all
-        end
-        @campaigns.size.should eq(4)
-      end
-    
       it 'returns only MY campaigns if country is specified' do
         VCR.use_cassette 'Models/Campaigns/ApiServiceConcernsTest/all_country_my' do
           @campaigns = SaysServicesClient::Campaign.all(country: 'my')
@@ -204,18 +187,18 @@ describe SaysServicesClient::Models::Campaigns::ApiServiceConcerns do
   
   context '#all_path' do
     it 'appends ids to URL if present in hash as integer' do
-      path = SaysServicesClient::Campaign.send(:all_path, ids: 2)
-      path.should eq("/api/v2/campaigns?ids=2")
+      path = SaysServicesClient::Campaign.send(:all_path, ids: 2, country: 'my')
+      path.should eq("/my/api/v2/campaigns?ids=2")
     end
     
     it 'appends ids to URL if present in hash as array' do
-      path = SaysServicesClient::Campaign.send(:all_path, ids: [1,2,3])
-      path.should eq("/api/v2/campaigns?ids=1,2,3")
+      path = SaysServicesClient::Campaign.send(:all_path, ids: [1,2,3], country: 'my')
+      path.should eq("/my/api/v2/campaigns?ids=1,2,3")
     end
     
     it 'should not append campaign_ids to URL if not present' do
-      path = SaysServicesClient::Campaign.send(:all_path, {})
-      path.should eq("/api/v2/campaigns")
+      path = SaysServicesClient::Campaign.send(:all_path, country: 'my')
+      path.should eq("/my/api/v2/campaigns")
     end
   end
   

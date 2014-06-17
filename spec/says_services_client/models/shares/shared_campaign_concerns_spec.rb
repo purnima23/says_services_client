@@ -3,10 +3,10 @@ require 'spec_helper'
 describe SaysServicesClient::Models::Shares::SharedCampaignConcerns do
   context '#include_shared_campaign' do
     it 'includes campaign to share' do
-      share = SaysServicesClient::Share.new(campaign_id: 3)
-      share2 = SaysServicesClient::Share.new(campaign_id: 12)
+      share = SaysServicesClient::Share.new(campaign_id: 3, country_code: 'my')
+      share2 = SaysServicesClient::Share.new(campaign_id: 12, country_code: 'my')
       VCR.use_cassette 'Models/Shares/SharedCampaignTest/include_shared_campaign' do
-        SaysServicesClient::Share.include_shared_campaign([share, share2])
+        SaysServicesClient::Share.include_shared_campaign('my', [share, share2])
       end
       share.campaign.is_a?(SaysServicesClient::Campaign).should be_true
       share.campaign.should_not be_nil

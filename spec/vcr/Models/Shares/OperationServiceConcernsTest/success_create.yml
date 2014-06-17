@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:9000/api/v2/shares/campaigns/12/users/28?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&username=newbie&message=Are%20you%20nutz%3F&country_code=
+    uri: http://localhost:9000/my/api/v2/shares/campaigns/12/users/28?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&username=newbie&message=Are%20you%20nutz%3F
     body:
       encoding: US-ASCII
       string: ''

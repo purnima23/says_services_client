@@ -5,8 +5,8 @@ module SaysServicesClient
         extend ActiveSupport::Concern
         
         module ClassMethods
-          def include_request_share_by_user_id(user_id, campaigns)
-            shares = request_share_by_user_id(user_id, campaigns.map(&:id))
+          def include_request_share_by_user_id(country, user_id, campaigns)
+            shares = request_share_by_user_id(country, user_id, campaigns.map(&:id))
             campaigns_shares_mapping(campaigns, shares)
           end
           
@@ -17,9 +17,10 @@ module SaysServicesClient
             end
           end
         
-          def request_share_by_user_id(user_id, campaign_ids)
+          def request_share_by_user_id(country, user_id, campaign_ids)
             campaign_ids = (campaign_ids.is_a?(Array) ? campaign_ids : [campaign_ids])
-            SaysServicesClient::Share.find_by_user_id(user_id, campaign_ids: campaign_ids)
+            SaysServicesClient::Share.find_by_user_id(user_id, campaign_ids: campaign_ids,
+                                                               country: country)
           end
         end
   
