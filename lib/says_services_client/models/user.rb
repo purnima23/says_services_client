@@ -4,7 +4,17 @@ module SaysServicesClient
     TIME_FIELDS = [:activated_at, :created_at, :updated_at, :dob]
 
     def self.all(options={})      
-      conn = establish_connection("/api/admin/v1/users", params: options)
+      
+      source = options.delete(:source)
+      service_name = :user_url
+      path = "/api/admin/v1/users"
+      if "sociable" == source
+        service_name = :sociable_user_url
+        country = options.delete(:country)
+        path = "/#{country}#{path}"
+      end
+      
+      conn = establish_connection(path, service_name: service_name, params: options)
       
       if block_given?
         conn.on_complete do |response|

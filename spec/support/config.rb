@@ -6,7 +6,6 @@ SaysServicesClient::Config.endpoint = {
   share_url: 'http://localhost:9000',
   campaign_list_url: 'http://localhost:9000',
   share_list_url: 'http://localhost:9000',
-  user_list_url: 'http://says-connect.dev',
   user_url: 'http://says-connect.dev',
   sociable_user_url: 'http://sociable2.dev',
   share_stat_url: 'http://localhost:9000',

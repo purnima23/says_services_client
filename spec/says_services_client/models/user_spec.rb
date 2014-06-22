@@ -34,6 +34,20 @@ describe SaysServicesClient::User, :vcr do
         users.total_entries.should eq 6
       end
     end
+
+    context 'when source is sociable' do
+      it 'returns users from sociable' do
+        users = SaysServicesClient::User.all(country: 'my', source: 'sociable')
+
+        users.count.should eq 2
+        user =  users.first
+        user.id.should eq 1
+        user.email.should eq "nguyen@localhost.com"
+        user.display_name.should eq "Nguyen"
+        user.wallet.should eq "RM9,992.00"
+        user.country.should eq "malaysia"
+      end
+    end
   end
 
   describe "#find" do

@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sociable2.dev/my/api/admin/v1/users?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      ETag:
+      - '"01b680c939a71f3a85f6bc6cd68207e9"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Request-Id:
+      - ade3d83e-fa14-41c2-bfda-6f5ed1a7e0e6
+      X-Runtime:
+      - '0.264018'
+      Date:
+      - Sun, 22 Jun 2014 08:31:24 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"users":[{"id":1,"email":"nguyen@localhost.com","display_name":"Nguyen","wallet":"RM9,992.00","country":"malaysia"},{"id":2,"email":"nguyen3@localhost.com","display_name":"nguyen3","wallet":"RM0.00","country":"malaysia"}],"page":null,"per_page":null,"total_entries":2}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://sociable2.dev/my/api/admin/v1/users?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+  recorded_at: Sun, 22 Jun 2014 08:31:24 GMT
+recorded_with: VCR 2.9.0
