@@ -4,7 +4,7 @@ module SaysServicesClient
     TIME_FIELDS = [:activated_at, :created_at, :updated_at, :dob]
 
     def self.all(options={})
-      
+
       source = options.delete(:source)
       service_name = :user_url
       path = "/api/admin/v1/users"
@@ -13,7 +13,7 @@ module SaysServicesClient
         country = options.delete(:country)
         path = "/#{country}#{path}"
       end
-      
+
       conn = establish_connection(path, service_name: service_name, params: options)
 
       if block_given?
@@ -69,9 +69,25 @@ module SaysServicesClient
 
     def self.update (id, options={})
       raise ActiveModel::MissingAttributeError.new("id") if id.blank?
-      request = establish_connection("/api/admin/v1/users/#{id}", method: :put, params: options)
-      response = request.run
-      parse(response.body)
+
+      source = options.delete(:source)
+
+      unless source
+        request = establish_connection("/api/admin/v1/users/#{id}", method: :put, params: options)
+        response = request.run
+        parse(response.body)
+      else #this is a wallet update
+        service_name = :user_url
+        path = "/api/admin/v1/users"
+        if "sociable" == source
+          service_name = :sociable_user_url
+          country = options.delete(:country)
+          path = "/#{country}#{path}/#{id}"
+        end
+        request = establish_connection(path, service_name: service_name, method: :put, params: options)
+        response = request.run
+        parse(response.body)
+      end
     end
 
     def self.parse_list(json, options={})
