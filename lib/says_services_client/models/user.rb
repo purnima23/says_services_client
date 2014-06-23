@@ -1,9 +1,9 @@
 module SaysServicesClient
-  class User < Models::Base  
+  class User < Models::Base
 
     TIME_FIELDS = [:activated_at, :created_at, :updated_at, :dob]
 
-    def self.all(options={})      
+    def self.all(options={})
       
       source = options.delete(:source)
       service_name = :user_url
@@ -15,12 +15,12 @@ module SaysServicesClient
       end
       
       conn = establish_connection(path, service_name: service_name, params: options)
-      
+
       if block_given?
         conn.on_complete do |response|
           users = parse_list(response.body, options: options)
           yield users
-        end          
+        end
         SaysServicesClient::Config.hydra.queue(conn)
       else
         response = conn.run
@@ -52,7 +52,7 @@ module SaysServicesClient
           else
             yield user
           end
-        end          
+        end
         SaysServicesClient::Config.hydra.queue(conn)
       else
         response = conn.run
@@ -65,6 +65,13 @@ module SaysServicesClient
 
         user
       end
+    end
+
+    def self.update (id, options={})
+      raise ActiveModel::MissingAttributeError.new("id") if id.blank?
+      request = establish_connection("/api/admin/v1/users/#{id}", method: :put, params: options)
+      response = request.run
+      parse(response.body)
     end
 
     def self.parse_list(json, options={})
