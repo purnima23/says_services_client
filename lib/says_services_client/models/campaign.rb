@@ -10,7 +10,7 @@ module SaysServicesClient
     include SaysServicesClient::Models::Campaigns::ShareConcerns
     include SaysServicesClient::Models::Campaigns::OperationServiceConcerns
     
-    attr_reader :friendly_id, :is_ended, :is_completed, :remaining_days, :total_available_reward, :per_uv_reward, :site_url, :photo_url, :large_photo_url, :site_screenshot_url, :triggers, :tag_list, :requirement, :country, :reward_count, :total_reward, :click_limit
+    attr_reader :friendly_id, :is_ended, :is_completed, :remaining_days, :total_available_reward, :per_uv_reward, :site_url, :photo_url, :large_photo_url, :site_screenshot_url, :triggers, :tag_list, :requirement, :country, :reward_count, :total_reward, :click_limit, :preview_key
     attr_accessor :id, :title, :campaign_about, :supporters_count, :views_count, :completed_at, :created_at, :updated_at, :state, :type, :no_facebook_sharing, :reward_type, :secondary_description
     
     validates_presence_of :title
