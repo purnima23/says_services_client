@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sociable2.dev/my/api/admin/v1/traffic_referrers?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&page=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"592066075a1105f6c6a34c220c14ee4a"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fdea67d0-04e2-4f3a-83d6-b8fcd04e6b53
+      X-Runtime:
+      - '0.038837'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 02 Jul 2014 02:53:51 GMT
+      Content-Length:
+      - '67'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - request_method=GET; path=/
+      - 8sm_s=UnRKcFZxS1BBL2pGdHNVRllsak82K1g0THhCOU04N0c4VjNMSlJlV0hiYzZUV3N5WHpQTHQxZ1JCQTN6aDhUcGVLRHdGYmxNNlA0dEZXKzY4YXpObE9jcEZNUG9jUm9zY2s1UjNOOFpuYVk9LS1TM0RyMFFRb005b3J0ZW1rM0Vzdmp3PT0%3D--8d8b00723e2b4c8ae0f4ca0ab6a9c921859a37fe;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"traffic_referrers":[],"page":"2","per_page":20,"total_entries":1}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://sociable2.dev/my/api/admin/v1/traffic_referrers?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&page=2
+  recorded_at: Wed, 02 Jul 2014 02:53:51 GMT
+recorded_with: VCR 2.9.0

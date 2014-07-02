@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sociable2.dev/my/api/admin/v1/traffic_referrers?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"24b132d80dcef4eb62820498df6d92fa"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c47f06aa-f8d8-4e2f-bd49-4f9d3e0aa715
+      X-Runtime:
+      - '0.043372'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 02 Jul 2014 02:53:51 GMT
+      Content-Length:
+      - '208'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - request_method=GET; path=/
+      - 8sm_s=MXVyOTI2WXY4b2NnYTVPZlNDdFJCSDQ5Qmc0YmQ5TnVkQm5oQWNnWEhSQXhYNThMcVc2bkdBbzI0VnV1ejNSdFArdVdQcFpmUW5sTE1BaUVvVFNHcHB5SHZ2aWVxKytUUUI2TFVkcnF6NHc9LS1vTC9SRFpQbjI1aERnSmJnZTlCL1h3PT0%3D--6372289838a449ca9a3e201641b027c21c708458;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"traffic_referrers":[{"id":1,"utm_source":"adsite.com","utm_medium":"banner","utm_campaign":"christmas","utm_content":null,"referrer":"none","signups":2,"shares":2}],"page":1,"per_page":20,"total_entries":1}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://sociable2.dev/my/api/admin/v1/traffic_referrers?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+  recorded_at: Wed, 02 Jul 2014 02:53:51 GMT
+recorded_with: VCR 2.9.0

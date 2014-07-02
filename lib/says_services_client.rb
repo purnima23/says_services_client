@@ -19,6 +19,7 @@ require 'says_services_client/models/trigger'
 require 'says_services_client/models/user'
 require 'says_services_client/models/cashout'
 require 'says_services_client/models/last_job'
+require 'says_services_client/models/traffic_referrer'
 
 module SaysServicesClient
   class MissingEndpoint < StandardError
