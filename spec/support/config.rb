@@ -10,5 +10,6 @@ SaysServicesClient::Config.endpoint = {
   sociable_user_url: 'http://sociable2.dev',
   share_stat_url: 'http://localhost:9000',
   cashout_url: 'http://sociable2.dev',
-  last_job_url: 'http://localhost:9000'
+  last_job_url: 'http://localhost:9000',
+  transaction_url: 'http://sociable2.dev'
 }

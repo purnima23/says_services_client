@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sociable2.dev/my/api/admin/v1/users/1/transactions?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&page=1&per_page=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      ETag:
+      - '"9768b0e2b6bfc3f704bd50ba0ffea3af"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      - 8sm_s=WktlMHNPSkl4Z0NLV0hJYWtrUGZ1QkN2RTJrZkFkOWxaU1h0Ri8reU01QnFyaUF1VkcyK0hqVXJ4MEt2VGFMMTYyZUdZd1l0QWVLTnZ6L3pmeGttb1NtamYwQ3Yway9oODJuS0JBNGFWOVk9LS1kWE5XUFpXd3doRTRhOVVHQTZIVSt3PT0%3D--7884aafa17c26fedf70d138611648d51aaa83679;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 8afdd967-78e9-470e-8fbb-92eb23e1bad1
+      X-Runtime:
+      - '0.232985'
+      Date:
+      - Wed, 02 Jul 2014 07:10:26 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"transactions":[{"id":10,"type":"CashTransaction","action_desc":"factory
+        girl action description","remark":"factory girl remark","created_at":"2014-07-02T15:08:58.000+08:00","amount":"RM10,000.00"},{"id":9,"type":"CashTransaction","action_desc":"factory
+        girl action description","remark":"factory girl remark","created_at":"2014-07-02T15:08:58.000+08:00","amount":"RM10,000.00"}],"page":"1","per_page":"2","total_entries":5}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://sociable2.dev/my/api/admin/v1/users/1/transactions?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&page=1&per_page=2
+  recorded_at: Wed, 02 Jul 2014 07:10:26 GMT
+recorded_with: VCR 2.9.0

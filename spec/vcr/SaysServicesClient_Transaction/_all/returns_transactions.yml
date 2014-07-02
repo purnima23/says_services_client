@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sociable2.dev/my/api/admin/v1/users/1/transactions?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      ETag:
+      - '"f734510a719b8913f44f5772efbcbba5"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      - 8sm_s=MkR1MXpsckZrN0FnYi9sRjJiY2Zaeis3cEZWd1UyM1JrcXRydUR1UTlObEc0U0xGUHNFdUVQMk9NZkhVNjluR2JaU2FCekp5ejhSTy9OTVcwOTNVOHhkV1MxTUtzM2NkVDhydndrcU9DTG89LS1uR0dtMHpVRmJOSHA0N2R4cW8wNEtnPT0%3D--75075a3785b1c810539aa5e84590f8b6f15d966e;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 0e7c0a5f-a327-46da-b372-b6a93a865a04
+      X-Runtime:
+      - '0.064384'
+      Date:
+      - Wed, 02 Jul 2014 07:08:06 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"transactions":[{"id":6,"type":"CashTransaction","action_desc":"factory
+        girl action description","remark":"factory girl remark","created_at":"2014-07-02T14:57:10.000+08:00","amount":"RM10,000.00"}],"page":null,"per_page":null,"total_entries":1}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://sociable2.dev/my/api/admin/v1/users/1/transactions?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+  recorded_at: Wed, 02 Jul 2014 07:08:06 GMT
+recorded_with: VCR 2.9.0
