@@ -10,7 +10,7 @@ module SaysServicesClient
         end
         
         def endpoint(custom_service_name=nil)
-          raise MissingEndpoint.new("Missing #{service_name} endpoint") unless SaysServicesClient::Config.endpoint.has_key?(service_name)
+          raise MissingEndpoint.new("Missing #{custom_service_name || service_name} endpoint") unless SaysServicesClient::Config.endpoint.has_key?(custom_service_name || service_name)
           SaysServicesClient::Config.endpoint.fetch(custom_service_name || service_name)
         end
         
