@@ -67,16 +67,18 @@ module SaysServicesClient
       end
     end
 
-    def self.update (id, options={})
+   def self.update (id, options={})
       raise ActiveModel::MissingAttributeError.new("id") if id.blank?
 
       source = options.delete(:source)
-
-      unless source
+      Rails.logger.info ">>>> Client services Update"
+      if options[:update_action] == 'profile'
+        Rails.logger.info ">>>> Client services Update Action = #{options[:update_action]}"
         request = establish_connection("/api/admin/v1/users/#{id}", method: :put, params: options)
         response = request.run
         parse(response.body)
-      else #this is a wallet update
+      elsif options[:update_action] == 'wallet' || options[:update_action] == 'suspend' || options[:update_action] == 'unsuspend'
+        Rails.logger.info ">>>> Client services Update Action = #{options[:update_action]}"
         service_name = :user_url
         path = "/api/admin/v1/users"
         if "sociable" == source
@@ -88,6 +90,15 @@ module SaysServicesClient
         response = request.run
         parse(response.body)
       end
+
+
+    end
+
+
+    def self.suspend(id, options={})
+      raise ActiveModel::MissingAttributeError.new("id") if id.blank?
+
+
     end
 
     def self.parse_list(json, options={})
