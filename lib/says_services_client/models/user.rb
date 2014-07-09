@@ -131,5 +131,14 @@ module SaysServicesClient
       end
       user
     end
+    
+    def self.renew_invite_url(user_id, options={})
+      country_code = options.delete(:country_code)
+
+      conn = establish_connection("/#{country_code}/api/admin/v1/invites/renew?id=#{user_id}", service_name: :sociable_user_url)
+
+      response = conn.run
+      JSON.parse(response.body)['url']
+    end
   end
 end
