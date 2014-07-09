@@ -32,7 +32,15 @@ module SaysServicesClient
       includes = Array(options.delete(:include)) || []
       country_code = options.delete(:country_code)
 
-      conn = establish_connection("/api/admin/v1/users/#{user_id}")
+      source = options.delete(:source)
+      service_name = :user_url
+      path = "/api/admin/v1/users"
+      if "sociable" == source.to_s
+        service_name = :sociable_user_url
+        path = "/#{country_code}#{path}"
+      end
+
+      conn = establish_connection("#{path}/#{user_id}", service_name: service_name)
 
       sociable_conn = nil
       if includes.include?(:sociable)
