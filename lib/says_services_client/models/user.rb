@@ -79,27 +79,16 @@ module SaysServicesClient
       raise ActiveModel::MissingAttributeError.new("id") if id.blank?
 
       source = options.delete(:source)
-      Rails.logger.info ">>>> Client services Update"
-      if options[:update_action] == 'profile'
-        Rails.logger.info ">>>> Client services Update Action = #{options[:update_action]}"
-        request = establish_connection("/api/admin/v1/users/#{id}", method: :put, params: options)
-        response = request.run
-        parse(response.body)
-      elsif options[:update_action] == 'wallet' || options[:update_action] == 'suspend' || options[:update_action] == 'unsuspend'
-        Rails.logger.info ">>>> Client services Update Action = #{options[:update_action]}"
-        service_name = :user_url
-        path = "/api/admin/v1/users"
-        if "sociable" == source
-          service_name = :sociable_user_url
-          country = options.delete(:country)
-          path = "/#{country}#{path}/#{id}"
-        end
-        request = establish_connection(path, service_name: service_name, method: :put, params: options)
-        response = request.run
-        parse(response.body)
+      service_name = :user_url
+      path = "/api/admin/v1/users"
+      if "sociable" == source
+        service_name = :sociable_user_url
+        country = options.delete(:country)
+        path = "/#{country}#{path}/#{id}"
       end
-
-
+      request = establish_connection(path, service_name: service_name, method: :put, params: options)
+      response = request.run
+      parse(response.body)
     end
 
 
