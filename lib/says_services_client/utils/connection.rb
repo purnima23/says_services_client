@@ -1,11 +1,24 @@
 module SaysServicesClient
   module Utils
-    class Connection
-      class << self
+    module Connection
+      extend ActiveSupport::Concern
+      
+      module ClassMethods
         private
         def establish_connection(path, options={})
           options[:params] = {token: SaysServicesClient::Config.oauth_token}.merge(options[:params] || {})
+          # Typhoeus::Request.new(endpoint(service_name) + path, options)
+          
+          # opt = {}
+          #
           service_name = options.delete(:service_name)
+          # if method = options.delete(:method)
+          #   opt[:method] = method
+          # end
+          # opt[:params] = {token: SaysServicesClient::Config.oauth_token}.merge(options)
+          #
+          # Typhoeus::Request.new(endpoint(service_name) + path, opt)
+          
           Typhoeus::Request.new(endpoint(service_name) + path, options)
         end
         

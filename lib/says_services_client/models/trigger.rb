@@ -1,5 +1,3 @@
 module SaysServicesClient
-  class Trigger < Models::Base
-    attr_reader :id, :message      
-  end
+  class Trigger < Models::Base; end
 end
