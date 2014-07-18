@@ -11,7 +11,7 @@ describe SaysServicesClient::TrafficReferrer, :vcr do
 
     context 'when more options are passed' do
       it 'should escalate to superclass with correct options' do
-        SaysServicesClient::Utils::Connection.should_receive(:establish_connection).with("/my/api/admin/v1/traffic_referrers", service_name: :cashout_url, params: {utm_source: 'adsite.com', extra_field: 'yes'}).and_call_original
+        SaysServicesClient::TrafficReferrer.should_receive(:establish_connection).with("/my/api/admin/v1/traffic_referrers", params: {country: 'my', utm_source: 'adsite.com', extra_field: 'yes'}, service_name: :cashout_url).and_call_original
         tr = SaysServicesClient::TrafficReferrer.all(country: 'my', utm_source: 'adsite.com', extra_field: 'yes')
       end
     end

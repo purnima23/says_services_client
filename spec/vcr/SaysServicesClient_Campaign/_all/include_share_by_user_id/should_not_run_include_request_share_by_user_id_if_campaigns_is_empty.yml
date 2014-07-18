@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:9000/in/api/v2/campaigns?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&country=in&include=share_by_user_id&user_id=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - '"9a2ae537d7db125cb47189ce05b8b5b4"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - campaign_service_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWRmNzRiZWY4NWY0NmRiYzdkNDc2M2VhNjUyYTM3ZGQ5BjsAVEkiDXJlZmVycmVyBjsAVEkiCW5vbmUGOwBU--10dd9da59f81b2628588d08eafd5ca2bb009be42;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 291e5951ce8ac6288d144bfc1de2809e
+      X-Runtime:
+      - '0.073244'
+      Connection:
+      - close
+      Server:
+      - thin 1.3.1 codename Triple Espresso
+    body:
+      encoding: UTF-8
+      string: '{"campaigns":[],"offset":0}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://localhost:9000/in/api/v2/campaigns?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&country=in&include=share_by_user_id&user_id=1
+  recorded_at: Fri, 18 Jul 2014 10:13:58 GMT
+recorded_with: VCR 2.9.0

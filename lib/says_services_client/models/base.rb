@@ -1,23 +1,20 @@
 module SaysServicesClient
   module Models
-    class Base < Utils::Connection
+    class Base < Hashie::Mash
+      TIME_FIELDS = [:created_at, :updated_at]
+      
       I18n.enforce_available_locales = true
       
-      include ActiveModel::Serializers::JSON
+      include SaysServicesClient::Utils::Connection
+      extend ActiveModel::Naming
+      extend ActiveModel::Translation
       include ActiveModel::Validations
-      include ActiveModel::Conversion
-      include SaysServicesClient::Utils::ClassLevelInheritableAttributes
-      include SaysServicesClient::Utils::OperationConcerns
-      
-      inheritable_attributes :attributes, :method_attributes
-      # class level instance variable
-      @attributes = []
-      @method_attributes = []
+      include ActiveModel::Conversion  
+      include ActiveRecord::Validations      
+      include ActiveRecord::Reflection
+      include Hashie::Extensions::Coercion
       
       class << self
-        # class level attr accessor
-        attr_accessor :attributes, :method_attributes
-
         @@last_request = nil
 
         def last_request
@@ -28,71 +25,154 @@ module SaysServicesClient
           @@last_request = request
         end
         
-        def attr_accessor(*args)
-          self.attributes = (self.attributes + args).uniq
-          super *args
+        def coerce(obj)
+          if obj.is_a?(Array)
+            obj.map do |value|
+              self.new(value)
+            end
+          else
+            self.new(obj)
+          end
         end
         
-        def attr_reader(*args)
-          self.attributes = (self.attributes + args).uniq
-          self.method_attributes = (self.method_attributes + args).uniq
-          super *args
+        def parse!(response, args={})
+          includes = args.try(:fetch, :params, nil).try(:fetch, :include, nil)
+          obj = new(JSON.parse(response.body))
+          send("include_#{includes}", [obj], args.try(:fetch, :params, {})) if includes
+          
+          TIME_FIELDS.each do |field|
+            obj[field] = Time.parse(obj[field]) if obj[field]
+          end
+          obj
         end
         
-        def instantiate(attributes=nil)
-          model = self.allocate
-          model.send(:assign_reader_attrs, attributes, as: :admin) if attributes
-          model.attributes = attributes if attributes
-          model.instance_variable_set("@new_record", false)
-          model
-        end        
-      end
+        def parse_list!(response, args={})
+          object_name = self.to_s.demodulize.pluralize.underscore
+          includes = args.try(:fetch, :params, nil).try(:fetch, :include, nil)
+          
+          parsed = JSON.parse(response.body)
+          objs = parsed[object_name].collect do |o|
+            obj = new(o)
+            TIME_FIELDS.each do |field|
+              obj[field] = Time.parse(obj[field]) if obj[field]
+            end
+            obj
+          end
+          
+          send("include_#{includes}", objs, args.try(:fetch, :params, {})) if includes
+          
+          if offset = parsed["offset"]
+            Hashie::Mash.new({
+              object_name => objs,
+              :offset => offset
+            })
+          else
+            page     = parsed["page"] || 1
+            per_page = parsed["per_page"] || 20
+            total    = parsed["total_entries"]
+            
+            WillPaginate::Collection.create(page, per_page, total) do |pager|
+              pager.replace objs
+            end
+          end
+        end
+        
+        def find(path, args={})
+          conn = establish_connection(path, args)
+        
+          if block_given?
+            conn.on_complete do |response|
+              if response.response_code == 404
+                yield nil
+              else
+                yield parse!(response, args)
+              end
+            end
+            SaysServicesClient::Config.hydra.queue(conn)
+          else
+            response = conn.run
+            return nil if response.response_code == 404
+            parse!(response, args)
+          end
+        end
+        
+        def all(path, args={})
+          conn = establish_connection(path, args)
+        
+          if block_given?
+            conn.on_complete do |response|
+              yield parse_list!(response, args)
+            end
+            SaysServicesClient::Config.hydra.queue(conn)
+          else
+            response = conn.run
+            parse_list!(response, args)
+          end
+        end
       
-      # override AR#inspect to mimic the behavior
-      def inspect
-        inspection = if self.attributes
-          self.attributes.collect{|name, value| "#{name}: \"#{value}\""}.compact.join(", ")
-        else
-          "not initialized"
+        def create(attributes={}, options={})
+          object = new(attributes)
+          object.save(options)
+          object
         end
-        "#<#{self.class} #{inspection}>"
-      end
-  
-      def initialize(attributes=nil)
-        @new_record = true
-        self.attributes = attributes unless attributes.nil?
       end
       
       def new_record?
-        @new_record
+        !persisted?
       end
-      
-      def valid?(context = nil)
-        context ||= (new_record? ? :create : :update)
-        output = super(context)
-        errors.empty? && output
+    
+      def persisted?
+        id.present?
       end
-  
-      def attributes
-        self.class.attributes.inject(ActiveSupport::HashWithIndifferentAccess.new) do |result, key|
-          result[key] = read_attribute_for_validation(key)
-          result
-        end
+    
+      def save(options={})
+        create_or_update(options)
       end
-
-      def attributes=(attrs)
-        attrs.each do |k, v|
-          send("#{k}=", v)
-        end
-      end
-              
+    
       private
-      def assign_reader_attrs(attributes, options={})
-        attributes.each do |key, value|
-          unless respond_to?("#{key}=")
-            instance_variable_set("@#{key}", value)
-            attributes.delete(key)
-          end
+      def create_or_update(options={})
+        result = new_record? ? create(options.merge(method: :post)) : update(options.merge(method: :put))
+        result != false
+      end
+    
+      def create(options={})
+        if valid?
+          create!(options)
+        else
+          false
+        end
+      end
+    
+      def create!(options={})
+        raise NotImplementedError #implement in subclass
+      end
+    
+      def update(options={})
+        if valid?
+          update!(options)
+        else
+          false
+        end
+      end
+    
+      def update!(options={})
+        raise NotImplementedError #implement in subclass
+      end
+    
+      def post!(path, options)
+        conn = self.class.send(:establish_connection, path, options)
+        response = conn.run
+      
+        attrs = JSON.parse(response.body)
+    
+        if response.code == 404
+          attrs['errors'].each {|e| errors.add :base, e}
+          false
+        elsif response.code == 500
+          raise StandardError.new(JSON.parse(response.body))
+        else
+          attrs.each_pair {|k, v| self[k] = v}
+          !id.blank?
         end
       end
     end

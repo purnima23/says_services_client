@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sociable2.dev/my/api/admin/v1/users/4/histories?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&page=1&per_page=2&country_code=my
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"9e570fea89b786680195b79b0f7e39a9"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a5988ebe-3a00-4702-80cd-384ebdb01bc2
+      X-Runtime:
+      - '0.039287'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Fri, 18 Jul 2014 10:18:58 GMT
+      Content-Length:
+      - '577'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - request_method=GET; path=/
+      - 8sm_s=ZUlnNjcwOVc2dXRab1ZZUEl1aFpIZUFMaklRODUycmZTejZlOCt1b0JDeTcxeWZpYTVJeXFXWDRqVmF0eTIrOHNEMmpOV0o4S2VJMjNBb0xnOVlrNjN6WGZMNXdmMFFnSzFMWjRuMnhQaWc9LS1SWEd1OXlBSmRub1l6ZHg1blZQV0V3PT0%3D--fb3764d5e3c439b0407a6b7117fb39d4eb073235;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"histories":[{"id":11,"created_at":"2014-06-02T12:44:17.000+08:00","action_taken":"Expiry
+        Reset","remarks":"Reset 1 BP and 100.0 cash to 0 at 02/06/2014","attachment_thumb_url":"/attachments/small/missing.png","attachment_url":"/attachments/original/missing.png","note":""},{"id":12,"created_at":"2014-06-02T13:08:10.000+08:00","action_taken":"Expiry
+        Reset","remarks":"Reset 100 BP and 0.0 cash to 0 at 02/06/2014","attachment_thumb_url":"/attachments/small/missing.png","attachment_url":"/attachments/original/missing.png","note":""}],"page":1,"per_page":2,"total_entries":6}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://sociable2.dev/my/api/admin/v1/users/4/histories?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&page=1&per_page=2&country_code=my
+  recorded_at: Fri, 18 Jul 2014 10:18:58 GMT
+recorded_with: VCR 2.9.0

@@ -5,22 +5,17 @@ module SaysServicesClient
         extend ActiveSupport::Concern
         
         module ClassMethods
-          def include_shared_campaign(country, shares)
-            shared_campaigns = SaysServicesClient::Campaign.all(ids: shares.map(&:campaign_id),
-                                                            country: country)
-            shares_campaigns_mapping(shares, shared_campaigns)
-          end
-          
           private
           def shares_campaigns_mapping(shares, shared_campaigns)
             shares.each do |share|
-              share.instance_variable_set("@campaign", shared_campaigns.find {|c| c.id == share.campaign_id})
+              share.campaign = shared_campaigns.find {|c| c.id == share.campaign_id}
             end
           end
-        end
-  
-        def campaign
-          instance_variable_get("@campaign")
+          
+          def include_campaign(shares, args={})
+            shared_campaigns = SaysServicesClient::Campaign.all(ids: shares.map(&:campaign_id), country: args[:country])['campaigns']
+            shares_campaigns_mapping(shares, shared_campaigns)
+          end
         end
       end
     end

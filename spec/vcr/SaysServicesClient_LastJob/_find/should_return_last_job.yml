@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:9000/my/api/v2/last_job/clicks_filter?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+    uri: http://localhost:9000/my/api/v2/last_job/clicks_filter?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&country=my
     body:
       encoding: US-ASCII
       string: ''
@@ -19,29 +19,25 @@ http_interactions:
       X-UA-Compatible:
       - IE=Edge
       ETag:
-      - "\"8af258aa796aa4ad3e9271c739fb28ae\""
+      - '"8af258aa796aa4ad3e9271c739fb28ae"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - campaign_service_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiJWZiMzg5MTlhZDg5OTBhYWQxYTExNzFlZDNlNjRmOGNlBjsAVEkiDXJlZmVycmVyBjsAVEkiCW5vbmUGOwBUSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCKThrY4BAA%3D%3D--3539357018e393ee6101dd8a188baebbdd804b59;
+      - campaign_service_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTYyZDE4YzQ1YjJmMjk5YTE2NGEyMzI5MDk5MzdiYzU3BjsAVEkiDXJlZmVycmVyBjsAVEkiCW5vbmUGOwBU--532a02aeafc5177ac053eff1ae15078317c007e3;
         path=/; HttpOnly
-      - says_global_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiJWZiMzg5MTlhZDg5OTBhYWQxYTExNzFlZDNlNjRmOGNlBjsAVEkiDXJlZmVycmVyBjsAVEkiCW5vbmUGOwBUSSIUYWJpbmdvX2lkZW50aXR5BjsARmwrCKThrY4BAA%3D%3D--3539357018e393ee6101dd8a188baebbdd804b59;
-        path=/; expires=Sat, 06-Dec-2014 09:31:24 GMT
-      Content-Length:
-      - '74'
       X-Request-Id:
-      - 9afc920db82984a73676d61870747a18
+      - a99127a19bc0a6ecb3932a8b7a315bd6
       X-Runtime:
-      - '0.076601'
+      - '0.070437'
       Connection:
-      - keep-alive
+      - close
       Server:
       - thin 1.3.1 codename Triple Espresso
     body:
       encoding: UTF-8
-      string: "{\"id\":1,\"job_name\":\"clicks_filter\",\"last_run\":\"2013-09-26T14:15:33+08:00\"}"
+      string: '{"id":1,"job_name":"clicks_filter","last_run":"2013-09-26T14:15:33+08:00"}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: http://localhost:9000//api/v2/last_job/clicks_filter?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
-  recorded_at: Fri, 06 Jun 2014 09:31:24 GMT
+      effective_url: http://localhost:9000/my/api/v2/last_job/clicks_filter?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&country=my
+  recorded_at: Fri, 18 Jul 2014 10:19:32 GMT
 recorded_with: VCR 2.9.0
