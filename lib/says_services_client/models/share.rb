@@ -33,12 +33,12 @@ module SaysServicesClient
       
         if block_given?
           conn.on_complete do |response|
-            yield parse_list!(response, options)
+            yield parse_list!(response, params: options)
           end          
           SaysServicesClient::Config.hydra.queue(conn)
         else
           response = conn.run
-          parse_list!(response, options)
+          parse_list!(response, params: options)
         end
       end
       

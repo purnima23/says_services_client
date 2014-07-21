@@ -1,0 +1,98 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:9000/my/api/v2/shares/users/3?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&country=my&include=campaign
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - '"978670a93b6a972fa9177a0da6673099"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - campaign_service_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWRkOGJkZmRmMjQzY2EzYTE1ZTAzZTMzZTFkNWZmY2VlBjsAVEkiDXJlZmVycmVyBjsAVEkiCW5vbmUGOwBU--1339e1836abc5b58ca718db545d2d6b2441d9edf;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 366c3bbeca3068c9937c263c0f0d1ab7
+      X-Runtime:
+      - '0.096676'
+      Connection:
+      - close
+      Server:
+      - thin 1.3.1 codename Triple Espresso
+    body:
+      encoding: UTF-8
+      string: '{"shares":[{"id":121,"share_url":"http://cherwei.invisible.dev/my-121","uniq_total_clicked_count":0,"total_clicked_count":0,"message":"Are
+        you nutz?","reward_count":"RM0.00","rewarded_uv_count":0,"user_id":3,"campaign_id":12,"thumbnail_url":"http://imgcdn.dev/aHR0cHM6Ly9zYXlzLWRldmVsb3BtZW50LnMzLmFtYXpvbmF3cy5jb20vY2FtcGFpZ25zLzEyL3Bob3Rvcy9mYi9pbWctMTIwMHg2MzAuanBnPzEzODYzMjM0MDAsMw.jpg?1386323400","created_at":"2014-07-03T13:50:21+08:00"},{"id":120,"share_url":"http://cherwei.my-apple.com/my-120","uniq_total_clicked_count":0,"total_clicked_count":0,"message":"bodoh
+        #2","reward_count":"RM0.00","rewarded_uv_count":0,"user_id":3,"campaign_id":3,"thumbnail_url":"http://imgcdn.dev/aHR0cHM6Ly9zYXlzLWRldmVsb3BtZW50LnMzLmFtYXpvbmF3cy5jb20vY2FtcGFpZ25zLzMvcGhvdG9zL2ZiL2ltZy0xMjAweDYzMC5qcGc_MTM4NjMyMzM3Mywz.jpg?1386323373","created_at":"2014-07-01T16:47:33+08:00"}],"offset":0}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://localhost:9000/my/api/v2/shares/users/3?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&country=my&include=campaign
+  recorded_at: Mon, 21 Jul 2014 04:42:49 GMT
+- request:
+    method: get
+    uri: http://localhost:9000/my/api/v2/campaigns?ids=12,3&token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&country=my
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - '"dc9d32d34c46a136089faa40c8e64108"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - campaign_service_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTZiNjVhN2NlYTFmNjZmOTU2MzJhYjQxMmY0MGI5YWQ3BjsAVEkiDXJlZmVycmVyBjsAVEkiCW5vbmUGOwBU--daa01ee5cfc30085ad8d53a92c913a1a498d07e5;
+        path=/; HttpOnly
+      X-Request-Id:
+      - d3d276b9dd82b834ed75de78b4fc064c
+      X-Runtime:
+      - '0.339027'
+      Connection:
+      - close
+      Server:
+      - thin 1.3.1 codename Triple Espresso
+    body:
+      encoding: UTF-8
+      string: '{"campaigns":[{"id":3,"friendly_id":"war-cry","title":"war cry","campaign_about":"<p><span
+        style=\"font-weight: bold; color: #444444; font-family: arial, sans-serif;
+        font-size: small; line-height: 16px;\">WarCry</span><span style=\"color: #444444;
+        font-family: arial, sans-serif; font-size: small; line-height: 16px;\">&nbsp;-
+        mmorpgs games reviews news and more.</span></p>","secondary_description":"","is_ended":false,"is_completed":false,"remaining_days":318,"supporters_count":40,"views_count":206,"total_available_reward":"RM2","per_uv_reward":"RM0.40","site_url":"http://www.warcry.com","photo_url":"https://says-development.s3.amazonaws.com/campaigns/3/photos/profile/img-1200x630.jpg?1386323373","large_photo_url":"https://says-development.s3.amazonaws.com/campaigns/3/photos/fb/img-1200x630.jpg?1386323373","site_screenshot_url":null,"embedded_video":null,"skip_iframe":false,"triggers":[{"id":6,"message":"This
+        is a war cry for the warriors. Well this team out of Chicago is definitely
+        a group of warriors"},{"id":25,"message":"bodoh #2"},{"id":26,"message":"bodoh
+        #3"}],"created_at":"2013-06-04 11:22:15 +0800","updated_at":"2014-07-09 10:42:15
+        +0800","state":"active","country":"malaysia","completed_at":"2013-09-26 14:51:04
+        +0800","tag_list":["test","zenith","tobacco"],"no_facebook_sharing":false,"type":"CommercialCampaign","reward_type":"Cash","total_reward":"8.1","reward_count":"6.0","click_limit":6,"preview_key":"31871f9ab848bc123e6325e0709b4a0781d063b6","requirement":{"age_max":null,"age_min":null,"gender":null,"race":null,"city_names":null}},{"id":12,"friendly_id":"kanasai","title":"kanasaii","campaign_about":"<p>omg</p>","secondary_description":"<p>Ma
+        lan fan la you</p>","is_ended":false,"is_completed":false,"remaining_days":144,"supporters_count":45,"views_count":104,"total_available_reward":"RM10","per_uv_reward":"RM0.10","site_url":"http://www.yahoo.com","photo_url":"https://says-development.s3.amazonaws.com/campaigns/12/photos/profile/img-1200x630.jpg?1386323400","large_photo_url":"https://says-development.s3.amazonaws.com/campaigns/12/photos/fb/img-1200x630.jpg?1386323400","site_screenshot_url":null,"embedded_video":null,"skip_iframe":false,"triggers":[{"id":36,"message":"Are
+        you nutz?"},{"id":37,"message":"a=Alamak"}],"created_at":"2013-12-05 14:57:32
+        +0800","updated_at":"2014-07-09 10:40:54 +0800","state":"active","country":"malaysia","completed_at":"","tag_list":["news
+        & finance"],"no_facebook_sharing":false,"type":"CommercialCampaign","reward_type":"Cash","total_reward":"10.0","reward_count":"0.0","click_limit":null,"preview_key":"a4774b9a7a8e06adab64c6316307e55d335fb7fa","requirement":{"age_max":null,"age_min":null,"gender":"Male","race":[],"city_names":["Perak","Selangor"]}}],"offset":0}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://localhost:9000/my/api/v2/campaigns?ids=12,3&token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&country=my
+  recorded_at: Mon, 21 Jul 2014 04:42:50 GMT
+recorded_with: VCR 2.9.0

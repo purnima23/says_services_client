@@ -80,6 +80,16 @@ describe SaysServicesClient::Share, :vcr do
       @shares.shares.first.user_id.should eq(3)
       @shares.shares.first.campaign_id.should eq(12)
     end
+    
+    it 'returns shares include campaign correctly' do
+      SaysServicesClient::Share.find_by_user_id(3, country: 'my', include: :campaign) do |s|
+        @shares = s
+      end
+      HYDRA.run
+      @shares.shares.each do |share|
+        share.campaign.should_not be_nil
+      end
+    end
   end
   
   context '#find_by_user_id_path' do
