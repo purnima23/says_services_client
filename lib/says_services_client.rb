@@ -7,7 +7,7 @@ require 'active_record/validations'
 require 'active_record/reflection'
 require 'hashie'
 require 'will_paginate/collection'
-
+require 'says_services_client/utils/string'
 require 'says_services_client/utils/connection'
 require 'says_services_client/models/base'
 require 'says_services_client/models/share'
