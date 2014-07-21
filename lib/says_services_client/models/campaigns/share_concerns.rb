@@ -5,7 +5,7 @@ module SaysServicesClient
         extend ActiveSupport::Concern
         
         def share_by_user_id(user_id)
-          shares.find {|share| share.user_id == user_id}
+          (shares || []).find {|share| share.user_id == user_id}
         end
         
         private        
