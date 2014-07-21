@@ -10,7 +10,7 @@ module SaysServicesClient
     validates_presence_of :message, on: :create
     
     def fresh
-      fresh ||= false
+      (super || 'false').to_bool
     end
     
     def next_page?
