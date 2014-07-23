@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:9000/my/api/v2/shares/campaigns/12/users/29?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&user_id=29&campaign_id=12&username=newbie&message=Are%20you%20nutz%3F&country_code=my
+    uri: http://localhost:9000/my/api/v2/shares/campaigns/12/users/29?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
     body:
       encoding: US-ASCII
-      string: ''
+      string: user_id=29&campaign_id=12&username=newbie&message=Are you nutz?&country_code=my
     headers:
       User-Agent:
       - Typhoeus - https://github.com/typhoeus/typhoeus
@@ -23,12 +23,12 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - campaign_service_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTUwYTRkY2NjYzNmNzAxMjFkNGQ3ZGFmNGNmNjBjMWJlBjsAVEkiDXJlZmVycmVyBjsAVEkiCW5vbmUGOwBU--3a9214fc5c40dc2e8214e7a40742a0c1943ca56a;
+      - campaign_service_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTE0YTNmNTJmOGUyYTJjNDA5ZWNjNmYyYTQzNTFlMzY0BjsAVEkiDXJlZmVycmVyBjsAVEkiCW5vbmUGOwBU--f7e9a546380197e5619630a98aaab351199fc34f;
         path=/; HttpOnly
       X-Request-Id:
-      - a4195ba71cc9b435a807e7765a5f5372
+      - 88e9f20b2101e695d193ca3d9b68ee38
       X-Runtime:
-      - '0.081568'
+      - '0.100141'
       Connection:
       - close
       Server:
@@ -39,6 +39,6 @@ http_interactions:
         you nutz?","reward_count":"RM0.00","rewarded_uv_count":0,"user_id":29,"campaign_id":12,"thumbnail_url":"http://imgcdn.dev/aHR0cHM6Ly9zYXlzLWRldmVsb3BtZW50LnMzLmFtYXpvbmF3cy5jb20vY2FtcGFpZ25zLzEyL3Bob3Rvcy9mYi9pbWctMTIwMHg2MzAuanBnPzEzODYzMjM0MDAsMjk.jpg?1386323400","created_at":"2014-07-18T15:25:54+08:00","fresh":false}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: http://localhost:9000/my/api/v2/shares/campaigns/12/users/29?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&user_id=29&campaign_id=12&username=newbie&message=Are%20you%20nutz%3F&country_code=my
-  recorded_at: Fri, 18 Jul 2014 09:49:45 GMT
+      effective_url: http://localhost:9000/my/api/v2/shares/campaigns/12/users/29?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+  recorded_at: Mon, 21 Jul 2014 10:45:43 GMT
 recorded_with: VCR 2.9.0

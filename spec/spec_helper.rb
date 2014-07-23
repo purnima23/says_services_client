@@ -4,6 +4,7 @@ Bundler.setup
 require 'typhoeus' # and any other gems you need
 require 'rspec'
 require 'says_services_client'
+require 'shoulda-matchers'
 require 'vcr'
 
 ENV["RAILS_ENV"] = 'test'

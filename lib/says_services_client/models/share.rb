@@ -55,7 +55,7 @@ module SaysServicesClient
     private
     def create!(options={})
       raise ActiveModel::MissingAttributeError.new("country") if country_code.blank?
-      post!("/#{country_code}/api/v2/shares/campaigns/#{campaign_id}/users/#{user_id}", options.merge!(params: to_hash))      
+      post!("/#{country_code}/api/v2/shares/campaigns/#{campaign_id}/users/#{user_id}", options.merge!(body: to_hash))
     end
   end
 end
