@@ -79,12 +79,14 @@ module SaysServicesClient
       raise ActiveModel::MissingAttributeError.new("id") if id.blank?
 
       source = options.delete(:source)
-      service_name = :user_url
-      path = "/api/admin/v1/users"
+      
       if "sociable" == source
         service_name = :sociable_user_url
         country = options.delete(:country)
         path = "/#{country}#{path}/#{id}"
+      else
+        service_name = :user_url
+        path = "/api/admin/v1/users/#{id}"
       end
       request = establish_connection(path, service_name: service_name, method: :put, params: options)
       response = request.run
