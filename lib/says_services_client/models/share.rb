@@ -13,10 +13,6 @@ module SaysServicesClient
       (super || false).to_s.to_bool
     end
     
-    def next_page?
-      offset > 0
-    end
-    
     class << self
       def find(id, options={})
         options.symbolize_keys!

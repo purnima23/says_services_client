@@ -64,7 +64,8 @@ module SaysServicesClient
           if offset = parsed["offset"]
             Hashie::Mash.new({
               object_name => objs,
-              :offset => offset
+              :offset => offset,
+              :next_page? => offset > 0
             })
           else
             page     = parsed["page"] || 1
