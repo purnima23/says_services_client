@@ -36,7 +36,7 @@ module SaysServicesClient
       service_name = :user_url
       path = "/api/admin/v1/users"
       if "sociable" == source.to_s
-        service_name = :sociable_user_url
+        service_name = "vn" == country_code ? :sociable_vn_user_url : :sociable_user_url
         path = "/#{country_code}#{path}"
       end
 
@@ -45,7 +45,8 @@ module SaysServicesClient
       sociable_conn = nil
       if includes.include?(:sociable)
         raise ActiveModel::MissingAttributeError.new("country_code") if country_code.blank?
-        sociable_conn = establish_connection("/#{country_code}/api/admin/v1/users/#{user_id}", params: options.merge(uid: true), service_name: :sociable_user_url)
+        service_name = "vn" == country_code ? :sociable_vn_user_url : :sociable_user_url
+        sociable_conn = establish_connection("/#{country_code}/api/admin/v1/users/#{user_id}", params: options.merge(uid: true), service_name: service_name)
       end
 
       if block_given?
@@ -79,9 +80,9 @@ module SaysServicesClient
       raise ActiveModel::MissingAttributeError.new("id") if id.blank?
 
       source = options.delete(:source)
-      
+
       if "sociable" == source
-        service_name = :sociable_user_url
+        service_name = "vn" == country_code ? :sociable_vn_user_url : :sociable_user_url
         country = options.delete(:country)
         path = "/#{country}/api/admin/v1/users/#{id}"
       else
@@ -122,11 +123,11 @@ module SaysServicesClient
       end
       user
     end
-    
+
     def self.renew_invite_url(user_id, options={})
       country_code = options.delete(:country_code)
-
-      conn = establish_connection("/#{country_code}/api/admin/v1/invites/renew?id=#{user_id}", service_name: :sociable_user_url)
+      service_name = "vn" == country_code ? :sociable_vn_user_url : :sociable_user_url
+      conn = establish_connection("/#{country_code}/api/admin/v1/invites/renew?id=#{user_id}", service_name: service_name)
 
       response = conn.run
       JSON.parse(response.body)['url']
