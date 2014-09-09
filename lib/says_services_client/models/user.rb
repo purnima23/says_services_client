@@ -82,9 +82,9 @@ module SaysServicesClient
       source = options.delete(:source)
 
       if "sociable" == source
-        country = options.delete(:country)
+        country_code = options.delete(:country)
         service_name = "vn" == country_code ? :sociable_vn_user_url : :sociable_user_url
-        path = "/#{country}/api/admin/v1/users/#{id}"
+        path = "/#{country_code}/api/admin/v1/users/#{id}"
       else
         service_name = :user_url
         path = "/api/admin/v1/users/#{id}"
