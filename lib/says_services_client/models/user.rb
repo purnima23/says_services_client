@@ -132,5 +132,32 @@ module SaysServicesClient
       response = conn.run
       JSON.parse(response.body)['url']
     end
+    
+    def self.custom_reward(options={})
+      country_code = options.delete(:country_code)
+      
+      raise ActiveModel::MissingAttributeError.new("country_code") if country_code.blank?
+      raise ActiveModel::MissingAttributeError.new("type") if options[:type].blank?
+      raise ActiveModel::MissingAttributeError.new("user") if options[:user].blank?
+      raise ActiveModel::MissingAttributeError.new("reward_type") if options[:reward_type].blank?
+      raise ActiveModel::MissingAttributeError.new("remark") if options[:remark].blank?
+      raise ActiveModel::MissingAttributeError.new("amount") if options[:amount].blank?
+      raise ActiveModel::MissingAttributeError.new("transactable_type") if options[:transactable_type].blank?
+      raise ActiveModel::MissingAttributeError.new("transactable_id") if options[:transactable_id].blank?
+      raise ActiveModel::MissingAttributeError.new("whodunnit") if options[:whodunnit].blank?
+      
+      path = "/#{country_code}/api/admin/v1/users/custom_rewards"
+      conn = establish_connection("#{path}", service_name: :sociable_user_url, method: :post, params: options)
+
+      if block_given?
+        conn.on_complete do |response|
+          yield parse(response.body)
+        end
+        SaysServicesClient::Config.hydra.queue(conn)
+      else
+        response = conn.run
+        parse(response.body)
+      end
+    end
   end
 end
