@@ -20,6 +20,7 @@ require 'says_services_client/models/traffic_referrer'
 require 'says_services_client/models/transaction'
 require 'says_services_client/models/history'
 require 'says_services_client/models/trigger'
+require 'says_services_client/models/identity_no_history'
 
 module SaysServicesClient
   class MissingEndpoint < StandardError
