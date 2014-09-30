@@ -39,8 +39,7 @@ module SaysServicesClient
           includes = args.try(:fetch, :params, nil).try(:fetch, :include, nil)
           obj = new(JSON.parse(response.body))
           send("include_#{includes}", [obj], args.try(:fetch, :params, {})) if includes
-          
-          TIME_FIELDS.each do |field|
+          self::TIME_FIELDS.each do |field|
             obj[field] = Time.parse(obj[field]) if obj[field]
           end
           obj
@@ -53,7 +52,7 @@ module SaysServicesClient
           parsed = JSON.parse(response.body)
           objs = parsed[object_name].collect do |o|
             obj = new(o)
-            TIME_FIELDS.each do |field|
+            self::TIME_FIELDS.each do |field|
               obj[field] = Time.parse(obj[field]) if obj[field]
             end
             obj
