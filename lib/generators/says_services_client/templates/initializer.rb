@@ -12,3 +12,14 @@ SaysServicesClient::Config.endpoint = {
   share_stat_url: 'http://localhost:9000/',
   last_job_url: 'http://localhost:9000/'
 }
+
+# enable caching by uncomment
+# the option is similar to what dalli accepts
+# SaysServicesClient::Cache::Config.hosts = ['localhost:11211']
+# SaysServicesClient::Cache::Config.option = {
+  # namespace: "app_v1",
+  # compress: true
+# }
+# handle error gracefully option
+# SaysServicesClient::Cache::Config.raise_error = false
+# Typhoeus::Config.cache = SaysServicesClient::Utils::Cache::DalliClient.new
