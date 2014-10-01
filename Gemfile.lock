@@ -5,7 +5,7 @@ PATH
       activemodel (> 3.2.15)
       activerecord (> 3.2.15)
       activesupport (> 3.2.15)
-      dalli (~> 2.6.2)
+      dalli (> 2.6.2)
       hashie (~> 2.1.1)
       typhoeus (~> 0.6.8)
       will_paginate (~> 3.0)
