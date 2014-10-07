@@ -56,6 +56,23 @@ module SaysServicesClient
         end
       end
       
+      def chance_stat_for_user(user_id, options={})
+        options.symbolize_keys!
+        raise ActiveModel::MissingAttributeError.new("country") if options[:country].blank?
+        
+        conn = establish_connection("/#{options[:country]}/api/v2/chance_campaigns/users/#{user_id}", params: options)
+        
+        if block_given?
+          conn.on_complete do |response|
+            yield parse_list!(response, options)
+          end          
+          SaysServicesClient::Config.hydra.queue(conn)
+        else
+          response = conn.run
+          parse_list!(response, options)
+        end
+      end
+      
       private
       def all_path(options)
         ids = [options.delete(:ids)].flatten.compact

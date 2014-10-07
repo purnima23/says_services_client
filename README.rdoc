@@ -60,3 +60,19 @@ Find campaigns (asynchronous)
   @campaigns = SaysServicesClient::Campaign.all
   
   @campaigns.size => 4
+  
+== Caching
+
+Add these to initializer file
+
+  SaysServicesClient::Cache::Config.hosts = ['localhost:11211']
+  SaysServicesClient::Cache::Config.option = {
+    namespace: "app_v1",
+    compress: true
+  }
+  # SaysServicesClient::Cache::Config.raise_error = false # comment out to handle memcached error gracefuly
+  Typhoeus::Config.cache = SaysServicesClient::Utils::Cache::DalliClient.new
+
+API with cache_ttl params will turn on caching automatically
+
+  @campaigns = SaysServicesClient::Campaign.all(cache_ttl: 10) # in seconds format

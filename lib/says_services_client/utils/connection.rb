@@ -6,18 +6,10 @@ module SaysServicesClient
       module ClassMethods
         private
         def establish_connection(path, options={})
+          cache_ttl = options[:params].try(:delete, :cache_ttl)
           options[:params] = {token: SaysServicesClient::Config.oauth_token}.merge(options[:params] || {})
-          # Typhoeus::Request.new(endpoint(service_name) + path, options)
-          
-          # opt = {}
-          #
           service_name = options.delete(:service_name)
-          # if method = options.delete(:method)
-          #   opt[:method] = method
-          # end
-          # opt[:params] = {token: SaysServicesClient::Config.oauth_token}.merge(options)
-          #
-          # Typhoeus::Request.new(endpoint(service_name) + path, opt)
+          options[:cache_ttl] = cache_ttl if cache_ttl
           
           Typhoeus::Request.new(endpoint(service_name) + path, options)
         end

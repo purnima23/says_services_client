@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'hashie', '~> 2.1.1'
   s.add_dependency 'will_paginate', '~> 3.0'
   s.add_dependency 'activerecord', '> 3.2.15'
+  s.add_dependency 'dalli', '> 2.6.2'
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "vcr"

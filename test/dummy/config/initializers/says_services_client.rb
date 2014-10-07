@@ -13,3 +13,20 @@ SaysServicesClient::Config.endpoint = {
   cashout_url: 'http://sociable.dev',
   sociable_user_url: 'http://sociable.dev'
 }
+
+# enable caching by uncomment
+# the option is similar to what dalli accepts
+# SaysServicesClient::Cache::Config.hosts = ['localhost:11211']
+SaysServicesClient::Cache::Config.option = {
+  # namespace: "app_v1",
+  compress: true
+}
+SaysServicesClient::Cache::Config.raise_error = false
+Typhoeus::Config.cache = SaysServicesClient::Utils::Cache::DalliClient.new
+
+# SaysServicesClient::Campaign.find(13, country: 'my', cache_ttl: 5)
+# SaysServicesClient::Campaign.find(13, country: 'my')
+# SaysServicesClient::Campaign.find(13, country: 'my', include: :share_by_user_id, user_id: 1, cache_ttl: 1)
+
+# SaysServicesClient::Campaign.find(13, country: 'my', cache_ttl: 5) {|x| @c = x}
+# HYDRA.run
