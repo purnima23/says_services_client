@@ -18,6 +18,10 @@ module SaysServicesClient
       reward_type == "Contribution Point"
     end
     
+    def is_chance?
+      reward_type == "Chance"
+    end
+    
     def next_page?
       offset > 0
     end
