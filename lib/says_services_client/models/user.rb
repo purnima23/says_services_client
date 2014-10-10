@@ -46,7 +46,7 @@ module SaysServicesClient
       if includes.include?(:sociable)
         raise ActiveModel::MissingAttributeError.new("country_code") if country_code.blank?
         service_name = "vn" == country_code ? :sociable_vn_user_url : :sociable_user_url
-        sociable_conn = establish_connection("/#{country_code}/api/admin/v1/users/#{user_id}", params: options, service_name: service_name)
+        sociable_conn = establish_connection("/#{country_code}/api/admin/v1/users/#{user_id}", params: options.merge(uid: true), service_name: service_name)
       end
 
       if block_given?
@@ -76,7 +76,7 @@ module SaysServicesClient
       end
     end
 
-   def self.update(id, options={})
+   def self.update (id, options={})
       raise ActiveModel::MissingAttributeError.new("id") if id.blank?
 
       source = options.delete(:source)
