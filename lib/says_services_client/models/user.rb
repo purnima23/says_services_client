@@ -76,7 +76,7 @@ module SaysServicesClient
       end
     end
 
-   def self.update (id, options={})
+   def self.update(id, options={})
       raise ActiveModel::MissingAttributeError.new("id") if id.blank?
 
       source = options.delete(:source)
@@ -132,10 +132,10 @@ module SaysServicesClient
       response = conn.run
       JSON.parse(response.body)['url']
     end
-    
+
     def self.custom_reward(options={})
       country_code = options.delete(:country_code)
-      
+
       raise ActiveModel::MissingAttributeError.new("country_code") if country_code.blank?
       raise ActiveModel::MissingAttributeError.new("type") if options[:type].blank?
       raise ActiveModel::MissingAttributeError.new("user") if options[:user].blank?
@@ -145,7 +145,7 @@ module SaysServicesClient
       raise ActiveModel::MissingAttributeError.new("transactable_type") if options[:transactable_type].blank?
       raise ActiveModel::MissingAttributeError.new("transactable_id") if options[:transactable_id].blank?
       raise ActiveModel::MissingAttributeError.new("whodunnit") if options[:whodunnit].blank?
-      
+
       path = "/#{country_code}/api/admin/v1/users/custom_rewards"
       conn = establish_connection("#{path}", service_name: :sociable_user_url, method: :post, params: options)
 
