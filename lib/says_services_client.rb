@@ -24,14 +24,15 @@ require 'says_services_client/models/trigger'
 require 'says_services_client/models/identity_no_history'
 require 'says_services_client/models/city'
 require 'says_services_client/models/reward_store'
+require 'says_services_client/models/bank'
 require 'says_services_client/utils/cache/config'
 require 'says_services_client/utils/cache/request'
 require 'says_services_client/utils/cache/dalli_client'
 
 module SaysServicesClient
   class MissingEndpoint < StandardError
-  end  
-  
+  end
+
   Campaign.class_eval {coerce_key :triggers, SaysServicesClient::Trigger}
   # override Typhoeus::Request#cacheable?; to turn caching feature on/off base on cache_ttyl params
   Typhoeus::Request.send(:include, SaysServicesClient::Utils::Cache::Request)

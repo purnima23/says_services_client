@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://says-connect.dev/api/admin/v1/countries/my/banks?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - '"36675fdb3258e0b4d1ce187f29e266fb"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e61ecec95c5d799c2f8038d018c7000e
+      X-Runtime:
+      - '0.015509'
+      Date:
+      - Wed, 15 Oct 2014 04:43:37 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"banks":[{"name":"AFFIN ISLAMIC BANK"},{"name":"ALLIANCE BANK MALAYSIA
+        BERHAD"},{"name":"AMBANK BERHAD"},{"name":"BANK ISLAM MALAYSIA"},{"name":"BANK
+        KERJASAMA RAKYAT MALAYSIA BERHAD"},{"name":"BANK MUAMALAT"},{"name":"BANK
+        SIMPANAN NASIONAL BERHAD"},{"name":"CIMB BANK BERHAD"},{"name":"CIMB BANK
+        KWIK"},{"name":"CITIBANK BERHAD"},{"name":"EON BANK / EONCAP ISLAMIC BANK"},{"name":"HONG
+        LEONG BANK"},{"name":"HSBC BANK MALAYSIA BERHAD"},{"name":"MAYBANK BERHAD"},{"name":"OCBC
+        BANK MALAYSIA BHD"},{"name":"PUBLIC BANK"},{"name":"RHB BANK"},{"name":"STANDARD
+        CHARTERED BANK MALAYSIA BERHAD"},{"name":"ROYAL BANK OF SCOTLAND (FORMALLY
+        KNOW AS ABN AMRO BANK BHD)"},{"name":"BANGKOK BANK BHD"},{"name":"BANK OF
+        AMERICA MALAYSIA BERHAD"},{"name":"BANK OF NOVIA SCOTIA BERHAD"},{"name":"BANK
+        OF TOKYO-MITSUBISHI (M) BERHAD"},{"name":"J P MORGAN CHASE BANK BERHAD"},{"name":"DEUTSCHE
+        BANK MALAYSIA"},{"name":"UNITED OVERSEAS BANK M''SIA BERHAD"},{"name":"CIMB
+        BANK BERHAD (FORMALLY KNOWN AS SOUTHERN BANK BHD)/CIMB ISLAMIC"},{"name":"BANK
+        OF CHINA (MALAYSIA) BERHAD"},{"name":"AGRO BANK"},{"name":"KUWAIT FINANCE
+        HOUSE"},{"name":"SUMITOMO MITSUI BKG CORP MALAYSIA B"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://says-connect.dev/api/admin/v1/countries/my/banks?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8
+  recorded_at: Wed, 15 Oct 2014 04:43:37 GMT
+recorded_with: VCR 2.9.0
