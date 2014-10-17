@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    says_services_client (2.1.3)
+    says_services_client (2.1.4)
       activemodel (> 3.2.15)
       activerecord (> 3.2.15)
       activesupport (> 3.2.15)

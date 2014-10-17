@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://sociable2.dev/vn/api/admin/v1/jobs?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&namespace=cashout&job_action=update_all&update_action=complete&status=verified&type=CashCashout
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      ETag:
+      - '"3657f2a12d8dd9c3fe8f729f2e6392dc"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=POST; path=/
+      - 8sm_s=cnpkNnYrNHBuSTNaZXdDMGlRT0t0WE9uSmFwRHRIMWlJTFFEbENCSXNVY2VscVN6UCtPWU5henVtQUpPdGFpS3NQZ2pyMjBPbXhVNGpEOE5CNDFlSVJmMmxFRUFIV3o3TitSWVdGOE5DUW89LS1Sb3hXV0xiR3dZeXgyaXJLa0RhKzRRPT0%3D--2dec684ab5650eeb3fbe1af477da391d45b8957c;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 0c5f94e2-540f-4163-b3ee-d2c3c354e88c
+      X-Runtime:
+      - '0.127033'
+      Date:
+      - Fri, 17 Oct 2014 08:08:31 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":"09cdf35cb05f507e4cf05a04"}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://sociable2.dev/vn/api/admin/v1/jobs?token=424b0d825d7966c06ee5b5d20ceb3cfdb7849a8408a91e31de7c093fef0041e8&namespace=cashout&job_action=update_all&update_action=complete&status=verified&type=CashCashout
+  recorded_at: Fri, 17 Oct 2014 08:08:31 GMT
+recorded_with: VCR 2.9.0
