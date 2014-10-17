@@ -77,7 +77,7 @@ module SaysServicesClient
           end
         end
 
-        def run_request(response_type, path, args={})
+        def run_request(response_type, path, args={}, &block)
           parse_method = response_type == :list ? :parse_list! : :parse!
 
           conn = establish_connection(path, args)
@@ -98,37 +98,12 @@ module SaysServicesClient
           end
         end
 
-        def find(path, args={})
-          conn = establish_connection(path, args)
-
-          if block_given?
-            conn.on_complete do |response|
-              if response.response_code == 404
-                yield nil
-              else
-                yield parse!(response, args)
-              end
-            end
-            SaysServicesClient::Config.hydra.queue(conn)
-          else
-            response = conn.run
-            return nil if response.response_code == 404
-            parse!(response, args)
-          end
+        def find(path, args={}, &block)
+          run_request(:single, path, args, &block)
         end
 
-        def all(path, args={})
-          conn = establish_connection(path, args)
-
-          if block_given?
-            conn.on_complete do |response|
-              yield parse_list!(response, args)
-            end
-            SaysServicesClient::Config.hydra.queue(conn)
-          else
-            response = conn.run
-            parse_list!(response, args)
-          end
+        def all(path, args={}, &block)
+          run_request(:list, path, args, &block)
         end
 
         def create(attributes={}, options={})
