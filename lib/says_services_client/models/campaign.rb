@@ -3,7 +3,7 @@ require 'says_services_client/models/campaigns/share_concerns'
 
 module SaysServicesClient
   class Campaign < Models::Base
-    TIME_FIELDS = [:created_at, :updated_at, :announce_date]
+    TIME_FIELDS = [:created_at, :updated_at, :announce_date, :end_date]
     
     include SaysServicesClient::Models::Campaigns::StateConcerns
     include SaysServicesClient::Models::Campaigns::ShareConcerns
