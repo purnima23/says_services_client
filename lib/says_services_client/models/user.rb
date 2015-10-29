@@ -43,7 +43,7 @@ module SaysServicesClient
       conn = establish_connection("#{path}/#{user_id}", service_name: service_name)
 
       sociable_conn = nil
-      if includes.include?(:sociable) && "sociable" != source
+      if includes.include?(:sociable)
         raise ActiveModel::MissingAttributeError.new("country_code") if country_code.blank?
         service_name = "vn" == country_code ? :sociable_vn_user_url : :sociable_user_url
         sociable_conn = establish_connection("/#{country_code}/api/admin/v1/users/#{user_id}", params: options.merge(uid: true), service_name: service_name)
